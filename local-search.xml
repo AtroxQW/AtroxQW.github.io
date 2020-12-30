@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>MyBatis—学习之路</title>
+    <link href="/posts/MyBatis%E2%80%94%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/"/>
+    <url>/posts/MyBatis%E2%80%94%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/</url>
+    
+    <content type="html"><![CDATA[<h3 id="1-1-What-is-MyBatis？"><a href="#1-1-What-is-MyBatis？" class="headerlink" title="1.1 What is MyBatis？"></a>1.1 What is MyBatis？</h3><p><strong>MyBatis_Logo</strong>:<img src="/posts/MyBatis%E2%80%94%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/blog\source\_posts\MyBatis学习\mybatis_logo.png" alt="MyBatis_logo" style="zoom:67%;"></p><p><strong>concept</strong>：MyBatis是一款优秀的==持久层框架==，它支持定制化SQL、存储过程以及高级映射。MyBatis避免了几乎所有的<code>JDBC代码</code>和<code>手动设置参数</code>以及<code>获取结果集</code>。MyBatis可以使用简单的<code>XML</code>或<code>注解</code>来配置和映射原生类型、接口和Java的pojo（实体类）为数据库中的记录。</p><p><strong>history</strong>：MyBatis 本是apache的一个开源项目<strong>iBatis</strong>，2010年这个<a href="https://baike.baidu.com/item/%E9%A1%B9%E7%9B%AE/477803">项目</a>由apache software foundation 迁移到了[google code](<a href="https://baike.baidu.com/item/google">https://baike.baidu.com/item/google</a> code/2346604)，并且改名为MyBatis 。2013年11月迁移到<a href="https://baike.baidu.com/item/Github/10145341">Github</a>。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>mybatis</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hexoxo_Fluid主题配置</title>
     <link href="/posts/Hexo-Fluid%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/"/>
     <url>/posts/Hexo-Fluid%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</url>
