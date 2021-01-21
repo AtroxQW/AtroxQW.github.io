@@ -1,1 +1,664 @@
-<!DOCTYPE html><html lang="en" data-default-color-scheme="&#34;auto&#34;"><head><meta charset="UTF-8"><link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png"><link rel="icon" type="image/png" href="/img/favicon.png"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="theme-color" content="#2f4154"><meta name="description" content=""><meta name="author" content="codeAtrox"><meta name="keywords" content=""><title>SpringBoot笔记01-遇见SpringBoot - Atrox的博客</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css"><link rel="stylesheet" href="/lib/hint/hint.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css"><link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css"><link rel="stylesheet" href="/css/main.css"><script id="fluid-configs">var Fluid=window.Fluid||{},CONFIG={hostname:"example.com",root:"/",version:"1.8.7",typing:{enable:!0,typeSpeed:70,cursorChar:"_",loop:!1},anchorjs:{enable:!0,element:"h1,h2,h3,h4,h5,h6",placement:"right",visible:"hover",icon:""},progressbar:{enable:!0,height_px:3,color:"#29d",options:{showSpinner:!1,trickleSpeed:100}},copy_btn:!0,image_zoom:{enable:!0},toc:{enable:!0,headingSelector:"h1,h2,h3,h4,h5,h6",collapseDepth:0},lazyload:{enable:!0,onlypost:!1},web_analytics:{enable:!1,baidu:null,google:null,gtag:null,tencent:{sid:null,cid:null},woyaola:null,cnzz:null,leancloud:{app_id:"ESDyAFj0rlPHtdaIfJoa3pTr-gzGzoHsz",app_key:"j9txoPTCSqfLMGi1UmkNO3vV",server_url:"AtroxQW.github.io"}}}</script><script src="/js/utils.js"></script><script src="/js/color-schema.js"></script><meta name="generator" content="Hexo 5.2.0"></head><body><header style="height:70vh"><nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"><div class="container"><a class="navbar-brand" href="/">&nbsp;<strong>AtroxQW</strong>&nbsp;</a> <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><div class="animated-icon"><span></span><span></span><span></span></div></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav ml-auto text-center"><li class="nav-item"><a class="nav-link" href="/"><i class="iconfont icon-home-fill"></i> 首页</a></li><li class="nav-item"><a class="nav-link" href="/archives/"><i class="iconfont icon-archive-fill"></i> 归档</a></li><li class="nav-item"><a class="nav-link" href="/categories/"><i class="iconfont icon-category-fill"></i> 分类</a></li><li class="nav-item"><a class="nav-link" href="/tags/"><i class="iconfont icon-tags-fill"></i> 标签</a></li><li class="nav-item"><a class="nav-link" href="/about/"><i class="iconfont icon-user-fill"></i> 关于我</a></li><li class="nav-item"><a class="nav-link" href="/links/"><i class="iconfont icon-link-fill"></i> 友链</a></li><li class="nav-item" id="search-btn"><a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i class="iconfont icon-search"></i>&nbsp;</a></li><li class="nav-item" id="color-toggle-btn"><a class="nav-link" href="javascript:">&nbsp;<i class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a></li></ul></div></div></nav><div class="banner" id="banner" parallax="true" style="background:url(/img/bg/atrox1.jpg) no-repeat center center;background-size:cover"><div class="full-bg-img"><div class="mask flex-center" style="background-color:rgba(0,0,0,.3)"><div class="page-header text-center fade-in-up"><span class="h2" id="subtitle" title="SpringBoot笔记01-遇见SpringBoot"></span><div class="mt-3"><span class="post-meta"><i class="iconfont icon-date-fill" aria-hidden="true"></i> <time datetime="2021-01-06 18:31" pubdate>January 6, 2021 pm</time></span></div><div class="mt-1"><span class="post-meta mr-2"><i class="iconfont icon-chart"></i> 2.6k 字 </span><span class="post-meta mr-2"><i class="iconfont icon-clock-fill"></i> 30 分钟</span></div></div></div></div></div></header><main><div class="container-fluid nopadding-x"><div class="row nomargin-x"><div class="d-none d-lg-block col-lg-2"></div><div class="col-lg-8 nopadding-x-md"><div class="container nopadding-x-md" id="board-ctn"><div class="py-5" id="board"><article class="post-content mx-auto"><h1 style="display:none">SpringBoot笔记01-遇见SpringBoot</h1><div class="markdown-body"><h2 id="SpringBoot简介"><a href="#SpringBoot简介" class="headerlink" title="SpringBoot简介"></a>SpringBoot简介</h2><h3 id="一、回顾什么是Spring"><a href="#一、回顾什么是Spring" class="headerlink" title="一、回顾什么是Spring"></a>一、回顾什么是Spring</h3><p>Spring是一个开源框架，2003年兴起的一个<mark>轻量级</mark>的Java开发框架，作者是 <strong>Rod Johnson</strong>。</p><p><strong>Spring是为了解决企业级应用开发的复杂性而创建的，目的是简化开发</strong>。</p><h3 id="二、Spring是如何简化Java开发的"><a href="#二、Spring是如何简化Java开发的" class="headerlink" title="二、Spring是如何简化Java开发的"></a>二、Spring是如何简化Java开发的</h3><p>为了降低 Java开发的复杂性，Spring采用了以下4种关键策略：</p><ul><li>基于POJO（Plain Ordinary Java Object）的<strong>轻量级</strong>和<strong>最小侵入式</strong>编程，所有东西都是Bean</li><li>通过<strong>IOC</strong>（Inversion Of Control—控制反转），<strong>依赖注入</strong>（DI）和<strong>面向接口</strong>实现低耦合</li><li>基于<strong>切面</strong>（AOP——Aspect Oriented Programming）和<strong>惯例</strong>进行<strong>声明式编程</strong></li><li>通过切面和模板减少样式代码，如RedisTemplate，xxxTemplate</li></ul><h3 id="三、什么是SpringBoot"><a href="#三、什么是SpringBoot" class="headerlink" title="三、什么是SpringBoot"></a>三、什么是SpringBoot</h3><p>SpringBoot，就是一个javaweb的开发框架，和SpringMVC类似，对比其他javaweb框架的好处，官方说是简化开发，约定大于配置， you can “just run”，能<strong>迅速的开发web应用</strong>，几行代码开发一个http<strong>接口</strong>。</p><p>所有的技术框架的发展似乎都遵循了一条主线规律：从一个<strong>复杂应用场景</strong> 衍生 一种<strong>规范框架</strong>，人们只需要进行各种配置而不需要自己去实现它，这时候强大的配置功能成了优点；发展到一定程度之后，人们根据实际生产应用情况，选取其中实用功能和设计精华，重构出一些<strong>轻量级的框架</strong>；之后为了提高开发效率，嫌弃原先的各类配置过于麻烦，于是开始提倡“<strong>约定大于配置</strong>”，进而衍生出一些一站式的解决方案。</p><p>这就是Java企业级应用-&gt;J2EE-&gt;spring-&gt;springboot的过程。</p><p>Spring Boot 基于 Spring 开发，Spirng Boot 本身并不提供 Spring 框架的核心特性以及扩展功能，只是用于快速、敏捷地开发新一代基于 Spring 框架的应用程序。也就是说，它并不是用来替代 Spring 的解决方案，而是和 Spring 框架紧密结合用于提升 Spring 开发者体验的工具。Spring Boot 以<strong>约定大于配置的核心思想</strong>，默认帮我们进行了很多设置，多数 Spring Boot 应用只需要很少的 Spring 配置。同时它集成了大量常用的第三方库配置（例如 Redis、MongoDB、Jpa、RabbitMQ、Quartz 等等），Spring Boot 应用中这些第三方库几乎可以零配置的<strong>开箱即用</strong>。</p><p>简单来说就是SpringBoot其实不是什么新的框架，它默认配置了很多框架的使用方式，就像maven整合了所有的jar包，spring boot整合了所有的框架 。Spring Boot 出生名门，从一开始就站在一个比较高的起点，又经过这几年的发展，生态足够完善，Spring Boot 已经当之无愧成为 Java 领域最热门的技术。</p><p><strong>SpringBoot的主要优点</strong>：</p><ul><li>为所有Spring开发者更快的入门</li><li><strong>开箱即用</strong>，提供各种默认配置来简化项目配置</li><li><strong>内嵌式容器</strong>简化Web项目</li><li>没有冗余代码生成和XML配置的要求</li></ul><h2 id="微服务简介"><a href="#微服务简介" class="headerlink" title="微服务简介"></a>微服务简介</h2><h3 id="一、什么是微服务？"><a href="#一、什么是微服务？" class="headerlink" title="一、什么是微服务？"></a>一、什么是微服务？</h3><p>微服务是一种<strong>架构风格</strong>，它要求我们在开发一个应用的时候，这个应用必须构建成<strong>一系列小服务的组合</strong>；可以通过http的方式进行互通。要说<strong>微服务架构</strong>，先得聊聊过去开发使用的<strong>单体应用架构</strong>。</p><h3 id="二、单体应用架构"><a href="#二、单体应用架构" class="headerlink" title="二、单体应用架构"></a>二、单体应用架构</h3><p>所谓单体应用架构（All In One）是指，我们将<strong>所有应用服务都封装在一个应用中</strong>。</p><p>无论是ERP（Enterprise Resource Planning——企业资源管理）、CRM（Customer Relationship Management——客户关系管理）或者其他的系统，我们把数据库访问、web访问等各个功能放到一个war包内。</p><p><strong>单体应用架构的好处</strong>：</p><ul><li>易于开发和测试，部署简单方便</li><li>当需要扩展时，只需将war包复制多份，然后放在多个服务器上，再做负载均衡即可。</li></ul><p><strong>单体应用架构的缺点</strong>：</p><ul><li><p>哪怕需要修改很小的地方，都需要关停服务，重新打包并部署。</p></li><li><p>对于大型应用，不可能把所有内容都放在一个应用里，这样维护、分工与合作都是问题</p></li></ul><h3 id="三、微服务架构"><a href="#三、微服务架构" class="headerlink" title="三、微服务架构"></a>三、微服务架构</h3><p>在单体应用架构的方式，我们把所有的功能单元放在一个应用里面，然后我们把整个应用部署到服务器上。如果负载能力不行，我们将整个应用进行<strong>水平复制</strong>，进行扩展，然后再负载均衡。</p><p>所谓微服务架构，就是打破单体应用架构方式，<strong>把每个功能元素独立出来</strong>。再把独立出来的功能元素进行<strong>动态组合</strong>，需要的功能元素才拿来组合，需要多一些时间可以整合多个功能元素。所以微服务架构是对功能元素进行复制，而不是对整个应用进行复制。</p><img src="/posts/2021/01/06/SpringBoot%E7%AC%94%E8%AE%B001-%E9%81%87%E8%A7%81SpringBoot/micro_service.png" srcset="/img/loading.gif" alt="微服务架构图解" style="zoom:100%"><p><strong>微服务架构的优点</strong>：</p><ul><li>节省了调用资源</li><li>每个功能元素的服务都是一个可替换的、可独立升级的软件代码</li></ul><ul><li>原文地址：<a target="_blank" rel="noopener" href="http://martinfowler.com/articles/microservices.html">http://martinfowler.com/articles/microservices.html</a></li><li>翻译：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/liuning8023/p/4493156.html">https://www.cnblogs.com/liuning8023/p/4493156.html</a></li></ul><h3 id="四、如何构建微服务"><a href="#四、如何构建微服务" class="headerlink" title="四、如何构建微服务"></a>四、如何构建微服务</h3><p>一个大型系统的微服务架构，就像一个复杂交织的神经网络，每一个神经元就是一个功能元素，它们各自完成自己的功能，然后通过 http 相互请求调用。比如一个电商系统，查缓存、连数据库。浏览页面、结账、支付等服务都是一个个独立的功能服务，都被微化了，它们作为一个个微服务共同构建了一个庞大的系统。如果修改其中的一个功能，只需要更新升级其中一个功能服务单元即可。</p><p>但是，这种庞大的系统架构给部署和运维带来很大的难度。于是，Spring为我们带来了构建大型分布式微服务的全套、全称产品：</p><ul><li><span style="color:#00008b">构建一个个功能独立的微服务应用单元，可以使用SpringBoot，快速构建应用</span></li><li><span style="color:#00008b">大型分布式网络服务的调用，由SpringCloud来完成，实现分布式</span></li><li><span style="color:#00008b">在分布式中间，进行流式数据计算、批处理，我们用到Spring Cloud Data Flow</span></li></ul><p><img src="/posts/2021/01/06/SpringBoot%E7%AC%94%E8%AE%B001-%E9%81%87%E8%A7%81SpringBoot/spring_product.jpg" srcset="/img/loading.gif" alt="微服务全套产品"></p><h2 id="SpringBoot快速开始"><a href="#SpringBoot快速开始" class="headerlink" title="SpringBoot快速开始"></a>SpringBoot快速开始</h2><h3 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h3><p>我们将学习如何快速的<strong>搭建一个Spring Boot应用</strong>，并且实<strong>现一个简单的Http请求</strong>。通过这个例子对Spring Boot有一个初步的了解，并体验其<strong>结构简单、开发快速</strong>的特性。</p><p><strong>环境准备</strong>：</p><ul><li>java version：”1.8.0.252”</li><li>Maven：apache-maven-3.6.3</li><li>SpringBoot 2.x 最新版</li></ul><p><strong>开发工具</strong>：</p><ul><li>IDEA</li></ul><h3 id="二、创建基础项目说明"><a href="#二、创建基础项目说明" class="headerlink" title="二、创建基础项目说明"></a>二、创建基础项目说明</h3><p>Spring官方提供了非常方便的工具让我们快速构建应用</p><p>Spring Initializr： <a target="_blank" rel="noopener" href="http://start.spring.io/">http://start.spring.io/</a></p><p><strong>项目创建方式一</strong>：使用Spring Initalizr 的 Web 页面创建项目</p><ol><li><p>打开 <a target="_blank" rel="noopener" href="http://start.spring.io/">http://start.spring.io/</a></p></li><li><p>填写项目信息</p></li><li><p>点击“Generate”按钮生成项目；下载此项目</p></li><li><p>解压项目包，并用IDEA以Maven项目导入，一路下一步即可，直到项目导入完毕。</p></li><li><p>如果是第一次使用，可能速度会比较慢，包比较多、需要耐心等待一切就绪</p></li></ol><img src="/posts/2021/01/06/SpringBoot%E7%AC%94%E8%AE%B001-%E9%81%87%E8%A7%81SpringBoot/spring_initializr.png" srcset="/img/loading.gif" alt="创建SpringBoot项目" style="zoom:80%"><p><strong>项目创建方式二：</strong>使用 IDEA 直接创建项目</p><ol><li>创建一个新项目</li><li>选择 spring initializr， 可以看到默认就是通过官网快速构建工具实现</li><li>填写项目信息</li><li>选择初始化的组件（初学勾选Web即可）</li><li>填写项目路径</li><li>等待项目构建成功</li></ol><img src="/posts/2021/01/06/SpringBoot%E7%AC%94%E8%AE%B001-%E9%81%87%E8%A7%81SpringBoot/idea_spring_initializr.png" srcset="/img/loading.gif" alt="idea构建SpringBoot项目" style="zoom:80%"><p><strong>项目结构分析</strong>：通过上面步骤完成基础项目的创建，会自动生成以下文件。</p><ol><li>程序的主启动类 xxxApplication（主程序的入口）</li><li>一个 application.properties 配置文件（核心配置文件）</li><li>一个测试类 xxxApplicationTests</li><li>一个pom.xml文件</li></ol><h3 id="三、pom-xml分析"><a href="#三、pom-xml分析" class="headerlink" title="三、pom.xml分析"></a>三、pom.xml分析</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!--父依赖--&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">parent</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.4.1<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">relativePath</span>/&gt;</span> <span class="hljs-comment">&lt;!-- lookup parent from repository --&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">parent</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.atrox<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>hellowrorld<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>0.0.1-SNAPSHOT<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>hellowrorld<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">description</span>&gt;</span>Demo project for Spring Boot<span class="hljs-tag">&lt;/<span class="hljs-name">description</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">properties</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">java.version</span>&gt;</span>1.8<span class="hljs-tag">&lt;/<span class="hljs-name">java.version</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">properties</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span><br>    <span class="hljs-comment">&lt;!--web依赖：tomcat，dispatcherServlet，xml--&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><br>    <span class="hljs-comment">&lt;!--spring-boot-starter所有的springboot依赖都是使用这个开头的--&gt;</span><br><br>    <span class="hljs-comment">&lt;!--单元测试--&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-test<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>test<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">build</span>&gt;</span><br>    <span class="hljs-comment">&lt;!--打jar包插件--&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">plugins</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">plugins</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">build</span>&gt;</span><br></code></pre></td></tr></table></figure><h3 id="四、编写一个http接口"><a href="#四、编写一个http接口" class="headerlink" title="四、编写一个http接口"></a>四、编写一个http接口</h3><ol><li><p>在主程序的同级目录下，新建一个controller包，一定要在<strong>同级目录</strong>下，否则识别不到。</p></li><li><p>在包中新建一个HelloController类</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@RestController</span><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloController</span> </span>&#123;<br>    <span class="hljs-comment">// 接口：http://localhost:8080/hello</span><br>    <span class="hljs-meta">@RequestMapping(&quot;/hello&quot;)</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">hello</span><span class="hljs-params">()</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;hello,world&quot;</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li><li><p>编写完毕后，从主程序启动项目，浏览器发起请求，查看页面输出。</p></li></ol><img src="/posts/2021/01/06/SpringBoot%E7%AC%94%E8%AE%B001-%E9%81%87%E8%A7%81SpringBoot/hello_world.png" srcset="/img/loading.gif" alt="页面输出" style="zoom:67%"><ol start="4"><li>简单几步，就完成了一个web接口的开发，SpringBoot就是这么简单。所以我们常用它来建立我们的微服务项目.</li></ol><h3 id="五、将项目打成jar包运行"><a href="#五、将项目打成jar包运行" class="headerlink" title="五、将项目打成jar包运行"></a>五、将项目打成jar包运行</h3><p>在maven侧边工具栏中点击package，进行打包。</p><img src="/posts/2021/01/06/SpringBoot%E7%AC%94%E8%AE%B001-%E9%81%87%E8%A7%81SpringBoot/package.png" srcset="/img/loading.gif" alt="项目打包" style="zoom:75%"><p>打包完后，我们在左侧<code>target</code>目录下就会得到一个jar包。</p><img src="/posts/2021/01/06/SpringBoot%E7%AC%94%E8%AE%B001-%E9%81%87%E8%A7%81SpringBoot/package_jar.png" srcset="/img/loading.gif" alt="target目录下的jar包" style="zoom:80%"><p>找到该jar包所在的文件夹，并在该文件夹下打开命令行，启动服务。</p><img src="/posts/2021/01/06/SpringBoot%E7%AC%94%E8%AE%B001-%E9%81%87%E8%A7%81SpringBoot/jar_start.png" srcset="/img/loading.gif" alt="在jar包启动服务" style="zoom:75%"><h3 id="六、更改项目运行端口号"><a href="#六、更改项目运行端口号" class="headerlink" title="六、更改项目运行端口号"></a>六、更改项目运行端口号</h3><p>在<code>resources</code>目录下的<code>application.properties</code>中写入：</p><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-meta">server.port</span>=<span class="hljs-string">8081</span><br></code></pre></td></tr></table></figure><p>然后重启项目即可。</p><h3 id="七、更改SpringBoot启动Bnner"><a href="#七、更改SpringBoot启动Bnner" class="headerlink" title="七、更改SpringBoot启动Bnner"></a>七、更改SpringBoot启动Bnner</h3><p>如何更改启动时显示的字符拼成的字母，SpringBoot呢？也就是 banner 图案；</p><p>只需一步：到项目下的 resources 目录下新建一个banner.txt 即可。</p><p>图案可以到：<a target="_blank" rel="noopener" href="https://www.bootschool.net/ascii">https://www.bootschool.net/ascii</a> 这个网站生成，然后拷贝到文件中即可！</p><img src="/posts/2021/01/06/SpringBoot%E7%AC%94%E8%AE%B001-%E9%81%87%E8%A7%81SpringBoot/springboot_banner.png" srcset="/img/loading.gif" alt="更改Banner" style="zoom:50%"></div><hr><div><div class="post-metas mb-3"><div class="post-meta"><i class="iconfont icon-tags"></i> <a class="hover-with-bg" href="/tags/SpringBoot/">SpringBoot</a></div></div><p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p><div class="post-prevnext"><article class="post-prev col-6"><a href="/posts/2021/01/07/SpringBoot%E7%AC%94%E8%AE%B002-%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA/"><i class="iconfont icon-arrowleft"></i> <span class="hidden-mobile">SpringBoot笔记02-运行原理深入浅出</span> <span class="visible-mobile">Previous</span></a></article><article class="post-next col-6"><a href="/posts/2021/01/04/SpringMVC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span class="hidden-mobile">SpringMVC学习笔记</span> <span class="visible-mobile">Next</span> <i class="iconfont icon-arrowright"></i></a></article></div></div><article class="comments" id="comments"><div id="gitalk-container"></div><script type="text/javascript">Fluid.utils.waitElementVisible("gitalk-container",(function(){Fluid.utils.createCssLink("/css/gitalk.css"),Fluid.utils.createScript("https://cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.min.js",(function(){new Gitalk({clientID:"af550312a411b96c64b9",clientSecret:"f11934265fd18324cb2d9fd605d7d445207a3e52",repo:"gitalk",owner:"AtroxQW",admin:["AtroxQW"],id:"ad62c561cbc9dbc109c8881fbbc7cdc6",language:"zh-CN",labels:["Gitalk"],perPage:10,pagerDirection:"last",createIssueManually:!0,distractionFreeMode:!1}).render("gitalk-container")}))}))</script><noscript>Please enable JavaScript to view the comments</noscript></article></article></div></div></div><div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn"><div id="toc"><p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p><div class="toc-body" id="toc-body"></div></div></div></div></div><a id="scroll-top-button" href="#" role="button"><i class="iconfont icon-arrowup" aria-hidden="true"></i></a><div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg" role="document"><div class="modal-content"><div class="modal-header text-center"><h4 class="modal-title w-100 font-weight-bold">Search</h4><button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body mx-3"><div class="md-form mb-5"><input type="text" id="local-search-input" class="form-control validate"> <label data-error="x" data-success="v" for="local-search-input">keyword</label></div><div class="list-group" id="local-search-result"></div></div></div></div></div></main><footer class="text-center mt-5 py-3"><div class="footer-content"><a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a></div><div class="statistics"><span id="leancloud-site-pv-container" style="display:none">总访问量 <span id="leancloud-site-pv"></span> 次 </span><span id="leancloud-site-uv-container" style="display:none">总访客数 <span id="leancloud-site-uv"></span> 人</span></div></footer><script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css"><script>NProgress.configure({showSpinner:!1,trickleSpeed:100}),NProgress.start(),window.addEventListener("load",(function(){NProgress.done()}))</script><script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script><script src="/js/debouncer.js"></script><script src="/js/events.js"></script><script src="/js/plugins.js"></script><script src="/js/lazyload.js"></script><script src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script defer src="/js/leancloud.js"></script><script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script><script>!function(t,i){(0,Fluid.plugins.typing)(i.getElementById("subtitle").title)}(window,document)</script><script src="/js/local-search.js"></script><script>document.querySelector("#local-search-input").onclick=function(){searchFunc("/local-search.xml","local-search-input","local-search-result"),this.onclick=null}</script><script src="/js/boot.js"></script><script src="https://libs.xiaoz.top/instantclick/instantclick.min.js" data-no-instant></script><script data-no-instant>InstantClick.init()</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="codeAtrox">
+  <meta name="keywords" content="">
+  <title>SpringBoot笔记01-遇见SpringBoot - Atrox的博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ESDyAFj0rlPHtdaIfJoa3pTr-gzGzoHsz","app_key":"j9txoPTCSqfLMGi1UmkNO3vV","server_url":"AtroxQW.github.io"}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>AtroxQW</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于我
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/bg/atrox1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="SpringBoot笔记01-遇见SpringBoot">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-01-06 18:31" pubdate>
+        January 6, 2021 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.6k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      30
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">SpringBoot笔记01-遇见SpringBoot</h1>
+            
+            <div class="markdown-body">
+              <h2 id="SpringBoot简介"><a href="#SpringBoot简介" class="headerlink" title="SpringBoot简介"></a>SpringBoot简介</h2><h3 id="一、回顾什么是Spring"><a href="#一、回顾什么是Spring" class="headerlink" title="一、回顾什么是Spring"></a>一、回顾什么是Spring</h3><p>Spring是一个开源框架，2003年兴起的一个<mark>轻量级</mark>的Java开发框架，作者是 <strong>Rod Johnson</strong>。</p>
+<p><strong>Spring是为了解决企业级应用开发的复杂性而创建的，目的是简化开发</strong>。</p>
+<h3 id="二、Spring是如何简化Java开发的"><a href="#二、Spring是如何简化Java开发的" class="headerlink" title="二、Spring是如何简化Java开发的"></a>二、Spring是如何简化Java开发的</h3><p>为了降低 Java开发的复杂性，Spring采用了以下4种关键策略：</p>
+<ul>
+<li>基于POJO（Plain Ordinary Java Object）的<strong>轻量级</strong>和<strong>最小侵入式</strong>编程，所有东西都是Bean</li>
+<li>通过<strong>IOC</strong>（Inversion Of Control—控制反转），<strong>依赖注入</strong>（DI）和<strong>面向接口</strong>实现低耦合</li>
+<li>基于<strong>切面</strong>（AOP——Aspect Oriented Programming）和<strong>惯例</strong>进行<strong>声明式编程</strong></li>
+<li>通过切面和模板减少样式代码，如RedisTemplate，xxxTemplate</li>
+</ul>
+<h3 id="三、什么是SpringBoot"><a href="#三、什么是SpringBoot" class="headerlink" title="三、什么是SpringBoot"></a>三、什么是SpringBoot</h3><p>SpringBoot，就是一个javaweb的开发框架，和SpringMVC类似，对比其他javaweb框架的好处，官方说是简化开发，约定大于配置，  you can “just run”，能<strong>迅速的开发web应用</strong>，几行代码开发一个http<strong>接口</strong>。</p>
+<p>所有的技术框架的发展似乎都遵循了一条主线规律：从一个<strong>复杂应用场景</strong> 衍生 一种<strong>规范框架</strong>，人们只需要进行各种配置而不需要自己去实现它，这时候强大的配置功能成了优点；发展到一定程度之后，人们根据实际生产应用情况，选取其中实用功能和设计精华，重构出一些<strong>轻量级的框架</strong>；之后为了提高开发效率，嫌弃原先的各类配置过于麻烦，于是开始提倡“<strong>约定大于配置</strong>”，进而衍生出一些一站式的解决方案。</p>
+<p>这就是Java企业级应用-&gt;J2EE-&gt;spring-&gt;springboot的过程。</p>
+<p>Spring Boot 基于 Spring 开发，Spirng Boot 本身并不提供 Spring 框架的核心特性以及扩展功能，只是用于快速、敏捷地开发新一代基于 Spring 框架的应用程序。也就是说，它并不是用来替代 Spring 的解决方案，而是和 Spring 框架紧密结合用于提升 Spring 开发者体验的工具。Spring Boot 以<strong>约定大于配置的核心思想</strong>，默认帮我们进行了很多设置，多数 Spring Boot 应用只需要很少的 Spring 配置。同时它集成了大量常用的第三方库配置（例如 Redis、MongoDB、Jpa、RabbitMQ、Quartz 等等），Spring Boot 应用中这些第三方库几乎可以零配置的<strong>开箱即用</strong>。</p>
+<p>简单来说就是SpringBoot其实不是什么新的框架，它默认配置了很多框架的使用方式，就像maven整合了所有的jar包，spring boot整合了所有的框架 。Spring Boot 出生名门，从一开始就站在一个比较高的起点，又经过这几年的发展，生态足够完善，Spring Boot 已经当之无愧成为 Java 领域最热门的技术。</p>
+<p><strong>SpringBoot的主要优点</strong>：</p>
+<ul>
+<li>为所有Spring开发者更快的入门</li>
+<li><strong>开箱即用</strong>，提供各种默认配置来简化项目配置</li>
+<li><strong>内嵌式容器</strong>简化Web项目</li>
+<li>没有冗余代码生成和XML配置的要求</li>
+</ul>
+<h2 id="微服务简介"><a href="#微服务简介" class="headerlink" title="微服务简介"></a>微服务简介</h2><h3 id="一、什么是微服务？"><a href="#一、什么是微服务？" class="headerlink" title="一、什么是微服务？"></a>一、什么是微服务？</h3><p>微服务是一种<strong>架构风格</strong>，它要求我们在开发一个应用的时候，这个应用必须构建成<strong>一系列小服务的组合</strong>；可以通过http的方式进行互通。要说<strong>微服务架构</strong>，先得聊聊过去开发使用的<strong>单体应用架构</strong>。</p>
+<h3 id="二、单体应用架构"><a href="#二、单体应用架构" class="headerlink" title="二、单体应用架构"></a>二、单体应用架构</h3><p>所谓单体应用架构（All In One）是指，我们将<strong>所有应用服务都封装在一个应用中</strong>。</p>
+<p>无论是ERP（Enterprise Resource Planning——企业资源管理）、CRM（Customer Relationship Management——客户关系管理）或者其他的系统，我们把数据库访问、web访问等各个功能放到一个war包内。</p>
+<p><strong>单体应用架构的好处</strong>：</p>
+<ul>
+<li>易于开发和测试，部署简单方便</li>
+<li>当需要扩展时，只需将war包复制多份，然后放在多个服务器上，再做负载均衡即可。</li>
+</ul>
+<p><strong>单体应用架构的缺点</strong>：</p>
+<ul>
+<li><p>哪怕需要修改很小的地方，都需要关停服务，重新打包并部署。</p>
+</li>
+<li><p>对于大型应用，不可能把所有内容都放在一个应用里，这样维护、分工与合作都是问题</p>
+</li>
+</ul>
+<h3 id="三、微服务架构"><a href="#三、微服务架构" class="headerlink" title="三、微服务架构"></a>三、微服务架构</h3><p>在单体应用架构的方式，我们把所有的功能单元放在一个应用里面，然后我们把整个应用部署到服务器上。如果负载能力不行，我们将整个应用进行<strong>水平复制</strong>，进行扩展，然后再负载均衡。</p>
+<p>所谓微服务架构，就是打破单体应用架构方式，<strong>把每个功能元素独立出来</strong>。再把独立出来的功能元素进行<strong>动态组合</strong>，需要的功能元素才拿来组合，需要多一些时间可以整合多个功能元素。所以微服务架构是对功能元素进行复制，而不是对整个应用进行复制。</p>
+<img src="/posts/2021/01/06/SpringBoot%E7%AC%94%E8%AE%B001-%E9%81%87%E8%A7%81SpringBoot/micro_service.png" srcset="/img/loading.gif" alt="微服务架构图解" style="zoom:100%;">
+
+
+
+<p><strong>微服务架构的优点</strong>：</p>
+<ul>
+<li>节省了调用资源</li>
+<li>每个功能元素的服务都是一个可替换的、可独立升级的软件代码</li>
+</ul>
+<ul>
+<li>原文地址：<a target="_blank" rel="noopener" href="http://martinfowler.com/articles/microservices.html">http://martinfowler.com/articles/microservices.html</a></li>
+<li>翻译：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/liuning8023/p/4493156.html">https://www.cnblogs.com/liuning8023/p/4493156.html</a></li>
+</ul>
+<h3 id="四、如何构建微服务"><a href="#四、如何构建微服务" class="headerlink" title="四、如何构建微服务"></a>四、如何构建微服务</h3><p>一个大型系统的微服务架构，就像一个复杂交织的神经网络，每一个神经元就是一个功能元素，它们各自完成自己的功能，然后通过 http 相互请求调用。比如一个电商系统，查缓存、连数据库。浏览页面、结账、支付等服务都是一个个独立的功能服务，都被微化了，它们作为一个个微服务共同构建了一个庞大的系统。如果修改其中的一个功能，只需要更新升级其中一个功能服务单元即可。</p>
+<p>但是，这种庞大的系统架构给部署和运维带来很大的难度。于是，Spring为我们带来了构建大型分布式微服务的全套、全称产品：</p>
+<ul>
+<li><span style="color:darkblue">构建一个个功能独立的微服务应用单元，可以使用SpringBoot，快速构建应用</span></li>
+<li><span style="color:darkblue">大型分布式网络服务的调用，由SpringCloud来完成，实现分布式</span></li>
+<li><span style="color:darkblue">在分布式中间，进行流式数据计算、批处理，我们用到Spring Cloud Data Flow</span></li>
+</ul>
+<p><img src="/posts/2021/01/06/SpringBoot%E7%AC%94%E8%AE%B001-%E9%81%87%E8%A7%81SpringBoot/spring_product.jpg" srcset="/img/loading.gif" alt="微服务全套产品"></p>
+<h2 id="SpringBoot快速开始"><a href="#SpringBoot快速开始" class="headerlink" title="SpringBoot快速开始"></a>SpringBoot快速开始</h2><h3 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h3><p>我们将学习如何快速的<strong>搭建一个Spring Boot应用</strong>，并且实<strong>现一个简单的Http请求</strong>。通过这个例子对Spring Boot有一个初步的了解，并体验其<strong>结构简单、开发快速</strong>的特性。</p>
+<p><strong>环境准备</strong>：</p>
+<ul>
+<li>java version：”1.8.0.252”</li>
+<li>Maven：apache-maven-3.6.3</li>
+<li>SpringBoot 2.x 最新版</li>
+</ul>
+<p><strong>开发工具</strong>：</p>
+<ul>
+<li>IDEA</li>
+</ul>
+<h3 id="二、创建基础项目说明"><a href="#二、创建基础项目说明" class="headerlink" title="二、创建基础项目说明"></a>二、创建基础项目说明</h3><p>Spring官方提供了非常方便的工具让我们快速构建应用</p>
+<p>Spring Initializr： <a target="_blank" rel="noopener" href="http://start.spring.io/">http://start.spring.io/</a></p>
+<p><strong>项目创建方式一</strong>：使用Spring Initalizr 的 Web 页面创建项目</p>
+<ol>
+<li><p>打开 <a target="_blank" rel="noopener" href="http://start.spring.io/">http://start.spring.io/</a></p>
+</li>
+<li><p>填写项目信息</p>
+</li>
+<li><p>点击“Generate”按钮生成项目；下载此项目</p>
+</li>
+<li><p>解压项目包，并用IDEA以Maven项目导入，一路下一步即可，直到项目导入完毕。</p>
+</li>
+<li><p>如果是第一次使用，可能速度会比较慢，包比较多、需要耐心等待一切就绪</p>
+</li>
+</ol>
+<img src="/posts/2021/01/06/SpringBoot%E7%AC%94%E8%AE%B001-%E9%81%87%E8%A7%81SpringBoot/spring_initializr.png" srcset="/img/loading.gif" alt="创建SpringBoot项目" style="zoom:80%;">
+
+
+
+<p><strong>项目创建方式二：</strong>使用 IDEA 直接创建项目</p>
+<ol>
+<li>创建一个新项目</li>
+<li>选择 spring initializr， 可以看到默认就是通过官网快速构建工具实现</li>
+<li>填写项目信息</li>
+<li>选择初始化的组件（初学勾选Web即可）</li>
+<li>填写项目路径</li>
+<li>等待项目构建成功</li>
+</ol>
+<img src="/posts/2021/01/06/SpringBoot%E7%AC%94%E8%AE%B001-%E9%81%87%E8%A7%81SpringBoot/idea_spring_initializr.png" srcset="/img/loading.gif" alt="idea构建SpringBoot项目" style="zoom:80%;">
+
+
+
+<p><strong>项目结构分析</strong>：通过上面步骤完成基础项目的创建，会自动生成以下文件。</p>
+<ol>
+<li>程序的主启动类 xxxApplication（主程序的入口）</li>
+<li>一个 application.properties 配置文件（核心配置文件）</li>
+<li>一个测试类 xxxApplicationTests</li>
+<li>一个pom.xml文件</li>
+</ol>
+<h3 id="三、pom-xml分析"><a href="#三、pom-xml分析" class="headerlink" title="三、pom.xml分析"></a>三、pom.xml分析</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!--父依赖--&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">parent</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.4.1<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">relativePath</span>/&gt;</span> <span class="hljs-comment">&lt;!-- lookup parent from repository --&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">parent</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.atrox<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>hellowrorld<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>0.0.1-SNAPSHOT<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>hellowrorld<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">description</span>&gt;</span>Demo project for Spring Boot<span class="hljs-tag">&lt;/<span class="hljs-name">description</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">properties</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">java.version</span>&gt;</span>1.8<span class="hljs-tag">&lt;/<span class="hljs-name">java.version</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">properties</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span><br>    <span class="hljs-comment">&lt;!--web依赖：tomcat，dispatcherServlet，xml--&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><br>    <span class="hljs-comment">&lt;!--spring-boot-starter所有的springboot依赖都是使用这个开头的--&gt;</span><br><br>    <span class="hljs-comment">&lt;!--单元测试--&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-test<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>test<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">build</span>&gt;</span><br>    <span class="hljs-comment">&lt;!--打jar包插件--&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">plugins</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">plugins</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">build</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="四、编写一个http接口"><a href="#四、编写一个http接口" class="headerlink" title="四、编写一个http接口"></a>四、编写一个http接口</h3><ol>
+<li><p>在主程序的同级目录下，新建一个controller包，一定要在<strong>同级目录</strong>下，否则识别不到。</p>
+</li>
+<li><p>在包中新建一个HelloController类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@RestController</span><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloController</span> </span>&#123;<br>    <span class="hljs-comment">// 接口：http://localhost:8080/hello</span><br>    <span class="hljs-meta">@RequestMapping(&quot;/hello&quot;)</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">hello</span><span class="hljs-params">()</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;hello,world&quot;</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>编写完毕后，从主程序启动项目，浏览器发起请求，查看页面输出。</p>
+</li>
+</ol>
+   <img src="/posts/2021/01/06/SpringBoot%E7%AC%94%E8%AE%B001-%E9%81%87%E8%A7%81SpringBoot/hello_world.png" srcset="/img/loading.gif" alt="页面输出" style="zoom: 67%;">
+
+<ol start="4">
+<li>简单几步，就完成了一个web接口的开发，SpringBoot就是这么简单。所以我们常用它来建立我们的微服务项目.</li>
+</ol>
+<h3 id="五、将项目打成jar包运行"><a href="#五、将项目打成jar包运行" class="headerlink" title="五、将项目打成jar包运行"></a>五、将项目打成jar包运行</h3><p>在maven侧边工具栏中点击package，进行打包。</p>
+<img src="/posts/2021/01/06/SpringBoot%E7%AC%94%E8%AE%B001-%E9%81%87%E8%A7%81SpringBoot/package.png" srcset="/img/loading.gif" alt="项目打包" style="zoom:75%;">
+
+
+
+<p>打包完后，我们在左侧<code>target</code>目录下就会得到一个jar包。</p>
+<img src="/posts/2021/01/06/SpringBoot%E7%AC%94%E8%AE%B001-%E9%81%87%E8%A7%81SpringBoot/package_jar.png" srcset="/img/loading.gif" alt="target目录下的jar包" style="zoom: 80%;">
+
+
+
+<p>找到该jar包所在的文件夹，并在该文件夹下打开命令行，启动服务。</p>
+<img src="/posts/2021/01/06/SpringBoot%E7%AC%94%E8%AE%B001-%E9%81%87%E8%A7%81SpringBoot/jar_start.png" srcset="/img/loading.gif" alt="在jar包启动服务" style="zoom:75%;">
+
+
+
+
+
+<h3 id="六、更改项目运行端口号"><a href="#六、更改项目运行端口号" class="headerlink" title="六、更改项目运行端口号"></a>六、更改项目运行端口号</h3><p>在<code>resources</code>目录下的<code>application.properties</code>中写入：</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-meta">server.port</span>=<span class="hljs-string">8081</span><br></code></pre></td></tr></table></figure>
+
+<p>然后重启项目即可。</p>
+<h3 id="七、更改SpringBoot启动Bnner"><a href="#七、更改SpringBoot启动Bnner" class="headerlink" title="七、更改SpringBoot启动Bnner"></a>七、更改SpringBoot启动Bnner</h3><p>如何更改启动时显示的字符拼成的字母，SpringBoot呢？也就是 banner 图案；</p>
+<p>只需一步：到项目下的 resources 目录下新建一个banner.txt 即可。</p>
+<p>图案可以到：<a target="_blank" rel="noopener" href="https://www.bootschool.net/ascii">https://www.bootschool.net/ascii</a> 这个网站生成，然后拷贝到文件中即可！</p>
+<img src="/posts/2021/01/06/SpringBoot%E7%AC%94%E8%AE%B001-%E9%81%87%E8%A7%81SpringBoot/springboot_banner.png" srcset="/img/loading.gif" alt="更改Banner" style="zoom:50%;">
+
+
+
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/SpringBoot/">SpringBoot</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/2021/01/07/SpringBoot%E7%AC%94%E8%AE%B002-%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">SpringBoot笔记02-运行原理深入浅出</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/2021/01/04/SpringMVC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        <span class="hidden-mobile">SpringMVC学习笔记</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.min.js', function () {
+        var gitalk = new Gitalk({
+          clientID: 'af550312a411b96c64b9',
+          clientSecret: 'f11934265fd18324cb2d9fd605d7d445207a3e52',
+          repo: 'gitalk',
+          owner: 'AtroxQW',
+          admin: ["AtroxQW"],
+          id: 'ad62c561cbc9dbc109c8881fbbc7cdc6',
+          language: 'zh-CN',
+          labels: ["Gitalk"],
+          perPage: 10,
+          pagerDirection: 'last',
+          createIssueManually: true,
+          distractionFreeMode: false
+        });
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- LeanCloud 统计PV -->
+        <span id="leancloud-site-pv-container" style="display: none">
+            总访问量 
+            <span id="leancloud-site-pv"></span>
+             次
+          </span>
+      
+      
+        <!-- LeanCloud 统计UV -->
+        <span id="leancloud-site-uv-container" style="display: none">
+            总访客数 
+            <span id="leancloud-site-uv"></span>
+             人
+          </span>
+      
+
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+<!-- hexo injector body_end start --><script src = 'https://libs.xiaoz.top/instantclick/instantclick.min.js' data-no-instant></script>
+<script data-no-instant>InstantClick.init();</script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

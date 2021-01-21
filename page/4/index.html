@@ -1,1 +1,887 @@
-<!DOCTYPE html><html lang="en" data-default-color-scheme="&#34;auto&#34;"><head><meta charset="UTF-8"><link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png"><link rel="icon" type="image/png" href="/img/favicon.png"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="theme-color" content="#2f4154"><meta name="description" content=""><meta name="author" content="codeAtrox"><meta name="keywords" content=""><title>Atrox的博客</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"><link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css"><link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css"><link rel="stylesheet" href="/css/main.css"><script id="fluid-configs">var Fluid=window.Fluid||{},CONFIG={hostname:"example.com",root:"/",version:"1.8.7",typing:{enable:!0,typeSpeed:70,cursorChar:"_",loop:!1},anchorjs:{enable:!0,element:"h1,h2,h3,h4,h5,h6",placement:"right",visible:"hover",icon:""},progressbar:{enable:!0,height_px:3,color:"#29d",options:{showSpinner:!1,trickleSpeed:100}},copy_btn:!0,image_zoom:{enable:!0},toc:{enable:!0,headingSelector:"h1,h2,h3,h4,h5,h6",collapseDepth:0},lazyload:{enable:!0,onlypost:!1},web_analytics:{enable:!1,baidu:null,google:null,gtag:null,tencent:{sid:null,cid:null},woyaola:null,cnzz:null,leancloud:{app_id:"ESDyAFj0rlPHtdaIfJoa3pTr-gzGzoHsz",app_key:"j9txoPTCSqfLMGi1UmkNO3vV",server_url:"AtroxQW.github.io"}}}</script><script src="/js/utils.js"></script><script src="/js/color-schema.js"></script><meta name="generator" content="Hexo 5.2.0"></head><body><header style="height:100vh"><nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"><div class="container"><a class="navbar-brand" href="/">&nbsp;<strong>AtroxQW</strong>&nbsp;</a> <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><div class="animated-icon"><span></span><span></span><span></span></div></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav ml-auto text-center"><li class="nav-item"><a class="nav-link" href="/"><i class="iconfont icon-home-fill"></i> 首页</a></li><li class="nav-item"><a class="nav-link" href="/archives/"><i class="iconfont icon-archive-fill"></i> 归档</a></li><li class="nav-item"><a class="nav-link" href="/categories/"><i class="iconfont icon-category-fill"></i> 分类</a></li><li class="nav-item"><a class="nav-link" href="/tags/"><i class="iconfont icon-tags-fill"></i> 标签</a></li><li class="nav-item"><a class="nav-link" href="/about/"><i class="iconfont icon-user-fill"></i> 关于我</a></li><li class="nav-item"><a class="nav-link" href="/links/"><i class="iconfont icon-link-fill"></i> 友链</a></li><li class="nav-item" id="search-btn"><a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i class="iconfont icon-search"></i>&nbsp;</a></li><li class="nav-item" id="color-toggle-btn"><a class="nav-link" href="javascript:">&nbsp;<i class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a></li></ul></div></div></nav><div class="banner" id="banner" parallax="true" style="background:url(/img/bg/atrox1.jpg) no-repeat center center;background-size:cover"><div class="full-bg-img"><div class="mask flex-center" style="background-color:rgba(0,0,0,.3)"><div class="page-header text-center fade-in-up"><span class="h2" id="subtitle" title="simple Code, Deep thought"></span></div><div class="scroll-down-bar"><i class="iconfont icon-arrowdown"></i></div></div></div></div></header><main><div class="container nopadding-x-md"><div class="py-5" id="board" style="margin-top:0"><div class="container"><div class="row"><div class="col-12 col-md-10 m-auto"><div class="row mx-auto index-card"><div class="col-12 col-md-4 m-auto index-img"><a href="/posts/2021/01/09/SpringBoot%E7%AC%94%E8%AE%B010-%E6%95%B4%E5%90%88JDBC/" target="_self"><img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringBoot笔记10-整合JDBC"></a></div><article class="col-12 col-md-8 mx-auto index-info"><h1 class="index-header"><a href="/posts/2021/01/09/SpringBoot%E7%AC%94%E8%AE%B010-%E6%95%B4%E5%90%88JDBC/">SpringBoot笔记10-整合JDBC</a></h1><p class="index-excerpt"><a href="/posts/2021/01/09/SpringBoot%E7%AC%94%E8%AE%B010-%E6%95%B4%E5%90%88JDBC/">一、SpringData简介对于数据访问层，无论是SQL（关系型数据库）还是NOSQL（非关系型数据库），SpringBoot 底层都是采用 Sping Data 的方式统一处理。 SpringBoot 底层都是采用 Spring Data 的方式进行统一处理各种数据库，Spring Data 也是 Spring 中与 Spring Boot、Spring Cloud 等齐名的知名项目。 Spri</a></p><div class="index-btm post-metas"><div class="post-meta mr-3"><i class="iconfont icon-date"></i> <time datetime="2021-01-09 19:29" pubdate>2021-01-09</time></div><div class="post-meta"><i class="iconfont icon-tags"></i> <a href="/tags/SpringBoot/">SpringBoot</a></div></div></article></div><div class="row mx-auto index-card"><div class="col-12 col-md-4 m-auto index-img"><a href="/posts/2021/01/09/SpringBoot%E7%AC%94%E8%AE%B009-%E9%A1%B5%E9%9D%A2%E5%9B%BD%E9%99%85%E5%8C%96/" target="_self"><img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringBoot笔记09-页面国际化"></a></div><article class="col-12 col-md-8 mx-auto index-info"><h1 class="index-header"><a href="/posts/2021/01/09/SpringBoot%E7%AC%94%E8%AE%B009-%E9%A1%B5%E9%9D%A2%E5%9B%BD%E9%99%85%E5%8C%96/">SpringBoot笔记09-页面国际化</a></h1><p class="index-excerpt"><a href="/posts/2021/01/09/SpringBoot%E7%AC%94%E8%AE%B009-%E9%A1%B5%E9%9D%A2%E5%9B%BD%E9%99%85%E5%8C%96/">页面国际化一、准备工作在IDEA中统一设置properties的编码问题：utf-8 二、编写配置文件编写国际化配置文件，抽取页面需要显示的国际化页面消息。我们可以去登录页面查看一下，哪些内容我们需要编写国际化的配置。 我们在resources资源文件下新建一个i18n目录，存放国际化配置文件 建立一个login.properties文件，还有一个login_zh_CN.properties</a></p><div class="index-btm post-metas"><div class="post-meta mr-3"><i class="iconfont icon-date"></i> <time datetime="2021-01-09 12:24" pubdate>2021-01-09</time></div><div class="post-meta"><i class="iconfont icon-tags"></i> <a href="/tags/SpringBoot/">SpringBoot</a></div></div></article></div><div class="row mx-auto index-card"><div class="col-12 col-md-4 m-auto index-img"><a href="/posts/2021/01/09/SpringBoot%E7%AC%94%E8%AE%B008-MVC%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86/" target="_self"><img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringBoot笔记08-MVC自动配置原理"></a></div><article class="col-12 col-md-8 mx-auto index-info"><h1 class="index-header"><a href="/posts/2021/01/09/SpringBoot%E7%AC%94%E8%AE%B008-MVC%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86/">SpringBoot笔记08-MVC自动配置原理</a></h1><p class="index-excerpt"><a href="/posts/2021/01/09/SpringBoot%E7%AC%94%E8%AE%B008-MVC%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86/">MVC自动配置原理一、官网阅读在进行项目编写前，我们还需要知道一个东西，就是SpringBoot对我们的SpringMVC还做了哪些配置，包括如何扩展，如何定制。 只有把这些都搞清楚了，我们在之后使用才会更加得心应手。途径一：源码分析，途径二：官方文档！ 地址：https://docs.spring.io/spring-boot/docs/2.2.5.RELEASE/reference/htmls</a></p><div class="index-btm post-metas"><div class="post-meta mr-3"><i class="iconfont icon-date"></i> <time datetime="2021-01-09 09:35" pubdate>2021-01-09</time></div><div class="post-meta"><i class="iconfont icon-tags"></i> <a href="/tags/SpringBoot/">SpringBoot</a></div></div></article></div><div class="row mx-auto index-card"><div class="col-12 col-md-4 m-auto index-img"><a href="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B007-Thymeleaf%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/" target="_self"><img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringBoot笔记07-Thymeleaf模板引擎"></a></div><article class="col-12 col-md-8 mx-auto index-info"><h1 class="index-header"><a href="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B007-Thymeleaf%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/">SpringBoot笔记07-Thymeleaf模板引擎</a></h1><p class="index-excerpt"><a href="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B007-Thymeleaf%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/">Thymeleaf一、模板引擎前端交给我们的页面，是html页面。如果是我们以前开发，我们需要把他们转成jsp页面，jsp好处就是当我们查出一些数据转发到JSP页面以后，我们可以用jsp轻松实现数据的显示，及交互等。 jsp支持非常强大的功能，包括能写Java代码，但是呢，我们现在的这种情况，SpringBoot这个项目首先是以jar的方式，不是war，像第二，我们用的还是嵌入式的Tomcat，所</a></p><div class="index-btm post-metas"><div class="post-meta mr-3"><i class="iconfont icon-date"></i> <time datetime="2021-01-08 20:32" pubdate>2021-01-08</time></div><div class="post-meta"><i class="iconfont icon-tags"></i> <a href="/tags/SpringBoot/">SpringBoot</a></div></div></article></div><div class="row mx-auto index-card"><div class="col-12 col-md-4 m-auto index-img"><a href="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B006-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%98%A0%E5%B0%84%E8%A7%84%E5%88%99/" target="_self"><img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringBoot笔记06-静态资源映射规则"></a></div><article class="col-12 col-md-8 mx-auto index-info"><h1 class="index-header"><a href="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B006-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%98%A0%E5%B0%84%E8%A7%84%E5%88%99/">SpringBoot笔记06-静态资源映射规则</a></h1><p class="index-excerpt"><a href="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B006-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%98%A0%E5%B0%84%E8%A7%84%E5%88%99/">静态资源导入源码分析 分析静态资源时如何导入的，我们就要分析一波源码了。 一、静态资源映射规则首先，我们搭建一个普通的SpringBoot项目，回顾一下HelloWorld程序！ 写请求是比较简单的，那我们要引入前端资源，我们项目中许多的静态资源，比如css，js等文件，这个SpringBoot怎么处理呢？ 之前，我们是一个web应用，我们的main目录下会有一个webapp，我们以前都是把所有</a></p><div class="index-btm post-metas"><div class="post-meta mr-3"><i class="iconfont icon-date"></i> <time datetime="2021-01-08 18:06" pubdate>2021-01-08</time></div><div class="post-meta"><i class="iconfont icon-tags"></i> <a href="/tags/SpringBoot/">SpringBoot</a></div></div></article></div><div class="row mx-auto index-card"><div class="col-12 col-md-4 m-auto index-img"><a href="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B005-%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86%E5%86%8D%E6%8E%A2/" target="_self"><img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringBoot笔记05-自动配置原理再探"></a></div><article class="col-12 col-md-8 mx-auto index-info"><h1 class="index-header"><a href="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B005-%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86%E5%86%8D%E6%8E%A2/">SpringBoot笔记05-自动配置原理再探</a></h1><p class="index-excerpt"><a href="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B005-%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86%E5%86%8D%E6%8E%A2/">自动配置原理Application.yaml配置文件到底能写什么？怎么写？SpringBoot官方文档中有大量的配置，我们无法全部记住。 一、分析自动配置原理我们以HttpEncodingAutoConfiguration（Http编码自动配置）为例解释自动配置原理。 1234567891011121314151617181920212223242526272829303132333435363</a></p><div class="index-btm post-metas"><div class="post-meta mr-3"><i class="iconfont icon-date"></i> <time datetime="2021-01-08 16:44" pubdate>2021-01-08</time></div><div class="post-meta"><i class="iconfont icon-tags"></i> <a href="/tags/SpringBoot/">SpringBoot</a></div></div></article></div><div class="row mx-auto index-card"><div class="col-12 col-md-4 m-auto index-img"><a href="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B004-JSR303%E6%95%B0%E6%8D%AE%E6%A0%A1%E9%AA%8C%E5%8F%8A%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%88%87%E6%8D%A2/" target="_self"><img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringBoot笔记04-JSR303数据校验及多环境切换"></a></div><article class="col-12 col-md-8 mx-auto index-info"><h1 class="index-header"><a href="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B004-JSR303%E6%95%B0%E6%8D%AE%E6%A0%A1%E9%AA%8C%E5%8F%8A%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%88%87%E6%8D%A2/">SpringBoot笔记04-JSR303数据校验及多环境切换</a></h1><p class="index-excerpt"><a href="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B004-JSR303%E6%95%B0%E6%8D%AE%E6%A0%A1%E9%AA%8C%E5%8F%8A%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%88%87%E6%8D%A2/">JSR303数据校验一、如何使用SpringBoot中可以用@validated来校验数据，如果数据异常则会统一抛出异常，方便异常中心统一处理。我们这里来写个注解让我们的name只能支持Email格式： 12345678@Component //注册bean@ConfigurationProperties(prefix = &quot;person&quot;)@Validated //数据校验</a></p><div class="index-btm post-metas"><div class="post-meta mr-3"><i class="iconfont icon-date"></i> <time datetime="2021-01-08 15:43" pubdate>2021-01-08</time></div><div class="post-meta"><i class="iconfont icon-tags"></i> <a href="/tags/SpringBoot/">SpringBoot</a></div></div></article></div><div class="row mx-auto index-card"><div class="col-12 col-md-4 m-auto index-img"><a href="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B003-yaml%E9%85%8D%E7%BD%AE%E6%B3%A8%E5%85%A5/" target="_self"><img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringBoot笔记03-yaml配置注入"></a></div><article class="col-12 col-md-8 mx-auto index-info"><h1 class="index-header"><a href="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B003-yaml%E9%85%8D%E7%BD%AE%E6%B3%A8%E5%85%A5/">SpringBoot笔记03-yaml配置注入</a></h1><p class="index-excerpt"><a href="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B003-yaml%E9%85%8D%E7%BD%AE%E6%B3%A8%E5%85%A5/">yaml语法学习一、配置文件SpringBoot使用一个全局的配置文件，配置文件名称是固定的，有两种写法： application.properties 语法结构：key=value application.yaml 语法结构：key: value 配置文件的作用：修改SpringBoot自动配置的默认值，因为SpringBoot在底层已经自动配置了这些项。比如我们可以在配置文件中修改</a></p><div class="index-btm post-metas"><div class="post-meta mr-3"><i class="iconfont icon-date"></i> <time datetime="2021-01-08 11:47" pubdate>2021-01-08</time></div><div class="post-meta"><i class="iconfont icon-tags"></i> <a href="/tags/SpringBoot/">SpringBoot</a></div></div></article></div><div class="row mx-auto index-card"><div class="col-12 col-md-4 m-auto index-img"><a href="/posts/2021/01/07/SpringBoot%E7%AC%94%E8%AE%B002-%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA/" target="_self"><img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringBoot笔记02-运行原理深入浅出"></a></div><article class="col-12 col-md-8 mx-auto index-info"><h1 class="index-header"><a href="/posts/2021/01/07/SpringBoot%E7%AC%94%E8%AE%B002-%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA/">SpringBoot笔记02-运行原理深入浅出</a></h1><p class="index-excerpt"><a href="/posts/2021/01/07/SpringBoot%E7%AC%94%E8%AE%B002-%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA/">运行原理深入浅出 我们之前写的SpringBoot项目，到底是如何运行的呢？既然它是一个Maven项目，我们从pom.xml文件开始探究。 pom文件解析一、父依赖在pom.xml中，有标签，表示它是有父项目spring-boot-starter-parent.xml的。 123456&lt;parent&gt; &lt;groupId&gt;org.springframework.</a></p><div class="index-btm post-metas"><div class="post-meta mr-3"><i class="iconfont icon-date"></i> <time datetime="2021-01-07 11:44" pubdate>2021-01-07</time></div><div class="post-meta"><i class="iconfont icon-tags"></i> <a href="/tags/SpringBoot/">SpringBoot</a></div></div></article></div><div class="row mx-auto index-card"><div class="col-12 col-md-4 m-auto index-img"><a href="/posts/2021/01/06/SpringBoot%E7%AC%94%E8%AE%B001-%E9%81%87%E8%A7%81SpringBoot/" target="_self"><img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringBoot笔记01-遇见SpringBoot"></a></div><article class="col-12 col-md-8 mx-auto index-info"><h1 class="index-header"><a href="/posts/2021/01/06/SpringBoot%E7%AC%94%E8%AE%B001-%E9%81%87%E8%A7%81SpringBoot/">SpringBoot笔记01-遇见SpringBoot</a></h1><p class="index-excerpt"><a href="/posts/2021/01/06/SpringBoot%E7%AC%94%E8%AE%B001-%E9%81%87%E8%A7%81SpringBoot/">SpringBoot简介一、回顾什么是SpringSpring是一个开源框架，2003年兴起的一个轻量级的Java开发框架，作者是 Rod Johnson。 Spring是为了解决企业级应用开发的复杂性而创建的，目的是简化开发。 二、Spring是如何简化Java开发的为了降低 Java开发的复杂性，Spring采用了以下4种关键策略： 基于POJO（Plain Ordinary Java Ob</a></p><div class="index-btm post-metas"><div class="post-meta mr-3"><i class="iconfont icon-date"></i> <time datetime="2021-01-06 18:31" pubdate>2021-01-06</time></div><div class="post-meta"><i class="iconfont icon-tags"></i> <a href="/tags/SpringBoot/">SpringBoot</a></div></div></article></div><nav aria-label="navigation"><span class="pagination" id="pagination"><a class="extend prev" rel="prev" href="/page/3/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/"><i class="iconfont icon-arrowright"></i></a></span></nav><script>for(ele of document.getElementById("pagination").getElementsByTagName("a"))ele.href+="#board"</script></div></div></div></div></div><a id="scroll-top-button" href="#" role="button"><i class="iconfont icon-arrowup" aria-hidden="true"></i></a><div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg" role="document"><div class="modal-content"><div class="modal-header text-center"><h4 class="modal-title w-100 font-weight-bold">Search</h4><button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body mx-3"><div class="md-form mb-5"><input type="text" id="local-search-input" class="form-control validate"> <label data-error="x" data-success="v" for="local-search-input">keyword</label></div><div class="list-group" id="local-search-result"></div></div></div></div></div></main><footer class="text-center mt-5 py-3"><div class="footer-content"><a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a></div><div class="statistics"><span id="leancloud-site-pv-container" style="display:none">总访问量 <span id="leancloud-site-pv"></span> 次 </span><span id="leancloud-site-uv-container" style="display:none">总访客数 <span id="leancloud-site-uv"></span> 人</span></div></footer><script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css"><script>NProgress.configure({showSpinner:!1,trickleSpeed:100}),NProgress.start(),window.addEventListener("load",(function(){NProgress.done()}))</script><script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script><script src="/js/debouncer.js"></script><script src="/js/events.js"></script><script src="/js/plugins.js"></script><script src="/js/lazyload.js"></script><script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script defer src="/js/leancloud.js"></script><script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script><script>!function(t,i){(0,Fluid.plugins.typing)(i.getElementById("subtitle").title)}(window,document)</script><script src="/js/local-search.js"></script><script>document.querySelector("#local-search-input").onclick=function(){searchFunc("/local-search.xml","local-search-input","local-search-result"),this.onclick=null}</script><script src="/js/boot.js"></script><script src="https://libs.xiaoz.top/instantclick/instantclick.min.js" data-no-instant></script><script data-no-instant>InstantClick.init()</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="codeAtrox">
+  <meta name="keywords" content="">
+  <title>Atrox的博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ESDyAFj0rlPHtdaIfJoa3pTr-gzGzoHsz","app_key":"j9txoPTCSqfLMGi1UmkNO3vV","server_url":"AtroxQW.github.io"}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>AtroxQW</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于我
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/bg/atrox1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="simple Code, Deep thought">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/11/SpringBoot%E7%AC%94%E8%AE%B014-%E5%BC%82%E6%AD%A5%E3%80%81%E5%AE%9A%E6%97%B6%E3%80%81%E9%82%AE%E4%BB%B6%E4%BB%BB%E5%8A%A1/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringBoot笔记14-异步、定时、邮件任务">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/11/SpringBoot%E7%AC%94%E8%AE%B014-%E5%BC%82%E6%AD%A5%E3%80%81%E5%AE%9A%E6%97%B6%E3%80%81%E9%82%AE%E4%BB%B6%E4%BB%BB%E5%8A%A1/">SpringBoot笔记14-异步、定时、邮件任务</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/11/SpringBoot%E7%AC%94%E8%AE%B014-%E5%BC%82%E6%AD%A5%E3%80%81%E5%AE%9A%E6%97%B6%E3%80%81%E9%82%AE%E4%BB%B6%E4%BB%BB%E5%8A%A1/">
+          
+          
+            
+          
+          一、前言
+在我们的工作中，常常会用到异步处理任务，比如我们在网站上发送邮件，后台会去发送邮件，此时前台会造成响应不动，直到邮件发送完毕，响应才会成功，所以我们一般会采用多线程的方式去处理这些任务。还有一些定时任务，比如需要在每天凌晨的时候，分析一次前一天的日志信息。还有就是邮件的发送，微信的前身也是邮件服务呢？这些东西都是怎么实现的呢？其实SpringBoot都给我们提供了对应的支持，我们上手使用
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-11 16:59" pubdate>
+              2021-01-11
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/SpringBoot/">SpringBoot</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/11/SpringBoot%E7%AC%94%E8%AE%B013-%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90Swagger/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringBoot笔记13-项目集成Swagger">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/11/SpringBoot%E7%AC%94%E8%AE%B013-%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90Swagger/">SpringBoot笔记13-项目集成Swagger</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/11/SpringBoot%E7%AC%94%E8%AE%B013-%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90Swagger/">
+          
+          
+            
+          
+          SpringBoot项目集成Swagger
+学习目标：
+
+了解Swagger的概念及作用
+掌握在项目中集成Swagger自动生成API文档
+
+一、Swagger简介前后端分离
+
+前端 -&gt; 前端控制层、视图层
+后端 -&gt; 后端控制层、服务层、数据访问层
+前后端通过API进行交互
+前后端相对独立且松耦合
+
+产生的问题
+
+前后端集成，前端或者后端无法做到“及时协商，尽早解决”，最终导致问题
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-11 12:55" pubdate>
+              2021-01-11
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/SpringBoot/">SpringBoot</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/10/SpringBoot%E7%AC%94%E8%AE%B012-%E6%95%B4%E5%90%88MyBatis/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringBoot笔记12-整合MyBatis">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/10/SpringBoot%E7%AC%94%E8%AE%B012-%E6%95%B4%E5%90%88MyBatis/">SpringBoot笔记12-整合MyBatis</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/10/SpringBoot%E7%AC%94%E8%AE%B012-%E6%95%B4%E5%90%88MyBatis/">
+          
+          
+            
+          
+          整合MyBatis官方文档：http://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/
+Maven仓库地址：https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter/2.1.1
+一、整合测试
+导入
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-10 14:38" pubdate>
+              2021-01-10
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/SpringBoot/">SpringBoot</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/09/SpringBoot%E7%AC%94%E8%AE%B011-%E6%95%B4%E5%90%88Druid%E6%95%B0%E6%8D%AE%E6%BA%90/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringBoot笔记11-整合Druid数据源">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/09/SpringBoot%E7%AC%94%E8%AE%B011-%E6%95%B4%E5%90%88Druid%E6%95%B0%E6%8D%AE%E6%BA%90/">SpringBoot笔记11-整合Druid数据源</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/09/SpringBoot%E7%AC%94%E8%AE%B011-%E6%95%B4%E5%90%88Druid%E6%95%B0%E6%8D%AE%E6%BA%90/">
+          
+          
+            
+          
+          集成Druid一、Druid简介Java程序很大一部分要操作数据库，为了提高心梗操作数据库的同时，有不得不使用数据库连接池。
+Druid是阿里巴巴开源平台上一个数据库连接池实现，结合了C3P0、DNCP等DB池的优点，同时加入了日志监控。
+Druid可以很好地监控DB池连接和SQL执行情况，天生就是针对监控而生的DB连接池。
+Druid已经在阿里巴巴部署了超过600个应用，经过一年多生产环境大规模
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-09 20:34" pubdate>
+              2021-01-09
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/SpringBoot/">SpringBoot</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/09/SpringBoot%E7%AC%94%E8%AE%B010-%E6%95%B4%E5%90%88JDBC/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringBoot笔记10-整合JDBC">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/09/SpringBoot%E7%AC%94%E8%AE%B010-%E6%95%B4%E5%90%88JDBC/">SpringBoot笔记10-整合JDBC</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/09/SpringBoot%E7%AC%94%E8%AE%B010-%E6%95%B4%E5%90%88JDBC/">
+          
+          
+            
+          
+          一、SpringData简介对于数据访问层，无论是SQL（关系型数据库）还是NOSQL（非关系型数据库），SpringBoot 底层都是采用 Sping Data 的方式统一处理。
+SpringBoot 底层都是采用 Spring Data 的方式进行统一处理各种数据库，Spring Data 也是 Spring 中与 Spring Boot、Spring Cloud 等齐名的知名项目。
+Spri
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-09 19:29" pubdate>
+              2021-01-09
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/SpringBoot/">SpringBoot</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/09/SpringBoot%E7%AC%94%E8%AE%B009-%E9%A1%B5%E9%9D%A2%E5%9B%BD%E9%99%85%E5%8C%96/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringBoot笔记09-页面国际化">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/09/SpringBoot%E7%AC%94%E8%AE%B009-%E9%A1%B5%E9%9D%A2%E5%9B%BD%E9%99%85%E5%8C%96/">SpringBoot笔记09-页面国际化</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/09/SpringBoot%E7%AC%94%E8%AE%B009-%E9%A1%B5%E9%9D%A2%E5%9B%BD%E9%99%85%E5%8C%96/">
+          
+          
+            
+          
+          页面国际化一、准备工作在IDEA中统一设置properties的编码问题：utf-8
+
+二、编写配置文件编写国际化配置文件，抽取页面需要显示的国际化页面消息。我们可以去登录页面查看一下，哪些内容我们需要编写国际化的配置。
+
+我们在resources资源文件下新建一个i18n目录，存放国际化配置文件
+
+建立一个login.properties文件，还有一个login_zh_CN.properties
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-09 12:24" pubdate>
+              2021-01-09
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/SpringBoot/">SpringBoot</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/09/SpringBoot%E7%AC%94%E8%AE%B008-MVC%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringBoot笔记08-MVC自动配置原理">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/09/SpringBoot%E7%AC%94%E8%AE%B008-MVC%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86/">SpringBoot笔记08-MVC自动配置原理</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/09/SpringBoot%E7%AC%94%E8%AE%B008-MVC%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86/">
+          
+          
+            
+          
+          MVC自动配置原理一、官网阅读在进行项目编写前，我们还需要知道一个东西，就是SpringBoot对我们的SpringMVC还做了哪些配置，包括如何扩展，如何定制。
+只有把这些都搞清楚了，我们在之后使用才会更加得心应手。途径一：源码分析，途径二：官方文档！
+地址：https://docs.spring.io/spring-boot/docs/2.2.5.RELEASE/reference/htmls
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-09 09:35" pubdate>
+              2021-01-09
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/SpringBoot/">SpringBoot</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B007-Thymeleaf%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringBoot笔记07-Thymeleaf模板引擎">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B007-Thymeleaf%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/">SpringBoot笔记07-Thymeleaf模板引擎</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B007-Thymeleaf%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/">
+          
+          
+            
+          
+          Thymeleaf一、模板引擎前端交给我们的页面，是html页面。如果是我们以前开发，我们需要把他们转成jsp页面，jsp好处就是当我们查出一些数据转发到JSP页面以后，我们可以用jsp轻松实现数据的显示，及交互等。
+jsp支持非常强大的功能，包括能写Java代码，但是呢，我们现在的这种情况，SpringBoot这个项目首先是以jar的方式，不是war，像第二，我们用的还是嵌入式的Tomcat，所
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-08 20:32" pubdate>
+              2021-01-08
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/SpringBoot/">SpringBoot</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B006-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%98%A0%E5%B0%84%E8%A7%84%E5%88%99/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringBoot笔记06-静态资源映射规则">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B006-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%98%A0%E5%B0%84%E8%A7%84%E5%88%99/">SpringBoot笔记06-静态资源映射规则</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B006-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%98%A0%E5%B0%84%E8%A7%84%E5%88%99/">
+          
+          
+            
+          
+          静态资源导入源码分析
+分析静态资源时如何导入的，我们就要分析一波源码了。
+
+一、静态资源映射规则首先，我们搭建一个普通的SpringBoot项目，回顾一下HelloWorld程序！
+写请求是比较简单的，那我们要引入前端资源，我们项目中许多的静态资源，比如css，js等文件，这个SpringBoot怎么处理呢？
+之前，我们是一个web应用，我们的main目录下会有一个webapp，我们以前都是把所有
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-08 18:06" pubdate>
+              2021-01-08
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/SpringBoot/">SpringBoot</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B005-%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86%E5%86%8D%E6%8E%A2/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringBoot笔记05-自动配置原理再探">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B005-%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86%E5%86%8D%E6%8E%A2/">SpringBoot笔记05-自动配置原理再探</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B005-%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86%E5%86%8D%E6%8E%A2/">
+          
+          
+            
+          
+          自动配置原理Application.yaml配置文件到底能写什么？怎么写？SpringBoot官方文档中有大量的配置，我们无法全部记住。
+
+一、分析自动配置原理我们以HttpEncodingAutoConfiguration（Http编码自动配置）为例解释自动配置原理。
+1234567891011121314151617181920212223242526272829303132333435363
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-08 16:44" pubdate>
+              2021-01-08
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/SpringBoot/">SpringBoot</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/3/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+  
+  <script>
+    for (ele of document.getElementById("pagination").getElementsByTagName("a")) {
+      ele.href += '#board';
+    }
+  </script>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- LeanCloud 统计PV -->
+        <span id="leancloud-site-pv-container" style="display: none">
+            总访问量 
+            <span id="leancloud-site-pv"></span>
+             次
+          </span>
+      
+      
+        <!-- LeanCloud 统计UV -->
+        <span id="leancloud-site-uv-container" style="display: none">
+            总访客数 
+            <span id="leancloud-site-uv"></span>
+             人
+          </span>
+      
+
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+<!-- hexo injector body_end start --><script src = 'https://libs.xiaoz.top/instantclick/instantclick.min.js' data-no-instant></script>
+<script data-no-instant>InstantClick.init();</script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

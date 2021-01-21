@@ -1,1 +1,811 @@
-<!DOCTYPE html><html lang="en" data-default-color-scheme="&#34;auto&#34;"><head><meta charset="UTF-8"><link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png"><link rel="icon" type="image/png" href="/img/favicon.png"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="theme-color" content="#2f4154"><meta name="description" content=""><meta name="author" content="codeAtrox"><meta name="keywords" content=""><title>Linux笔记02-Linux环境搭建 - Atrox的博客</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css"><link rel="stylesheet" href="/lib/hint/hint.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css"><link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css"><link rel="stylesheet" href="/css/main.css"><script id="fluid-configs">var Fluid=window.Fluid||{},CONFIG={hostname:"example.com",root:"/",version:"1.8.7",typing:{enable:!0,typeSpeed:70,cursorChar:"_",loop:!1},anchorjs:{enable:!0,element:"h1,h2,h3,h4,h5,h6",placement:"right",visible:"hover",icon:""},progressbar:{enable:!0,height_px:3,color:"#29d",options:{showSpinner:!1,trickleSpeed:100}},copy_btn:!0,image_zoom:{enable:!0},toc:{enable:!0,headingSelector:"h1,h2,h3,h4,h5,h6",collapseDepth:0},lazyload:{enable:!0,onlypost:!1},web_analytics:{enable:!1,baidu:null,google:null,gtag:null,tencent:{sid:null,cid:null},woyaola:null,cnzz:null,leancloud:{app_id:"ESDyAFj0rlPHtdaIfJoa3pTr-gzGzoHsz",app_key:"j9txoPTCSqfLMGi1UmkNO3vV",server_url:"AtroxQW.github.io"}}}</script><script src="/js/utils.js"></script><script src="/js/color-schema.js"></script><meta name="generator" content="Hexo 5.2.0"></head><body><header style="height:70vh"><nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"><div class="container"><a class="navbar-brand" href="/">&nbsp;<strong>AtroxQW</strong>&nbsp;</a> <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><div class="animated-icon"><span></span><span></span><span></span></div></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav ml-auto text-center"><li class="nav-item"><a class="nav-link" href="/"><i class="iconfont icon-home-fill"></i> 首页</a></li><li class="nav-item"><a class="nav-link" href="/archives/"><i class="iconfont icon-archive-fill"></i> 归档</a></li><li class="nav-item"><a class="nav-link" href="/categories/"><i class="iconfont icon-category-fill"></i> 分类</a></li><li class="nav-item"><a class="nav-link" href="/tags/"><i class="iconfont icon-tags-fill"></i> 标签</a></li><li class="nav-item"><a class="nav-link" href="/about/"><i class="iconfont icon-user-fill"></i> 关于我</a></li><li class="nav-item"><a class="nav-link" href="/links/"><i class="iconfont icon-link-fill"></i> 友链</a></li><li class="nav-item" id="search-btn"><a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i class="iconfont icon-search"></i>&nbsp;</a></li><li class="nav-item" id="color-toggle-btn"><a class="nav-link" href="javascript:">&nbsp;<i class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a></li></ul></div></div></nav><div class="banner" id="banner" parallax="true" style="background:url(/img/bg/atrox1.jpg) no-repeat center center;background-size:cover"><div class="full-bg-img"><div class="mask flex-center" style="background-color:rgba(0,0,0,.3)"><div class="page-header text-center fade-in-up"><span class="h2" id="subtitle" title="Linux笔记02-Linux环境搭建"></span><div class="mt-3"><span class="post-meta"><i class="iconfont icon-date-fill" aria-hidden="true"></i> <time datetime="2021-01-16 17:52" pubdate>January 16, 2021 pm</time></span></div><div class="mt-1"><span class="post-meta mr-2"><i class="iconfont icon-chart"></i> 2.7k 字 </span><span class="post-meta mr-2"><i class="iconfont icon-clock-fill"></i> 29 分钟</span></div></div></div></div></div></header><main><div class="container-fluid nopadding-x"><div class="row nomargin-x"><div class="d-none d-lg-block col-lg-2"></div><div class="col-lg-8 nopadding-x-md"><div class="container nopadding-x-md" id="board-ctn"><div class="py-5" id="board"><article class="post-content mx-auto"><h1 style="display:none">Linux笔记02-Linux环境搭建</h1><div class="markdown-body"><h2 id="Linux环境搭建"><a href="#Linux环境搭建" class="headerlink" title="Linux环境搭建"></a>Linux环境搭建</h2><blockquote><p><strong>前言</strong></p></blockquote><p>在学习Linux之前，我需要把Linux的环境搭建好，其实Linux操作系统本身也可以看做是一个大的软件。下面我将会以两种方式搭建Linux环境，第一种方式是在<strong>在本地虚拟机上安装CentOS</strong>，免费；第二种方式是<strong>购买云服务器</strong>，在服务器命令行搭建环境。</p><p><strong>安装虚拟机会占用内存空间，但是没有经济压力，比较快捷；购买服务器会产生消费，但最接近原生的线上开发</strong>。这两种方式，各有利弊，兄弟盟参考即可。</p><blockquote><p><strong>方式一：虚拟机安装CentOS</strong></p></blockquote><p>首先在安装CentOS之前，我们要先在本地安装虚拟机 <strong>VMware Workstation</strong>，这里我们从华军科技园下载VMware16 pro。当然，如果有经济条件，建议从官网购买正版虚拟机，下面是下载地址：</p><p>华军科技园下载虚拟机：<a target="_blank" rel="noopener" href="https://www.onlinedown.net/soft/2062.htm/">https://www.onlinedown.net/soft/2062.htm/</a></p><blockquote><p><strong>VMware Workstation安装步骤</strong></p></blockquote><ol><li><p>双击运行VMware Workstation15运行程序，打开如下图<strong>安装向导界面</strong>，点击下一步。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/install_guide.png" srcset="/img/loading.gif" alt="安装向导界面"></li><li><p>阅读如下图 VMware 虚拟机用户许可协议，<strong>勾选我接受协议</strong>，点击下一步。</p><p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/agreement.png" srcset="/img/loading.gif" alt="勾选接受协议"></p></li><li><p><strong>自定义安装目录</strong>：默认安装在C盘目录下，我可以点击“更改”按钮自定义安装路径，并点击下一步。</p><p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/change_path.png" srcset="/img/loading.gif" alt="自定义安装目录"></p></li><li><p>在<strong>用户体验设置界面</strong>，这里选择默认设置即可，直接点击下一步。</p><p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/UE.png" srcset="/img/loading.gif" alt="用户体验设置界面"></p></li><li><p><strong>创建快捷方式</strong>，桌面快捷方式以及开始菜单程序文件夹，自选，点击下一步。</p><p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/shortcut.png" srcset="/img/loading.gif" alt="快捷方式"></p></li><li><p>确认信息无误，<strong>点击安装</strong>。</p><p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/install.png" srcset="/img/loading.gif" alt="准备好安装"></p></li><li><p>等待VMware Workstation 16 Pro安装过程。</p><p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/install_pro.png" srcset="/img/loading.gif" alt="等待安装"></p></li><li><p>在安装成功界面，输入<strong>许可证秘钥</strong>。在这里，我推荐3条许可证秘钥：</p><p><em>ZF3R0-FHED2-M80TY-8QYGC-NPKYF</em><br><em>YF390-0HF8P-M81RQ-2DXQE-M2UT6</em><br><em>ZF71R-DMX85-08DQY-8YMNC-PPHV8</em></p></li></ol><p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/secret_key.png" srcset="/img/loading.gif" alt="许可证秘钥"></p><ol start="9"><li><p><strong>安装向导完成</strong>，退出即可。</p><p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/install_finish.png" srcset="/img/loading.gif" alt="安装完成"></p></li><li><p>打开软件，可以看到<strong>软件的主界面</strong>，并且已经完美激活！</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/work_ui.png" srcset="/img/loading.gif" alt="软件界面" style="zoom:50%"></li><li><p>详细操作可以查看VMware pro 16.0的使用文档</p><p>文档地址：<a target="_blank" rel="noopener" href="https://docs.vmware.com/cn/VMware-Workstation-Pro/16.0/com.vmware.ws.using.doc/GUID-0EE752F8-C159-487A-9159-FE1F646EE4CA.html">https://docs.vmware.com/cn/VMware-Workstation-Pro/16.0/com.vmware.ws.using.doc/GUID-0EE752F8-C159-487A-9159-FE1F646EE4CA.html</a></p></li></ol><p>其实呢，还有一种简单的安装虚拟机方法，那就是流氓软件360的<strong>软件管家</strong>！但是，它的版本好像停更很久了，不过也不失为一种资源，觉得安装麻烦的朋友，可以使用360一键安装。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/install_360.png" srcset="/img/loading.gif" alt="360软件管家" style="zoom:67%"><blockquote><p><strong>虚拟机安装完毕之后呢，我们需要在虚拟机上安装CentOS。</strong></p></blockquote><p>从哪里安装CentOS 8呢？我们面前有来两种选择，一种是从官网下载，一种是镜像下载，下面我一一把下载地址列举出来。</p><p><strong>下载CentOS 8</strong></p><p>官网CentOS 8下载：<a target="_blank" rel="noopener" href="https://www.centos.org/download/">https://www.centos.org/download/</a></p><p>阿里CentOS 8下载：<a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/centos/8/isos/x86_64/">https://mirrors.aliyun.com/centos/8/isos/x86_64/</a></p><p>清华CentOS 8下载：<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/centos/8/isos/x86_64/">https://mirrors.tuna.tsinghua.edu.cn/centos/8/isos/x86_64/</a></p><p>找个大点的文件夹，然后把CentOS 8下载到该文件夹下即可，我这里速度还可以6M/s，25分钟就下载完了。</p><p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/download_centos.png" srcset="/img/loading.gif" alt="下载CentOS 8"></p><p><strong>创建虚拟机</strong></p><ol><li><p>打开VMware，点击<strong>创建新的虚拟机</strong>，如下图所示。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/new_virtual_machine.png" srcset="/img/loading.gif" alt="创建新的虚拟机" style="zoom:75%"></li><li><p>在<strong>新建虚拟机向导界面</strong>，选择<strong>自定义高级</strong>，点击下一步。</p><p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/advanced.png" srcset="/img/loading.gif" alt="自定义高级选项"></p></li><li><p>在选择<strong>虚拟机硬件兼容性</strong>界面，采用默认设置，点击下一步。</p><p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/handware.png" srcset="/img/loading.gif" alt="虚拟机硬件兼容"></p></li><li><p>在<strong>安装客户机操作系统界面</strong>，选择<strong>稍后安装操作系统</strong>，点击下一步。</p><p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/install_os.png" srcset="/img/loading.gif" alt="稍后安装OS"></p></li><li><p>选择Linux，<strong>版本选择Linux 4 ×64位</strong>，因为CentOS 8系列基于 Linux 内核 4.18，点击下一步</p><p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/os_version.png" srcset="/img/loading.gif" alt="选择Linux操作系统和版本"></p></li><li><p><strong>命名虚拟机页面</strong>，虚拟机名称随便起，安装位置尽量选空间大的磁盘，点击下一步。</p><p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/define_virtual_machine.png" srcset="/img/loading.gif" alt="命名虚拟机"></p></li><li><p><strong>处理机配置页面</strong>，根据自己的主机CPU配置确定，点击下一步。</p><p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/cpu.png" srcset="/img/loading.gif" alt="处理机配置"></p></li><li><p><strong>分配虚拟机内存界面</strong>，我的电脑内存8G，我分配给它1G，点击下一步。</p><p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/memory.png" srcset="/img/loading.gif" alt="分配虚拟机内存"></p></li><li><p>设置**虚拟机网络连接模式(**NAT)，点击下一步。</p><p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/nat.png" srcset="/img/loading.gif" alt="设置网络连接模式"></p></li><li><p><strong>选择I/O控制器类型</strong>，选定LSI Logic（推荐）即可，点击下一步。</p><p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/io.png" srcset="/img/loading.gif" alt="选择I/O控制器类型"></p></li><li><p><strong>选择磁盘类型</strong>，选择推荐的SCSI类型即可，点击下一步。</p><p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/scsi.png" srcset="/img/loading.gif" alt="选择磁盘类型"></p></li><li><p><strong>选择磁盘</strong>，仍然是选择默认的创建新虚拟磁盘，点击下一步。</p><p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/new_virtual.png" srcset="/img/loading.gif" alt="创建新虚拟磁盘"></p></li><li><p><strong>指定磁盘容量</strong>，根据自己的需要分配磁盘容量，勾选将虚拟磁盘拆分成多个文件（方便用储存设备拷贝复制虚拟机到其他设备），点击下一步。</p><p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/disk_size.png" srcset="/img/loading.gif" alt="指定磁盘容量"></p></li><li><p><strong>指定磁盘文件存储位置</strong>，这里我选择E盘，点击下一步。</p><p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/centos_path.png" srcset="/img/loading.gif" alt="指定磁盘文件存储位置"></p></li><li><p><strong>准备好创建虚拟机界面</strong>，如果想安装图形界面，可以自定义硬件修改内存和磁盘大小，点击完成。</p><p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/ready.png" srcset="/img/loading.gif" alt="完成创建"></p></li></ol><p><strong>安装CentOS 8</strong></p><ol><li><p>创建好虚拟机后，点击<strong>编辑虚拟机设置</strong>。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/config.png" srcset="/img/loading.gif" alt="编辑虚拟机设置" style="zoom:67%"></li><li><p>选择<strong>CD/DVD</strong>，勾选启动时连接，再<strong>选择使用ISO映像文件</strong>，找到下载好的系统镜像文件添加进去，最后确定。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/cd.png" srcset="/img/loading.gif" alt="选择ISO映像文件" style="zoom:80%"></li><li><p>点击<strong>开启虚拟机</strong>。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/start_machine.png" srcset="/img/loading.gif" alt="开启虚拟机" style="zoom:67%"></li><li><p><strong>启动虚拟机失败</strong>，弹出错误。</p><p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/error.png" srcset="/img/loading.gif" alt="Intel VT-x禁用"></p></li><li><p><strong>借鉴博文</strong><a target="_blank" rel="noopener" href="http://www.xitongcheng.com/jiaocheng/xtazjc_article_38955.html">http://www.xitongcheng.com/jiaocheng/xtazjc_article_38955.html</a></p><p>Intel VT-x完整名称是Intel Virtualization Technology，就是Intel虚拟技术，开启它可以让硬件平台同时运行多个操作系统，是虚拟机软件运行必备的技术之一，如果禁用，就会弹出“此主机支持Intel VT-x,但Intel VT-x处于禁用状态”这个提示，解决办法就是进BIOS开启Intel Virtualization Technology。</p><p>我的笔记本是联想，所以我的操作是：</p><ul><li><p>开机点击F2进入BIOS，接着进入到bios的界面。</p></li><li><p>选择标题栏的configuration选项，在界面的下方就可以看到intel virtual technology的选项，也就是intel虚拟化技术选项，在其后边显示disabled选项，也就是禁用的意思，按回车键。</p></li><li><p>接着会弹出一个小窗口的选项，在其中选择enabled选项，也就是启用的意思，同样是按回车键确认选择。</p></li><li><p>接着就可以看到intel virtual technology选项后边的标识变成了enabled选项，也就是此时启用了该功能。</p></li></ul></li><li><p>按照5当中博文的说法，重启后，不管怎么按F2都不会进入BIOS界面，搜索处理办法，得到原因：<strong>Win10系统默认打开了【快速启动】，会导致笔记本开机过快，无法进入BIOS开启intel vt-x。</strong></p><p>【快速启动】原理：关机时 Windows 10 会将当前所有系统状态写入到休眠文件中，然后再关机，当再次启动计算机时，Windwos 就不用再重新加载系统内核、驱动程序和系统状态，而是直接从休眠文件进行加载并刷入内存，完成之后直接向用户推送 Windwos 登录界面。</p><p><strong>解决办法</strong>：</p><ol><li><p>关闭【快速启动】</p><p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/power.png" srcset="/img/loading.gif" alt="进入控制面板电源选项"></p><p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/no_quick_start.png" srcset="/img/loading.gif" alt="    "></p></li><li><p>windows恢复功能</p><p>首先，选择恢复中的立即重新启动</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/advance_start.png" srcset="/img/loading.gif" alt="点击立即重新启动" style="zoom:67%"><p>然后，重启后，会进入<strong>高级选项</strong>，选择<strong>疑难解答</strong>。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/problem.png" srcset="/img/loading.gif" alt="疑难解答" style="zoom:67%"><p>选择UFFI固件设置。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/固件.png" srcset="/img/loading.gif" alt="UFFI固件设置" style="zoom:67%"><p>自动重启，进入BIOS界面。选择标题栏的configuration选项，在界面的下方就可以看到intel virtual technology的选项，也就是intel虚拟化技术选项，在其后边显示disabled选项，也就是禁用的意思，按回车键。接着会弹出一个小窗口的选项，在其中选择enabled选项，也就是启用的意思，同样是按回车键确认选择。接着就可以看到intel virtual technology选项后边的标识变成了enabled选项，也就是此时启用了该功能。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/网络虚拟.png" srcset="/img/loading.gif" alt="开启网络虚拟选项" style="zoom:67%"><p>最后，F10保存设置并退出，重启即可。</p></li></ol></li><li><p>再次开启虚拟机，选择 <strong>Install CentOS Linux8</strong></p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/install_8.png" srcset="/img/loading.gif" alt="安装CentOS 8" style="zoom:67%"></li><li><p>安装完成后，<strong>选择语言</strong>，点击继续。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/select_la.png" srcset="/img/loading.gif" alt="选择语言" style="zoom:67%"></li><li><p>首先打开<strong>网络和主机名</strong>，给虚拟机连上网络。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/open_int.png" srcset="/img/loading.gif" alt="打开网络和主机名" style="zoom:67%"><p>如果网络连接不上，多半是DHCP问题，参考博客：<a target="_blank" rel="noopener" href="https://blog.csdn.net/suoyudong/article/details/83037670">https://blog.csdn.net/suoyudong/article/details/83037670</a></p></li><li><p>点击时间和日期，设置系统时间并更改时区(打开网络时间)：</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/date.png" srcset="/img/loading.gif" alt="修改时区" style="zoom:67%"></li><li><p>选择安装目的地，进行自定义配置，点击完成。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/install_loc.png" srcset="/img/loading.gif" alt="选择安装目的地" style="zoom:67%"></li><li><p>添加磁盘分区</p><p>下面是Linux的分区知识：</p><ul><li><p>交换分区(sqap):交换分区和Windows的虚拟内存很像。我们虚拟机内存为1G，我们划给它2G。</p></li><li><p>启动分区(boot):200MB足够</p></li><li><p>根分区(/)：剩余空间都给根分区，当然我们也可以单独划出/data分区，专门用来存储存数据，不过这里我们先不这样做，直接全部都给根分区。</p></li></ul><p>按照下图顺序依次进行设置：</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/boot.png" srcset="/img/loading.gif" alt="boot分区" style="zoom:67%"> <img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/swap.png" srcset="/img/loading.gif" alt="swap分区" style="zoom:67%"></li></ol><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/根.png" srcset="/img/loading.gif" alt="根分区" style="zoom:67%"><ol start="11"><li><p>点击完成后会弹出<strong>更改摘要页面</strong>，点击接受更改：</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/accept_change.png" srcset="/img/loading.gif" alt="接受更改" style="zoom:67%"></li><li><p><strong>修改root密码</strong>。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/change_pwd.png" srcset="/img/loading.gif" alt="修改root密码" style="zoom:67%"></li><li><p>创建用户,这里我创建的用户全名是AtroxQW，用户名是atroxqw，并设置为管理员。这一步忘了截图，采用网上的图片。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/create_user.png" srcset="/img/loading.gif" alt="创建用户" style="zoom:80%"></li><li><p>点击<strong>开始安装</strong>。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/install_2.png" srcset="/img/loading.gif" alt="开始安装" style="zoom:67%"></li><li><p>安装过程中报错，Error in posttrans scriptlet in rpm package kmod-kv</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/error2.png" srcset="/img/loading.gif" alt="安装报错" style="zoom:67%"></li><li><p>参考博文<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42789947/article/details/108687277?utm_medium=distribute.pc_relevant_t0.none-task-blog-OPENSEARCH-1.control&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-OPENSEARCH-1.control%EF%BC%8C%E5%88%86%E5%8C%BA%E7%9A%84%E7%9A%84%E6%97%B6%E5%80%99%E6%8A%8A/boot%E5%88%86%E5%8C%BA%E7%9A%84%E5%A4%A7%E5%B0%8F%E6%94%B9%E6%88%90300M%EF%BC%8C%E5%AE%9E%E6%B5%8B%E6%9C%89%E6%95%88%E3%80%82">https://blog.csdn.net/weixin_42789947/article/details/108687277?utm_medium=distribute.pc_relevant_t0.none-task-blog-OPENSEARCH-1.control&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-OPENSEARCH-1.control，分区的的时候把/boot分区的大小改成300M，实测有效。</a></p></li><li><p>安装完成后点击重启系统。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/restart.png" srcset="/img/loading.gif" alt="重启系统" style="zoom:67%"></li><li><p>重启完成后点击LICENS INFORMATION接受许可证,勾选同意许可，然后点击完成。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/accept_license.png" srcset="/img/loading.gif" alt="接受许可证" style="zoom:67%"> <img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/ui.png" srcset="/img/loading.gif" alt="同意许可协议" style="zoom:67%"></li><li><p>接受许可证之后，点击结束配置。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/finish_config.png" srcset="/img/loading.gif" alt="结束配置" style="zoom:67%"></li><li><p>来到登录界面，点击未列出，以root用户登录，方便后面配置操作：</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/root.png" srcset="/img/loading.gif" alt="以root用户登录" style="zoom:67%"></li><li><p>在欢迎页选择语言。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/select_la2.png" srcset="/img/loading.gif" alt="选择语言" style="zoom:67%"></li><li><p>选择键盘布局。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/select_kb.png" srcset="/img/loading.gif" alt="键盘布局" style="zoom:67%"></li><li><p>打开位置服务</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/loc.png" srcset="/img/loading.gif" alt="位置服务" style="zoom:67%"></li><li><p>连接在线账号或者直接跳过。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/account.png" srcset="/img/loading.gif" alt="连接在线账号" style="zoom:67%"></li><li><p>开始使用CentOS Linux系统。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/use.png" srcset="/img/loading.gif" alt="使用系统" style="zoom:67%"></li><li><p>打开命令行测试。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/all_finish.png" srcset="/img/loading.gif" alt="测试命令行" style="zoom:67%"></li><li><p>安装完成，大功告成啦，本地Linux环境就准备好啦！</p></li></ol><blockquote><p>方式二：连接阿里云服务器</p></blockquote><ol><li><p>购买完阿里云服务器，<strong>配置安全组的端口号</strong>，获取公网IP。</p><p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/IP.png" srcset="/img/loading.gif" alt="阿里云服务器配置"></p></li></ol><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/safe.png" srcset="/img/loading.gif" alt="安全组" style="zoom:67%"><ol start="2"><li><p><strong>安装xshell和xftp软件</strong>，这里推荐从官网下载，学生免费试用xshell和xftp。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/xshell.png" srcset="/img/loading.gif" alt="xshell" style="zoom:67%"><p>当然，还有一个渠道，360软件管家，但是<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/ye.png" srcset="/img/loading.gif" alt="img" style="zoom:80%">不用。</p></li><li><p><strong>xshell连接阿里云服务器</strong>，新建连接。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/new_con.png" srcset="/img/loading.gif" alt="新建连接" style="zoom:67%"></li><li><p><strong>添加新建会话的相关信息</strong>，包括公网id和一些描述。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/con_info.png" srcset="/img/loading.gif" alt="会话信息" style="zoom:67%"></li><li><p><strong>登录用户名填写root</strong>，选择记住用户名。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/name.png" srcset="/img/loading.gif" alt="登录用户名" style="zoom:67%"></li><li><p>填写登录密码。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/pws.png" srcset="/img/loading.gif" alt="密码" style="zoom:67%"></li><li><p>连接成功，在命令行进行操作。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/con_suc.png" srcset="/img/loading.gif" alt="xshell连接阿里云服务器" style="zoom:67%"></li><li><p>上传文件，启动xshell上面菜单栏的xftp。比如说我们上传一张图片到阿里云服务器。</p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/upimg.png" srcset="/img/loading.gif" alt="xftp上传文件" style="zoom:67%"></li><li><p>到此，Xshell连接阿里云结束！</p></li></ol><blockquote><p>Linux获取宝塔棉被登录地址、账号和密码</p></blockquote><ul><li><p>首先用xshell通过公网连接服务器；</p></li><li><p>连接成功后，在xshell终端输入命令：/etc/init.d/bt</p></li><li><p>进入宝塔面板命令行: 输入命令编号：14</p></li></ul></div><hr><div><div class="post-metas mb-3"><div class="post-meta"><i class="iconfont icon-tags"></i> <a class="hover-with-bg" href="/tags/Linux/">Linux</a></div></div><p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p><div class="post-prevnext"><article class="post-prev col-6"><a href="/posts/2021/01/17/Linux%E7%AC%94%E8%AE%B003-Linux%E7%B3%BB%E7%BB%9F%E5%88%9D%E6%8E%A2/"><i class="iconfont icon-arrowleft"></i> <span class="hidden-mobile">Linux笔记03-Linux系统初探</span> <span class="visible-mobile">Previous</span></a></article><article class="post-next col-6"><a href="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B001-%E5%85%A5%E9%97%A8%E6%A6%82%E8%BF%B0/"><span class="hidden-mobile">Linux笔记01-入门概述</span> <span class="visible-mobile">Next</span> <i class="iconfont icon-arrowright"></i></a></article></div></div><article class="comments" id="comments"><div id="gitalk-container"></div><script type="text/javascript">Fluid.utils.waitElementVisible("gitalk-container",(function(){Fluid.utils.createCssLink("/css/gitalk.css"),Fluid.utils.createScript("https://cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.min.js",(function(){new Gitalk({clientID:"af550312a411b96c64b9",clientSecret:"f11934265fd18324cb2d9fd605d7d445207a3e52",repo:"gitalk",owner:"AtroxQW",admin:["AtroxQW"],id:"83d825613a4892c553ddd329bbbe0071",language:"zh-CN",labels:["Gitalk"],perPage:10,pagerDirection:"last",createIssueManually:!0,distractionFreeMode:!1}).render("gitalk-container")}))}))</script><noscript>Please enable JavaScript to view the comments</noscript></article></article></div></div></div><div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn"><div id="toc"><p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p><div class="toc-body" id="toc-body"></div></div></div></div></div><a id="scroll-top-button" href="#" role="button"><i class="iconfont icon-arrowup" aria-hidden="true"></i></a><div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg" role="document"><div class="modal-content"><div class="modal-header text-center"><h4 class="modal-title w-100 font-weight-bold">Search</h4><button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body mx-3"><div class="md-form mb-5"><input type="text" id="local-search-input" class="form-control validate"> <label data-error="x" data-success="v" for="local-search-input">keyword</label></div><div class="list-group" id="local-search-result"></div></div></div></div></div></main><footer class="text-center mt-5 py-3"><div class="footer-content"><a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a></div><div class="statistics"><span id="leancloud-site-pv-container" style="display:none">总访问量 <span id="leancloud-site-pv"></span> 次 </span><span id="leancloud-site-uv-container" style="display:none">总访客数 <span id="leancloud-site-uv"></span> 人</span></div></footer><script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css"><script>NProgress.configure({showSpinner:!1,trickleSpeed:100}),NProgress.start(),window.addEventListener("load",(function(){NProgress.done()}))</script><script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script><script src="/js/debouncer.js"></script><script src="/js/events.js"></script><script src="/js/plugins.js"></script><script src="/js/lazyload.js"></script><script src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script defer src="/js/leancloud.js"></script><script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script><script>!function(t,i){(0,Fluid.plugins.typing)(i.getElementById("subtitle").title)}(window,document)</script><script src="/js/local-search.js"></script><script>document.querySelector("#local-search-input").onclick=function(){searchFunc("/local-search.xml","local-search-input","local-search-result"),this.onclick=null}</script><script src="/js/boot.js"></script><script src="https://libs.xiaoz.top/instantclick/instantclick.min.js" data-no-instant></script><script data-no-instant>InstantClick.init()</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="codeAtrox">
+  <meta name="keywords" content="">
+  <title>Linux笔记02-Linux环境搭建 - Atrox的博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"ESDyAFj0rlPHtdaIfJoa3pTr-gzGzoHsz","app_key":"j9txoPTCSqfLMGi1UmkNO3vV","server_url":"AtroxQW.github.io"}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>AtroxQW</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于我
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/bg/atrox1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Linux笔记02-Linux环境搭建">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-01-16 17:52" pubdate>
+        January 16, 2021 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.7k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      29
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Linux笔记02-Linux环境搭建</h1>
+            
+            <div class="markdown-body">
+              <h2 id="Linux环境搭建"><a href="#Linux环境搭建" class="headerlink" title="Linux环境搭建"></a>Linux环境搭建</h2><blockquote>
+<p><strong>前言</strong></p>
+</blockquote>
+<p>在学习Linux之前，我需要把Linux的环境搭建好，其实Linux操作系统本身也可以看做是一个大的软件。下面我将会以两种方式搭建Linux环境，第一种方式是在<strong>在本地虚拟机上安装CentOS</strong>，免费；第二种方式是<strong>购买云服务器</strong>，在服务器命令行搭建环境。</p>
+<p><strong>安装虚拟机会占用内存空间，但是没有经济压力，比较快捷；购买服务器会产生消费，但最接近原生的线上开发</strong>。这两种方式，各有利弊，兄弟盟参考即可。</p>
+<blockquote>
+<p><strong>方式一：虚拟机安装CentOS</strong></p>
+</blockquote>
+<p>首先在安装CentOS之前，我们要先在本地安装虚拟机 <strong>VMware Workstation</strong>，这里我们从华军科技园下载VMware16 pro。当然，如果有经济条件，建议从官网购买正版虚拟机，下面是下载地址：</p>
+<p>华军科技园下载虚拟机：<a target="_blank" rel="noopener" href="https://www.onlinedown.net/soft/2062.htm/">https://www.onlinedown.net/soft/2062.htm/</a></p>
+<blockquote>
+<p><strong>VMware Workstation安装步骤</strong></p>
+</blockquote>
+<ol>
+<li><p>双击运行VMware Workstation15运行程序，打开如下图<strong>安装向导界面</strong>，点击下一步。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/install_guide.png" srcset="/img/loading.gif" alt="安装向导界面">
+</li>
+<li><p>阅读如下图 VMware 虚拟机用户许可协议，<strong>勾选我接受协议</strong>，点击下一步。</p>
+<p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/agreement.png" srcset="/img/loading.gif" alt="勾选接受协议"></p>
+</li>
+<li><p><strong>自定义安装目录</strong>：默认安装在C盘目录下，我可以点击“更改”按钮自定义安装路径，并点击下一步。</p>
+<p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/change_path.png" srcset="/img/loading.gif" alt="自定义安装目录"></p>
+</li>
+<li><p>在<strong>用户体验设置界面</strong>，这里选择默认设置即可，直接点击下一步。</p>
+<p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/UE.png" srcset="/img/loading.gif" alt="用户体验设置界面"></p>
+</li>
+<li><p><strong>创建快捷方式</strong>，桌面快捷方式以及开始菜单程序文件夹，自选，点击下一步。</p>
+<p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/shortcut.png" srcset="/img/loading.gif" alt="快捷方式"></p>
+</li>
+<li><p>确认信息无误，<strong>点击安装</strong>。</p>
+<p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/install.png" srcset="/img/loading.gif" alt="准备好安装"></p>
+</li>
+<li><p>等待VMware Workstation 16 Pro安装过程。</p>
+<p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/install_pro.png" srcset="/img/loading.gif" alt="等待安装"></p>
+</li>
+<li><p>在安装成功界面，输入<strong>许可证秘钥</strong>。在这里，我推荐3条许可证秘钥：</p>
+<p><em>ZF3R0-FHED2-M80TY-8QYGC-NPKYF</em><br><em>YF390-0HF8P-M81RQ-2DXQE-M2UT6</em><br><em>ZF71R-DMX85-08DQY-8YMNC-PPHV8</em></p>
+</li>
+</ol>
+<p>   <img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/secret_key.png" srcset="/img/loading.gif" alt="许可证秘钥"></p>
+<ol start="9">
+<li><p><strong>安装向导完成</strong>，退出即可。</p>
+<p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/install_finish.png" srcset="/img/loading.gif" alt="安装完成"></p>
+</li>
+<li><p>打开软件，可以看到<strong>软件的主界面</strong>，并且已经完美激活！</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/work_ui.png" srcset="/img/loading.gif" alt="软件界面" style="zoom: 50%;">
+</li>
+<li><p>详细操作可以查看VMware pro 16.0的使用文档</p>
+<p>文档地址：<a target="_blank" rel="noopener" href="https://docs.vmware.com/cn/VMware-Workstation-Pro/16.0/com.vmware.ws.using.doc/GUID-0EE752F8-C159-487A-9159-FE1F646EE4CA.html">https://docs.vmware.com/cn/VMware-Workstation-Pro/16.0/com.vmware.ws.using.doc/GUID-0EE752F8-C159-487A-9159-FE1F646EE4CA.html</a></p>
+</li>
+</ol>
+<p>其实呢，还有一种简单的安装虚拟机方法，那就是流氓软件360的<strong>软件管家</strong>！但是，它的版本好像停更很久了，不过也不失为一种资源，觉得安装麻烦的朋友，可以使用360一键安装。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/install_360.png" srcset="/img/loading.gif" alt="360软件管家" style="zoom: 67%;">
+
+<blockquote>
+<p><strong>虚拟机安装完毕之后呢，我们需要在虚拟机上安装CentOS。</strong></p>
+</blockquote>
+<p>从哪里安装CentOS 8呢？我们面前有来两种选择，一种是从官网下载，一种是镜像下载，下面我一一把下载地址列举出来。</p>
+<p><strong>下载CentOS 8</strong> </p>
+<p>官网CentOS 8下载：<a target="_blank" rel="noopener" href="https://www.centos.org/download/">https://www.centos.org/download/</a></p>
+<p>阿里CentOS 8下载：<a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/centos/8/isos/x86_64/">https://mirrors.aliyun.com/centos/8/isos/x86_64/</a></p>
+<p>清华CentOS 8下载：<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/centos/8/isos/x86_64/">https://mirrors.tuna.tsinghua.edu.cn/centos/8/isos/x86_64/</a></p>
+<p>找个大点的文件夹，然后把CentOS 8下载到该文件夹下即可，我这里速度还可以6M/s，25分钟就下载完了。</p>
+<p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/download_centos.png" srcset="/img/loading.gif" alt="下载CentOS 8"></p>
+<p><strong>创建虚拟机</strong></p>
+<ol>
+<li><p>打开VMware，点击<strong>创建新的虚拟机</strong>，如下图所示。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/new_virtual_machine.png" srcset="/img/loading.gif" alt="创建新的虚拟机" style="zoom:75%;">
+</li>
+<li><p>在<strong>新建虚拟机向导界面</strong>，选择<strong>自定义高级</strong>，点击下一步。</p>
+<p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/advanced.png" srcset="/img/loading.gif" alt="自定义高级选项"></p>
+</li>
+<li><p>在选择<strong>虚拟机硬件兼容性</strong>界面，采用默认设置，点击下一步。</p>
+<p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/handware.png" srcset="/img/loading.gif" alt="虚拟机硬件兼容"></p>
+</li>
+<li><p>在<strong>安装客户机操作系统界面</strong>，选择<strong>稍后安装操作系统</strong>，点击下一步。</p>
+<p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/install_os.png" srcset="/img/loading.gif" alt="稍后安装OS"></p>
+</li>
+<li><p>选择Linux，<strong>版本选择Linux 4 ×64位</strong>，因为CentOS 8系列基于 Linux 内核 4.18，点击下一步</p>
+<p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/os_version.png" srcset="/img/loading.gif" alt="选择Linux操作系统和版本"></p>
+</li>
+<li><p><strong>命名虚拟机页面</strong>，虚拟机名称随便起，安装位置尽量选空间大的磁盘，点击下一步。</p>
+<p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/define_virtual_machine.png" srcset="/img/loading.gif" alt="命名虚拟机"></p>
+</li>
+<li><p><strong>处理机配置页面</strong>，根据自己的主机CPU配置确定，点击下一步。</p>
+<p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/cpu.png" srcset="/img/loading.gif" alt="处理机配置"></p>
+</li>
+<li><p><strong>分配虚拟机内存界面</strong>，我的电脑内存8G，我分配给它1G，点击下一步。</p>
+<p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/memory.png" srcset="/img/loading.gif" alt="分配虚拟机内存"></p>
+</li>
+<li><p>设置**虚拟机网络连接模式(**NAT)，点击下一步。</p>
+<p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/nat.png" srcset="/img/loading.gif" alt="设置网络连接模式"></p>
+</li>
+<li><p><strong>选择I/O控制器类型</strong>，选定LSI Logic（推荐）即可，点击下一步。</p>
+<p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/io.png" srcset="/img/loading.gif" alt="选择I/O控制器类型"></p>
+</li>
+<li><p><strong>选择磁盘类型</strong>，选择推荐的SCSI类型即可，点击下一步。</p>
+<p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/scsi.png" srcset="/img/loading.gif" alt="选择磁盘类型"></p>
+</li>
+<li><p><strong>选择磁盘</strong>，仍然是选择默认的创建新虚拟磁盘，点击下一步。</p>
+<p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/new_virtual.png" srcset="/img/loading.gif" alt="创建新虚拟磁盘"></p>
+</li>
+<li><p><strong>指定磁盘容量</strong>，根据自己的需要分配磁盘容量，勾选将虚拟磁盘拆分成多个文件（方便用储存设备拷贝复制虚拟机到其他设备），点击下一步。</p>
+<p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/disk_size.png" srcset="/img/loading.gif" alt="指定磁盘容量"></p>
+</li>
+<li><p><strong>指定磁盘文件存储位置</strong>，这里我选择E盘，点击下一步。</p>
+<p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/centos_path.png" srcset="/img/loading.gif" alt="指定磁盘文件存储位置"></p>
+</li>
+<li><p><strong>准备好创建虚拟机界面</strong>，如果想安装图形界面，可以自定义硬件修改内存和磁盘大小，点击完成。</p>
+<p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/ready.png" srcset="/img/loading.gif" alt="完成创建"></p>
+</li>
+</ol>
+<p><strong>安装CentOS 8</strong></p>
+<ol>
+<li><p>创建好虚拟机后，点击<strong>编辑虚拟机设置</strong>。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/config.png" srcset="/img/loading.gif" alt="编辑虚拟机设置" style="zoom: 67%;">
+</li>
+<li><p>选择<strong>CD/DVD</strong>，勾选启动时连接，再<strong>选择使用ISO映像文件</strong>，找到下载好的系统镜像文件添加进去，最后确定。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/cd.png" srcset="/img/loading.gif" alt="选择ISO映像文件" style="zoom: 80%;">
+</li>
+<li><p>点击<strong>开启虚拟机</strong>。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/start_machine.png" srcset="/img/loading.gif" alt="开启虚拟机" style="zoom: 67%;">
+</li>
+<li><p><strong>启动虚拟机失败</strong>，弹出错误。</p>
+<p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/error.png" srcset="/img/loading.gif" alt="Intel VT-x禁用"></p>
+</li>
+<li><p><strong>借鉴博文</strong><a target="_blank" rel="noopener" href="http://www.xitongcheng.com/jiaocheng/xtazjc_article_38955.html">http://www.xitongcheng.com/jiaocheng/xtazjc_article_38955.html</a></p>
+<p>Intel VT-x完整名称是Intel Virtualization Technology，就是Intel虚拟技术，开启它可以让硬件平台同时运行多个操作系统，是虚拟机软件运行必备的技术之一，如果禁用，就会弹出“此主机支持Intel VT-x,但Intel VT-x处于禁用状态”这个提示，解决办法就是进BIOS开启Intel Virtualization Technology。</p>
+<p>我的笔记本是联想，所以我的操作是：</p>
+<ul>
+<li><p>开机点击F2进入BIOS，接着进入到bios的界面。</p>
+</li>
+<li><p>选择标题栏的configuration选项，在界面的下方就可以看到intel virtual technology的选项，也就是intel虚拟化技术选项，在其后边显示disabled选项，也就是禁用的意思，按回车键。</p>
+</li>
+<li><p>接着会弹出一个小窗口的选项，在其中选择enabled选项，也就是启用的意思，同样是按回车键确认选择。</p>
+</li>
+<li><p>接着就可以看到intel virtual technology选项后边的标识变成了enabled选项，也就是此时启用了该功能。</p>
+</li>
+</ul>
+</li>
+<li><p>按照5当中博文的说法，重启后，不管怎么按F2都不会进入BIOS界面，搜索处理办法，得到原因：<strong>Win10系统默认打开了【快速启动】，会导致笔记本开机过快，无法进入BIOS开启intel vt-x。</strong></p>
+<p>【快速启动】原理：关机时 Windows 10 会将当前所有系统状态写入到休眠文件中，然后再关机，当再次启动计算机时，Windwos 就不用再重新加载系统内核、驱动程序和系统状态，而是直接从休眠文件进行加载并刷入内存，完成之后直接向用户推送 Windwos 登录界面。</p>
+<p><strong>解决办法</strong>：</p>
+<ol>
+<li><p>关闭【快速启动】</p>
+<p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/power.png" srcset="/img/loading.gif" alt="进入控制面板电源选项"></p>
+<p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/no_quick_start.png" srcset="/img/loading.gif" alt="    "></p>
+</li>
+<li><p>windows恢复功能</p>
+<p>首先，选择恢复中的立即重新启动</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/advance_start.png" srcset="/img/loading.gif" alt="点击立即重新启动" style="zoom:67%;">
+
+<p>然后，重启后，会进入<strong>高级选项</strong>，选择<strong>疑难解答</strong>。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/problem.png" srcset="/img/loading.gif" alt="疑难解答" style="zoom: 67%;">
+
+<p>选择UFFI固件设置。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/固件.png" srcset="/img/loading.gif" alt="UFFI固件设置" style="zoom:67%;">
+
+<p>自动重启，进入BIOS界面。选择标题栏的configuration选项，在界面的下方就可以看到intel virtual technology的选项，也就是intel虚拟化技术选项，在其后边显示disabled选项，也就是禁用的意思，按回车键。接着会弹出一个小窗口的选项，在其中选择enabled选项，也就是启用的意思，同样是按回车键确认选择。接着就可以看到intel virtual technology选项后边的标识变成了enabled选项，也就是此时启用了该功能。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/网络虚拟.png" srcset="/img/loading.gif" alt="开启网络虚拟选项" style="zoom:67%;">
+
+<p>最后，F10保存设置并退出，重启即可。</p>
+</li>
+</ol>
+</li>
+<li><p>再次开启虚拟机，选择 <strong>Install CentOS Linux8</strong></p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/install_8.png" srcset="/img/loading.gif" alt="安装CentOS 8" style="zoom:67%;">
+</li>
+<li><p>安装完成后，<strong>选择语言</strong>，点击继续。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/select_la.png" srcset="/img/loading.gif" alt="选择语言" style="zoom:67%;">
+</li>
+<li><p>首先打开<strong>网络和主机名</strong>，给虚拟机连上网络。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/open_int.png" srcset="/img/loading.gif" alt="打开网络和主机名" style="zoom: 67%;">
+
+<p>如果网络连接不上，多半是DHCP问题，参考博客：<a target="_blank" rel="noopener" href="https://blog.csdn.net/suoyudong/article/details/83037670">https://blog.csdn.net/suoyudong/article/details/83037670</a></p>
+</li>
+<li><p>点击时间和日期，设置系统时间并更改时区(打开网络时间)：</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/date.png" srcset="/img/loading.gif" alt="修改时区" style="zoom:67%;">
+</li>
+<li><p>选择安装目的地，进行自定义配置，点击完成。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/install_loc.png" srcset="/img/loading.gif" alt="选择安装目的地" style="zoom:67%;">
+</li>
+<li><p>添加磁盘分区</p>
+<p>下面是Linux的分区知识：</p>
+<ul>
+<li><p>交换分区(sqap):交换分区和Windows的虚拟内存很像。我们虚拟机内存为1G，我们划给它2G。</p>
+</li>
+<li><p>启动分区(boot):200MB足够</p>
+</li>
+<li><p>根分区(/)：剩余空间都给根分区，当然我们也可以单独划出/data分区，专门用来存储存数据，不过这里我们先不这样做，直接全部都给根分区。</p>
+</li>
+</ul>
+<p>按照下图顺序依次进行设置：</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/boot.png" srcset="/img/loading.gif" alt="boot分区" style="zoom:67%;">
+
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/swap.png" srcset="/img/loading.gif" alt="swap分区" style="zoom:67%;">
+
+</li>
+</ol>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/根.png" srcset="/img/loading.gif" alt="根分区" style="zoom:67%;">
+
+<ol start="11">
+<li><p>点击完成后会弹出<strong>更改摘要页面</strong>，点击接受更改：</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/accept_change.png" srcset="/img/loading.gif" alt="接受更改" style="zoom:67%;">
+</li>
+<li><p><strong>修改root密码</strong>。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/change_pwd.png" srcset="/img/loading.gif" alt="修改root密码" style="zoom:67%;">
+</li>
+<li><p>创建用户,这里我创建的用户全名是AtroxQW，用户名是atroxqw，并设置为管理员。这一步忘了截图，采用网上的图片。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/create_user.png" srcset="/img/loading.gif" alt="创建用户" style="zoom: 80%;">
+</li>
+<li><p>点击<strong>开始安装</strong>。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/install_2.png" srcset="/img/loading.gif" alt="开始安装" style="zoom:67%;">
+</li>
+<li><p>安装过程中报错，Error in posttrans scriptlet in rpm package kmod-kv</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/error2.png" srcset="/img/loading.gif" alt="安装报错" style="zoom: 67%;">
+</li>
+<li><p>参考博文<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42789947/article/details/108687277?utm_medium=distribute.pc_relevant_t0.none-task-blog-OPENSEARCH-1.control&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-OPENSEARCH-1.control%EF%BC%8C%E5%88%86%E5%8C%BA%E7%9A%84%E7%9A%84%E6%97%B6%E5%80%99%E6%8A%8A/boot%E5%88%86%E5%8C%BA%E7%9A%84%E5%A4%A7%E5%B0%8F%E6%94%B9%E6%88%90300M%EF%BC%8C%E5%AE%9E%E6%B5%8B%E6%9C%89%E6%95%88%E3%80%82">https://blog.csdn.net/weixin_42789947/article/details/108687277?utm_medium=distribute.pc_relevant_t0.none-task-blog-OPENSEARCH-1.control&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-OPENSEARCH-1.control，分区的的时候把/boot分区的大小改成300M，实测有效。</a></p>
+</li>
+<li><p>安装完成后点击重启系统。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/restart.png" srcset="/img/loading.gif" alt="重启系统" style="zoom:67%;">
+</li>
+<li><p>重启完成后点击LICENS INFORMATION接受许可证,勾选同意许可，然后点击完成。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/accept_license.png" srcset="/img/loading.gif" alt="接受许可证" style="zoom:67%;">
+
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/ui.png" srcset="/img/loading.gif" alt="同意许可协议" style="zoom:67%;">
+</li>
+<li><p>接受许可证之后，点击结束配置。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/finish_config.png" srcset="/img/loading.gif" alt="结束配置" style="zoom:67%;">
+</li>
+<li><p>来到登录界面，点击未列出，以root用户登录，方便后面配置操作：</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/root.png" srcset="/img/loading.gif" alt="以root用户登录" style="zoom:67%;">
+</li>
+<li><p>在欢迎页选择语言。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/select_la2.png" srcset="/img/loading.gif" alt="选择语言" style="zoom:67%;">
+</li>
+<li><p>选择键盘布局。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/select_kb.png" srcset="/img/loading.gif" alt="键盘布局" style="zoom:67%;">
+</li>
+<li><p>打开位置服务</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/loc.png" srcset="/img/loading.gif" alt="位置服务" style="zoom:67%;">
+</li>
+<li><p>连接在线账号或者直接跳过。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/account.png" srcset="/img/loading.gif" alt="连接在线账号" style="zoom:67%;">
+</li>
+<li><p>开始使用CentOS Linux系统。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/use.png" srcset="/img/loading.gif" alt="使用系统" style="zoom:67%;">
+</li>
+<li><p>打开命令行测试。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/all_finish.png" srcset="/img/loading.gif" alt="测试命令行" style="zoom:67%;">
+</li>
+<li><p>安装完成，大功告成啦，本地Linux环境就准备好啦！</p>
+</li>
+</ol>
+<blockquote>
+<p>方式二：连接阿里云服务器</p>
+</blockquote>
+<ol>
+<li><p>购买完阿里云服务器，<strong>配置安全组的端口号</strong>，获取公网IP。</p>
+<p><img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/IP.png" srcset="/img/loading.gif" alt="阿里云服务器配置"></p>
+</li>
+</ol>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/safe.png" srcset="/img/loading.gif" alt="安全组" style="zoom:67%;">
+
+<ol start="2">
+<li><p><strong>安装xshell和xftp软件</strong>，这里推荐从官网下载，学生免费试用xshell和xftp。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/xshell.png" srcset="/img/loading.gif" alt="xshell" style="zoom:67%;">
+
+<p>当然，还有一个渠道，360软件管家，但是<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/ye.png" srcset="/img/loading.gif" alt="img" style="zoom: 80%;">不用。</p>
+</li>
+<li><p><strong>xshell连接阿里云服务器</strong>，新建连接。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/new_con.png" srcset="/img/loading.gif" alt="新建连接" style="zoom:67%;">
+</li>
+<li><p><strong>添加新建会话的相关信息</strong>，包括公网id和一些描述。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/con_info.png" srcset="/img/loading.gif" alt="会话信息" style="zoom:67%;">
+</li>
+<li><p><strong>登录用户名填写root</strong>，选择记住用户名。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/name.png" srcset="/img/loading.gif" alt="登录用户名" style="zoom:67%;">
+</li>
+<li><p>填写登录密码。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/pws.png" srcset="/img/loading.gif" alt="密码" style="zoom:67%;">
+</li>
+<li><p>连接成功，在命令行进行操作。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/con_suc.png" srcset="/img/loading.gif" alt="xshell连接阿里云服务器" style="zoom:67%;">
+</li>
+<li><p>上传文件，启动xshell上面菜单栏的xftp。比如说我们上传一张图片到阿里云服务器。</p>
+<img src="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/upimg.png" srcset="/img/loading.gif" alt="xftp上传文件" style="zoom:67%;">
+</li>
+<li><p>到此，Xshell连接阿里云结束！</p>
+</li>
+</ol>
+<blockquote>
+<p>Linux获取宝塔棉被登录地址、账号和密码</p>
+</blockquote>
+<ul>
+<li><p>首先用xshell通过公网连接服务器；</p>
+</li>
+<li><p>连接成功后，在xshell终端输入命令：/etc/init.d/bt </p>
+</li>
+<li><p>进入宝塔面板命令行: 输入命令编号：14</p>
+</li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Linux/">Linux</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/2021/01/17/Linux%E7%AC%94%E8%AE%B003-Linux%E7%B3%BB%E7%BB%9F%E5%88%9D%E6%8E%A2/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Linux笔记03-Linux系统初探</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B001-%E5%85%A5%E9%97%A8%E6%A6%82%E8%BF%B0/">
+                        <span class="hidden-mobile">Linux笔记01-入门概述</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.min.js', function () {
+        var gitalk = new Gitalk({
+          clientID: 'af550312a411b96c64b9',
+          clientSecret: 'f11934265fd18324cb2d9fd605d7d445207a3e52',
+          repo: 'gitalk',
+          owner: 'AtroxQW',
+          admin: ["AtroxQW"],
+          id: '83d825613a4892c553ddd329bbbe0071',
+          language: 'zh-CN',
+          labels: ["Gitalk"],
+          perPage: 10,
+          pagerDirection: 'last',
+          createIssueManually: true,
+          distractionFreeMode: false
+        });
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- LeanCloud 统计PV -->
+        <span id="leancloud-site-pv-container" style="display: none">
+            总访问量 
+            <span id="leancloud-site-pv"></span>
+             次
+          </span>
+      
+      
+        <!-- LeanCloud 统计UV -->
+        <span id="leancloud-site-uv-container" style="display: none">
+            总访客数 
+            <span id="leancloud-site-uv"></span>
+             人
+          </span>
+      
+
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+<!-- hexo injector body_end start --><script src = 'https://libs.xiaoz.top/instantclick/instantclick.min.js' data-no-instant></script>
+<script data-no-instant>InstantClick.init();</script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
