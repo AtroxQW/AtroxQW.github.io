@@ -248,10 +248,10 @@
 </blockquote>
 <p><strong>布隆过滤器</strong></p>
 <p>对所有可能查询的参数以Hash的形式存储，以便快速确定是否存在这个值，在控制层先进行拦截校验，校验不通过直接打回，减轻了存储系统的压力。</p>
-<p><img src="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B017-%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E4%B8%8E%E9%9B%AA%E5%B4%A9/Redis%E7%AC%94%E8%AE%B017-%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E4%B8%8E%E9%9B%AA%E5%B4%A9%5C1.png" srcset="/img/loading.gif" alt="布隆过滤器"></p>
+<p><img src="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B017-%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E4%B8%8E%E9%9B%AA%E5%B4%A9/1.png" srcset="/img/loading.gif" alt="布隆过滤器"></p>
 <p><strong>缓存空对象</strong></p>
 <p>一次请求若在缓存和数据库中都没找到，就在缓存中方一个空对象用于处理后续这个请求。</p>
-<p><img src="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B017-%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E4%B8%8E%E9%9B%AA%E5%B4%A9/Redis%E7%AC%94%E8%AE%B017-%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E4%B8%8E%E9%9B%AA%E5%B4%A9%5C2.png" srcset="/img/loading.gif" alt="缓存空对象"></p>
+<p><img src="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B017-%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E4%B8%8E%E9%9B%AA%E5%B4%A9/2.png" srcset="/img/loading.gif" alt="缓存空对象"></p>
 <p> 这样做有一个缺陷：存储空对象也需要空间，大量的空对象会耗费一定的空间，存储效率并不高。解决这个缺陷的方式就是设置较短过期时间</p>
 <p>即使对空值设置了过期时间，还是会存在缓存层和存储层的数据会有一段时间窗口的不一致，这对于需要保持一致性的业务会有影响。</p>
 <h3 id="缓存击穿（量太大，缓存过期）"><a href="#缓存击穿（量太大，缓存过期）" class="headerlink" title="缓存击穿（量太大，缓存过期）"></a>缓存击穿（量太大，缓存过期）</h3><blockquote>
@@ -274,7 +274,7 @@
 <p>概念</p>
 </blockquote>
 <p>大量的key设置了相同的过期时间，导致在缓存在同一时刻全部失效，造成瞬时DB请求量大、压力骤增，引起雪崩。</p>
-<p><img src="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B017-%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E4%B8%8E%E9%9B%AA%E5%B4%A9/Redis%E7%AC%94%E8%AE%B017-%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E4%B8%8E%E9%9B%AA%E5%B4%A9%5C3.png" srcset="/img/loading.gif" alt="缓存雪崩"></p>
+<p><img src="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B017-%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E4%B8%8E%E9%9B%AA%E5%B4%A9/3.png" srcset="/img/loading.gif" alt="缓存雪崩"></p>
 <blockquote>
 <p>解决方案</p>
 </blockquote>
