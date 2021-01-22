@@ -191,6 +191,432 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B015-%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Redis笔记15-主从复制">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B015-%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">Redis笔记15-主从复制</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B015-%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
+          
+          
+            
+          
+          主从复制概念 主从复制，是指将一台Redis服务器的数据，复制到其他的Redis服务器。前者称为主节点（Master/Leader）,后者称为从节点（Slave/Follower）， 数据的复制是单向的！只能由主节点复制到从节点（主节点以写为主、从节点以读为主）。
+默认情况下，每台Redis服务器都是主节点，一个主节点可以有0个或者多个从节点，但每个从节点只能由一个主节点。
+作用
+数据冗余：主从复
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-21 11:36" pubdate>
+              2021-01-21
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Redis/">Redis</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B014-%E5%8F%91%E5%B8%83%E4%B8%8E%E8%AE%A2%E9%98%85/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Redis笔记14-发布与订阅">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B014-%E5%8F%91%E5%B8%83%E4%B8%8E%E8%AE%A2%E9%98%85/">Redis笔记14-发布与订阅</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B014-%E5%8F%91%E5%B8%83%E4%B8%8E%E8%AE%A2%E9%98%85/">
+          
+          
+            
+          
+          发布与订阅Redis 发布订阅(pub/sub)是一种消息通信模式：发送者(pub)发送消息，订阅者(sub)接收消息。
+下图展示了频道 channel1 ， 以及订阅这个频道的三个客户端 —— client2 、 client5 和 client1 之间的关系：
+
+当有新消息通过 PUBLISH 命令发送给频道 channel1 时， 这个消息就会被发送给订阅它的三个客户端：
+
+命令
+
+
+命令
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-21 09:48" pubdate>
+              2021-01-21
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Redis/">Redis</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/20/Redis%E7%AC%94%E8%AE%B013-Redis%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96-AOF/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Redis笔记13-Redis的持久化-AOF">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/20/Redis%E7%AC%94%E8%AE%B013-Redis%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96-AOF/">Redis笔记13-Redis的持久化-AOF</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/20/Redis%E7%AC%94%E8%AE%B013-Redis%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96-AOF/">
+          
+          
+            
+          
+          持久化AOFAppend Only File
+将我们所有的命令都记录下来，history，恢复的时候就把这个文件全部再执行一遍
+
+以日志的形式来记录每个写的操作，将Redis执行过的所有指令记录下来（读操作不记录），只许追加文件但不可以改写文件，redis启动之初会读取该文件重新构建数据，换言之，redis重启的话就根据日志文件的内容将写指令从前到后执行一次以完成数据的恢复工作。
+
+什么是AOF 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-20 20:06" pubdate>
+              2021-01-20
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Redis/">Redis</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/20/Redis%E7%AC%94%E8%AE%B012-Redis%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96-RDB/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Redis笔记12-Redis的持久化-RDB">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/20/Redis%E7%AC%94%E8%AE%B012-Redis%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96-RDB/">Redis笔记12-Redis的持久化-RDB</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/20/Redis%E7%AC%94%E8%AE%B012-Redis%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96-RDB/">
+          
+          
+            
+          
+          持久化-RDB什么是RDB
+RDB：Redis Databases，在指定时间间隔后，将内存中的数据集快照写入数据库 ；在恢复时候，直接读取快照文件，进行数据的恢复 ；
+
+默认情况下， Redis 将数据库快照保存在名字为 dump.rdb的二进制文件中。文件名可以在配置文件中进行自定义。
+工作原理
+在进行 RDB 的时候，**redis** 的主线程是不会做 io 操作的，主线程会 fork 一
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-20 20:05" pubdate>
+              2021-01-20
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Redis/">Redis</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/20/Redis%E7%AC%94%E8%AE%B011-Redis-conf%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%88%86%E6%9E%90/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Redis笔记11-Redis.conf配置文件分析">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/20/Redis%E7%AC%94%E8%AE%B011-Redis-conf%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%88%86%E6%9E%90/">Redis笔记11-Redis.conf配置文件分析</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/20/Redis%E7%AC%94%E8%AE%B011-Redis-conf%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%88%86%E6%9E%90/">
+          
+          
+            
+          
+          Redis.config分析
+容量单位不区分大小写，G和GB有区别
+
+1234567891011# Note on units: when memory size is needed, it is possible to specify# it in the usual form of 1k 5GB 4M and so forth:## 1k =&gt; 1000 bytes# 1kb =&gt;
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-20 18:21" pubdate>
+              2021-01-20
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Redis/">Redis</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/20/Redis%E7%AC%94%E8%AE%B010-SpringBoot%E6%95%B4%E5%90%88Redis/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Redis笔记10-SpringBoot整合Redis">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/20/Redis%E7%AC%94%E8%AE%B010-SpringBoot%E6%95%B4%E5%90%88Redis/">Redis笔记10-SpringBoot整合Redis</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/20/Redis%E7%AC%94%E8%AE%B010-SpringBoot%E6%95%B4%E5%90%88Redis/">
+          
+          
+            
+          
+          SpringBoot整合Redis
+新建module，勾选SpringBoot项目，勾选NoSQL的Redis依赖。
+
+12345&lt;!-- 操作Redis --&gt;&lt;dependency&gt;    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;    &lt;artifactId&gt;spring-boot-st
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-20 16:18" pubdate>
+              2021-01-20
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Redis/">Redis</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/20/Redis%E7%AC%94%E8%AE%B009-%E4%BD%BF%E7%94%A8Jedis%E6%93%8D%E4%BD%9CRedis/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Redis笔记09-使用Jedis操作Redis">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/20/Redis%E7%AC%94%E8%AE%B009-%E4%BD%BF%E7%94%A8Jedis%E6%93%8D%E4%BD%9CRedis/">Redis笔记09-使用Jedis操作Redis</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/20/Redis%E7%AC%94%E8%AE%B009-%E4%BD%BF%E7%94%A8Jedis%E6%93%8D%E4%BD%9CRedis/">
+          
+          
+            
+          
+          Jedis使用Java来操作Redis，Jedis是Redis官方推荐使用的Java连接redis的客户端。
+
+什么是Jedis？是Redis官方推荐的java连接开发工具！使用java操作Redis中间件。如果要使用java来操作redis，那么一定要对jedis十分熟悉。
+
+
+导入Jedis的依赖和fastJson依赖
+123456789101112&lt;!-- Jedis的依赖 --&gt
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-20 11:25" pubdate>
+              2021-01-20
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Redis/">Redis</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B008-%E4%BA%8B%E5%8A%A1%E7%9A%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Redis笔记08-事务的相关操作">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B008-%E4%BA%8B%E5%8A%A1%E7%9A%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/">Redis笔记08-事务的相关操作</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B008-%E4%BA%8B%E5%8A%A1%E7%9A%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/">
+          
+          
+            
+          
+          Redis的单条命令是保证原子性的，但是redis事务不能保证原子性。
+
+Redis事务本质：一组命令的集合。
+—————– 队列 set set set 执行 ——————-
+事务中每条命令都会被序列化，执行过程中按顺序执行，不允许其他命令进行干扰。
+
+一次性
+顺序性
+排他性
+
+
+
+Redis事务没有隔离级别的概念
+Redis单条命令是保证原子性的，但是事务不保证原子性！
+
+
+Redis事务操作
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-19 19:36" pubdate>
+              2021-01-19
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Redis%E5%AD%A6%E4%B9%A0/">Redis学习</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B007-%E4%B8%89%E7%A7%8D%E7%89%B9%E6%AE%8A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" target="_self">
           <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Redis笔记07-三种特殊数据类型">
         </a>
@@ -309,417 +735,6 @@ STRLEN key
             <i class="iconfont icon-date"></i>
             <time datetime="2021-01-19 10:20" pubdate>
               2021-01-19
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Redis/">Redis</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B005-RedisKey%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" target="_self">
-          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Redis笔记05-RedisKey基本命令">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B005-RedisKey%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">Redis笔记05-RedisKey基本命令</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B005-RedisKey%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">
-          
-          
-            
-          
-          RedisKey基本命令Redis 是一个开源（BSD许可），内存存储的数据结构服务器，可用作数据库，高速缓存和消息队列代理。它支持字符串、哈希表、列表、集合、有序集合、为徒、hyperloglogs等数据类型。内置了复制、Lua脚本、LRU收回、事务以及不同级别磁盘持久化功能，同时通过Redis Sentinel提供高可用，通过Redis Cluster提供自动分区。
-
-在Redis中无论什么数
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-19 10:07" pubdate>
-              2021-01-19
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Redis/">Redis</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B004-Redis%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/" target="_self">
-          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Redis笔记04-Redis的基本知识">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B004-Redis%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/">Redis笔记04-Redis的基本知识</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B004-Redis%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/">
-          
-          
-            
-          
-          Redis基础知识
-redis默认有16个数据库
-
-默认使用的是第0个
-16个数据库为：DB 0~DB 15。默认使用DB 0 ，可以使用select n切换到DB n，dbsize可以查看当前数据库的大小，与key数量相关。
-12345678910111213141516171819202122232425262728127.0.0.1:6379&gt; config get databases
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-19 09:25" pubdate>
-              2021-01-19
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Redis/">Redis</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/18/Redis%E7%AC%94%E8%AE%B003-redis-benchmark%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/" target="_self">
-          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Redis笔记03-redis-benchmark性能测试">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/18/Redis%E7%AC%94%E8%AE%B003-redis-benchmark%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/">Redis笔记03-redis-benchmark性能测试</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/18/Redis%E7%AC%94%E8%AE%B003-redis-benchmark%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/">
-          
-          
-            
-          
-          性能测试redis-benchmark是一个压力测试工具，而且是官方自带的。
-redis-benchmark的命令参数，如下图所示：
-
-下面我们来进行简单测试：
-1# 测试：100个并发连接，100000个请求
-
-
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-18 20:32" pubdate>
-              2021-01-18
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Redis/">Redis</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/17/Linux%E7%AC%94%E8%AE%B004-%E5%B8%B8%E7%94%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" target="_self">
-          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Linux笔记04-常用的基本命令">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/17/Linux%E7%AC%94%E8%AE%B004-%E5%B8%B8%E7%94%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">Linux笔记04-常用的基本命令</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/17/Linux%E7%AC%94%E8%AE%B004-%E5%B8%B8%E7%94%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">
-          
-          
-            
-          
-          常用的基本命令目录管理
-绝对路径与相对路径
-
-cd：切换目录命令。
-./：当前目录
-cd .. 返回上一级目录
-123456[root@iZ2zeh7ydg2bbydds175q0Z ~]# cd /[root@iZ2zeh7ydg2bbydds175q0Z /]# lsbin   dev  home  lib64  mnt  patch  root  sbin  sys  usr  wwwboo
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-17 12:42" pubdate>
-              2021-01-17
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/17/Linux%E7%AC%94%E8%AE%B003-Linux%E7%B3%BB%E7%BB%9F%E5%88%9D%E6%8E%A2/" target="_self">
-          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Linux笔记03-Linux系统初探">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/17/Linux%E7%AC%94%E8%AE%B003-Linux%E7%B3%BB%E7%BB%9F%E5%88%9D%E6%8E%A2/">Linux笔记03-Linux系统初探</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/17/Linux%E7%AC%94%E8%AE%B003-Linux%E7%B3%BB%E7%BB%9F%E5%88%9D%E6%8E%A2/">
-          
-          
-            
-          
-          Linux系统初探
-开机登录
-
-开机会启动许多程序，它们在Windows中叫做“服务”(service)，在Linux就叫做“守护进程”(daemon)。
-开机成功后，会显示一个文本登录界面。这个界面就是我们经常看到的登录界面，在这个登录界面会提示用户输入用户名，而用户输入的用户名将作为参数传给login程序来验证用户的身份，密码是不明文显示的，输完确认回车即可。
-一般来说，用户的登录方式有三种：
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-17 10:18" pubdate>
-              2021-01-17
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" target="_self">
-          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Linux笔记02-Linux环境搭建">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">Linux笔记02-Linux环境搭建</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
-          
-          
-            
-          
-          Linux环境搭建
-前言
-
-在学习Linux之前，我需要把Linux的环境搭建好，其实Linux操作系统本身也可以看做是一个大的软件。下面我将会以两种方式搭建Linux环境，第一种方式是在在本地虚拟机上安装CentOS，免费；第二种方式是购买云服务器，在服务器命令行搭建环境。
-安装虚拟机会占用内存空间，但是没有经济压力，比较快捷；购买服务器会产生消费，但最接近原生的线上开发。这两种方式，各有利弊，
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-16 17:52" pubdate>
-              2021-01-16
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B001-%E5%85%A5%E9%97%A8%E6%A6%82%E8%BF%B0/" target="_self">
-          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Linux笔记01-入门概述">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B001-%E5%85%A5%E9%97%A8%E6%A6%82%E8%BF%B0/">Linux笔记01-入门概述</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B001-%E5%85%A5%E9%97%A8%E6%A6%82%E8%BF%B0/">
-          
-          
-            
-          
-          Linux入门概述
-我们为什么要学习Linux？
-
-Linux诞生了这么多年，以前还喊着如何能取代windows系统，现在这个口号已经小多了。任何事物发展都有其局限性都有其天花板。就如同在国内再搞一个社交软件取代腾讯一样，想想而已基本不可能，因为用户已经习惯于使用微信交流，不是说技术上实现不了解而是老百姓已经习惯了，想让他们不用，即使他们自己不用亲戚朋友还是要用，习惯成自然的事情。
-同理，当世界上
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-16 16:48" pubdate>
-              2021-01-16
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">Linux</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/15/Redis%E7%AC%94%E8%AE%B002-Redis%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" target="_self">
-          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Redis笔记02-Redis环境搭建">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/15/Redis%E7%AC%94%E8%AE%B002-Redis%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">Redis笔记02-Redis环境搭建</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/15/Redis%E7%AC%94%E8%AE%B002-Redis%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
-          
-          
-            
-          
-          一、概述1. Redis是什么？Redis（Remote Dictionary Server )，即远程字典服务。
-是一个开源的使用ANSI C语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。
-与memcached一样，为了保证效率，数据都是缓存在内存中。区别的是redis会周期性的把更新的数据写入磁盘或者把修改操作写入追加的记录文件，并且在此基
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-15 19:07" pubdate>
-              2021-01-15
             </time>
           </div>
         

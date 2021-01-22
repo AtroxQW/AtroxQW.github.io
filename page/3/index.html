@@ -191,6 +191,417 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B005-RedisKey%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Redis笔记05-RedisKey基本命令">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B005-RedisKey%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">Redis笔记05-RedisKey基本命令</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B005-RedisKey%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">
+          
+          
+            
+          
+          RedisKey基本命令Redis 是一个开源（BSD许可），内存存储的数据结构服务器，可用作数据库，高速缓存和消息队列代理。它支持字符串、哈希表、列表、集合、有序集合、为徒、hyperloglogs等数据类型。内置了复制、Lua脚本、LRU收回、事务以及不同级别磁盘持久化功能，同时通过Redis Sentinel提供高可用，通过Redis Cluster提供自动分区。
+
+在Redis中无论什么数
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-19 10:07" pubdate>
+              2021-01-19
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Redis/">Redis</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B004-Redis%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Redis笔记04-Redis的基本知识">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B004-Redis%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/">Redis笔记04-Redis的基本知识</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B004-Redis%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/">
+          
+          
+            
+          
+          Redis基础知识
+redis默认有16个数据库
+
+默认使用的是第0个
+16个数据库为：DB 0~DB 15。默认使用DB 0 ，可以使用select n切换到DB n，dbsize可以查看当前数据库的大小，与key数量相关。
+12345678910111213141516171819202122232425262728127.0.0.1:6379&gt; config get databases
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-19 09:25" pubdate>
+              2021-01-19
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Redis/">Redis</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/18/Redis%E7%AC%94%E8%AE%B003-redis-benchmark%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Redis笔记03-redis-benchmark性能测试">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/18/Redis%E7%AC%94%E8%AE%B003-redis-benchmark%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/">Redis笔记03-redis-benchmark性能测试</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/18/Redis%E7%AC%94%E8%AE%B003-redis-benchmark%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/">
+          
+          
+            
+          
+          性能测试redis-benchmark是一个压力测试工具，而且是官方自带的。
+redis-benchmark的命令参数，如下图所示：
+
+下面我们来进行简单测试：
+1# 测试：100个并发连接，100000个请求
+
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-18 20:32" pubdate>
+              2021-01-18
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Redis/">Redis</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/17/Linux%E7%AC%94%E8%AE%B004-%E5%B8%B8%E7%94%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Linux笔记04-常用的基本命令">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/17/Linux%E7%AC%94%E8%AE%B004-%E5%B8%B8%E7%94%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">Linux笔记04-常用的基本命令</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/17/Linux%E7%AC%94%E8%AE%B004-%E5%B8%B8%E7%94%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">
+          
+          
+            
+          
+          常用的基本命令目录管理
+绝对路径与相对路径
+
+cd：切换目录命令。
+./：当前目录
+cd .. 返回上一级目录
+123456[root@iZ2zeh7ydg2bbydds175q0Z ~]# cd /[root@iZ2zeh7ydg2bbydds175q0Z /]# lsbin   dev  home  lib64  mnt  patch  root  sbin  sys  usr  wwwboo
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-17 12:42" pubdate>
+              2021-01-17
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/17/Linux%E7%AC%94%E8%AE%B003-Linux%E7%B3%BB%E7%BB%9F%E5%88%9D%E6%8E%A2/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Linux笔记03-Linux系统初探">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/17/Linux%E7%AC%94%E8%AE%B003-Linux%E7%B3%BB%E7%BB%9F%E5%88%9D%E6%8E%A2/">Linux笔记03-Linux系统初探</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/17/Linux%E7%AC%94%E8%AE%B003-Linux%E7%B3%BB%E7%BB%9F%E5%88%9D%E6%8E%A2/">
+          
+          
+            
+          
+          Linux系统初探
+开机登录
+
+开机会启动许多程序，它们在Windows中叫做“服务”(service)，在Linux就叫做“守护进程”(daemon)。
+开机成功后，会显示一个文本登录界面。这个界面就是我们经常看到的登录界面，在这个登录界面会提示用户输入用户名，而用户输入的用户名将作为参数传给login程序来验证用户的身份，密码是不明文显示的，输完确认回车即可。
+一般来说，用户的登录方式有三种：
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-17 10:18" pubdate>
+              2021-01-17
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Linux笔记02-Linux环境搭建">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">Linux笔记02-Linux环境搭建</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B002-Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+          
+          
+            
+          
+          Linux环境搭建
+前言
+
+在学习Linux之前，我需要把Linux的环境搭建好，其实Linux操作系统本身也可以看做是一个大的软件。下面我将会以两种方式搭建Linux环境，第一种方式是在在本地虚拟机上安装CentOS，免费；第二种方式是购买云服务器，在服务器命令行搭建环境。
+安装虚拟机会占用内存空间，但是没有经济压力，比较快捷；购买服务器会产生消费，但最接近原生的线上开发。这两种方式，各有利弊，
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-16 17:52" pubdate>
+              2021-01-16
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B001-%E5%85%A5%E9%97%A8%E6%A6%82%E8%BF%B0/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Linux笔记01-入门概述">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B001-%E5%85%A5%E9%97%A8%E6%A6%82%E8%BF%B0/">Linux笔记01-入门概述</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/16/Linux%E7%AC%94%E8%AE%B001-%E5%85%A5%E9%97%A8%E6%A6%82%E8%BF%B0/">
+          
+          
+            
+          
+          Linux入门概述
+我们为什么要学习Linux？
+
+Linux诞生了这么多年，以前还喊着如何能取代windows系统，现在这个口号已经小多了。任何事物发展都有其局限性都有其天花板。就如同在国内再搞一个社交软件取代腾讯一样，想想而已基本不可能，因为用户已经习惯于使用微信交流，不是说技术上实现不了解而是老百姓已经习惯了，想让他们不用，即使他们自己不用亲戚朋友还是要用，习惯成自然的事情。
+同理，当世界上
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-16 16:48" pubdate>
+              2021-01-16
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/15/Redis%E7%AC%94%E8%AE%B002-Redis%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Redis笔记02-Redis环境搭建">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/15/Redis%E7%AC%94%E8%AE%B002-Redis%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">Redis笔记02-Redis环境搭建</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/15/Redis%E7%AC%94%E8%AE%B002-Redis%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+          
+          
+            
+          
+          一、概述1. Redis是什么？Redis（Remote Dictionary Server )，即远程字典服务。
+是一个开源的使用ANSI C语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。
+与memcached一样，为了保证效率，数据都是缓存在内存中。区别的是redis会周期性的把更新的数据写入磁盘或者把修改操作写入追加的记录文件，并且在此基
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-15 19:07" pubdate>
+              2021-01-15
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Redis/">Redis</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/posts/2021/01/15/Redis%E7%AC%94%E8%AE%B001-NoSQL%E8%BF%BD%E6%A0%B9%E6%BA%AF%E6%BA%90/" target="_self">
           <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Redis笔记01-NoSQL追根溯源">
         </a>
@@ -277,428 +688,6 @@
             <i class="iconfont icon-date"></i>
             <time datetime="2021-01-14 20:10" pubdate>
               2021-01-14
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/SpringCloud/">SpringCloud</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/14/SpringCloud%E7%AC%94%E8%AE%B008-Hystrix-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD/" target="_self">
-          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringCloud08笔记-Hystrix:服务熔断">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/14/SpringCloud%E7%AC%94%E8%AE%B008-Hystrix-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD/">SpringCloud08笔记-Hystrix:服务熔断</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/14/SpringCloud%E7%AC%94%E8%AE%B008-Hystrix-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD/">
-          
-          
-            
-          
-          Hystrix：服务熔断
-分布式系统面临的问题
-
-复杂分布式体系结构中的应用程序有数十个依赖关系，每个依赖关系在某些时候将不可避免失败！
-一、服务雪崩多个微服务之间调用的时候，假设微服务A调用微服务B和微服务C，微服务B和微服务C又调用其他的微服务，这就是所谓的“扇出”，如果扇出的链路上某个微服务的调用响应时间过长，或者不可用，对微服务A的调用就会占用越来越多的系统资源，进而引起系统崩溃，所谓的“
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-14 17:20" pubdate>
-              2021-01-14
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/SpringCloud/">SpringCloud</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/14/SpringCloud%E7%AC%94%E8%AE%B007-Feign-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1-%E5%9F%BA%E4%BA%8E%E6%9C%8D%E5%8A%A1%E7%AB%AF/" target="_self">
-          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringCloud笔记07-Feign:负载均衡(基于服务端)">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/14/SpringCloud%E7%AC%94%E8%AE%B007-Feign-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1-%E5%9F%BA%E4%BA%8E%E6%9C%8D%E5%8A%A1%E7%AB%AF/">SpringCloud笔记07-Feign:负载均衡(基于服务端)</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/14/SpringCloud%E7%AC%94%E8%AE%B007-Feign-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1-%E5%9F%BA%E4%BA%8E%E6%9C%8D%E5%8A%A1%E7%AB%AF/">
-          
-          
-            
-          
-          Feign：负载均衡（基于服务端）一、Feign简介Feign是声明式Web Service客户端，它让微服务之间的调用变得更简单，类似controller调用service。SpringCloud集成了Ribbon和Eureka，可以使用Feigin提供负载均衡的http客户端
-只需要创建一个接口，然后添加注解即可~
-Feign，主要是社区版，大家都习惯面向接口编程。这个是很多开发人员的规范。调
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-14 12:31" pubdate>
-              2021-01-14
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/SpringCloud/">SpringCloud</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/13/SpringCloud%E7%AC%94%E8%AE%B006-Ribbon-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%EF%BC%88%E5%9F%BA%E4%BA%8E%E5%AE%A2%E6%88%B7%E7%AB%AF%EF%BC%89/" target="_self">
-          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringCloud笔记06-Ribbon:负载均衡（基于客户端）">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/13/SpringCloud%E7%AC%94%E8%AE%B006-Ribbon-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%EF%BC%88%E5%9F%BA%E4%BA%8E%E5%AE%A2%E6%88%B7%E7%AB%AF%EF%BC%89/">SpringCloud笔记06-Ribbon:负载均衡（基于客户端）</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/13/SpringCloud%E7%AC%94%E8%AE%B006-Ribbon-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%EF%BC%88%E5%9F%BA%E4%BA%8E%E5%AE%A2%E6%88%B7%E7%AB%AF%EF%BC%89/">
-          
-          
-            
-          
-          Ribbon：负载均衡（基于客户端）一、负载均衡以及RibbonRibbon是什么？
-
-Spring Cloud Ribbon 是基于Netflix Ribbon 实现的一套客户端负载均衡的工具。
-简单的说，Ribbon 是 Netflix 发布的开源项目，主要功能是提供客户端的软件负载均衡算法，将 Netflix 的中间层服务连接在一起。Ribbon 的客户端组件提供一系列完整的配置项，如：连接
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-13 19:54" pubdate>
-              2021-01-13
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/SpringCloud/">SpringCloud</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/13/SpringCloud%E7%AC%94%E8%AE%B005-Eureka%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0/" target="_self">
-          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringCloud笔记05-Eureka服务注册与发现">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/13/SpringCloud%E7%AC%94%E8%AE%B005-Eureka%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0/">SpringCloud笔记05-Eureka服务注册与发现</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/13/SpringCloud%E7%AC%94%E8%AE%B005-Eureka%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0/">
-          
-          
-            
-          
-          Eureka服务注册中心一、什么是Eureka
-Netflix在涉及Eureka时，遵循的就是API原则.
-Eureka是Netflix的有个子模块，也是核心模块之一。Eureka是基于REST的服务，用于定位服务，以实现云端中间件层服务发现和故障转移，服务注册与发现对于微服务来说是非常重要的，有了服务注册与发现，只需要使用服务的标识符，就可以访问到服务，而不需要修改服务调用的配置文件了，功能类似
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-13 16:27" pubdate>
-              2021-01-13
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/SpringCloud/">SpringCloud</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/13/SpringCloud%E7%AC%94%E8%AE%B004-Rest%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" target="_self">
-          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringCloud笔记04-Rest学习环境搭建:服务提供者">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/13/SpringCloud%E7%AC%94%E8%AE%B004-Rest%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">SpringCloud笔记04-Rest学习环境搭建:服务提供者</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/13/SpringCloud%E7%AC%94%E8%AE%B004-Rest%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
-          
-          
-            
-          
-          Rest学习环境搭建一、介绍
-我们会使用一个Dept部门模块做一个微服务通用案例Consumer消费者（Client）通过REST调用Provider提供者（Server）提供的服务。
-回顾Spring、SpringMVC、MyBatis等以往的学习知识。
-Maven的分包分模块架构复习。
-
-
-一个简单的Maven模块结构是这样的：
-– app-parent: 一个父项目(app-parent)聚
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-13 15:15" pubdate>
-              2021-01-13
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/SpringCloud/">SpringCloud</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/12/SpringCloud%E7%AC%94%E8%AE%B003-SpringCloud%E5%85%A5%E9%97%A8%E6%A6%82%E8%BF%B0/" target="_self">
-          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringCloud笔记03-SpringCloud入门概述">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/12/SpringCloud%E7%AC%94%E8%AE%B003-SpringCloud%E5%85%A5%E9%97%A8%E6%A6%82%E8%BF%B0/">SpringCloud笔记03-SpringCloud入门概述</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/12/SpringCloud%E7%AC%94%E8%AE%B003-SpringCloud%E5%85%A5%E9%97%A8%E6%A6%82%E8%BF%B0/">
-          
-          
-            
-          
-          SpringCloud入门概述一、SpringCloud是什么？详情请查看Spring官网：https://spring.io
-
-SpringCloud的生态与流程：
-
-二、SpringCloud和SpringBoot的关系
-Springboot专注于方便地开发单个个体微服务
-SpringCloud是关注全局的微服务协调治理框架。它将SpringBoot开发的一个个单体微服务，整合并管理起来，为各
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-12 20:10" pubdate>
-              2021-01-12
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/SpringCloud/">SpringCloud</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/12/SpringCloud%E7%AC%94%E8%AE%B002-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A6%82%E8%BF%B0/" target="_self">
-          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringCloud笔记02-微服务概述">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/12/SpringCloud%E7%AC%94%E8%AE%B002-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A6%82%E8%BF%B0/">SpringCloud笔记02-微服务概述</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/12/SpringCloud%E7%AC%94%E8%AE%B002-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A6%82%E8%BF%B0/">
-          
-          
-            
-          
-          微服务概述一、什么是微服务？
-什么是微服务？
-
-微服务(Microservice Architecture) 是近几年流行的一种架构思想，关于它的概念很难一言以蔽之。
-究竟什么是微服务呢？我们在此引用ThoughtWorks 公司的首席科学家 Martin Fowler 于2014年提出的一段话：
-原文：https://martinfowler.com/articles/microservices
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-12 19:42" pubdate>
-              2021-01-12
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/SpringCloud/">SpringCloud</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/12/SpringCloud%E7%AC%94%E8%AE%B001-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E6%A0%B8%E5%BF%83%E9%97%AE%E9%A2%98/" target="_self">
-          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="SpringCloud笔记01-微服务架构核心问题">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/12/SpringCloud%E7%AC%94%E8%AE%B001-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E6%A0%B8%E5%BF%83%E9%97%AE%E9%A2%98/">SpringCloud笔记01-微服务架构核心问题</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/12/SpringCloud%E7%AC%94%E8%AE%B001-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E6%A0%B8%E5%BF%83%E9%97%AE%E9%A2%98/">
-          
-          
-            
-          
-          微服务架构的4个核心问题一、核心问题
-服务很多，客户端该怎么访问？
-
-这么多服务，服务之间如何通信？
-
-这么多服务，应该如何治理？
-
-服务挂了怎么办？
-
-
-二、3种主流解决方案
-SpringCloud NetFlix
-Apache Dubbo Zookeeper
-SpringCloud  Alibaba
-
-三、详细方案
-SpringCloud NetFlix 一站式解决方案
-API网关，zuul组
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-12 19:32" pubdate>
-              2021-01-12
             </time>
           </div>
         
