@@ -191,6 +191,67 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/23/ElasticSearch%E7%AC%94%E8%AE%B009-SpringBoot%E9%9B%86%E6%88%90ElasticSearch/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="ElasticSearch笔记09-SpringBoot集成ElasticSearch">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/23/ElasticSearch%E7%AC%94%E8%AE%B009-SpringBoot%E9%9B%86%E6%88%90ElasticSearch/">ElasticSearch笔记09-SpringBoot集成ElasticSearch</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/23/ElasticSearch%E7%AC%94%E8%AE%B009-SpringBoot%E9%9B%86%E6%88%90ElasticSearch/">
+          
+          
+            
+          
+          SpringBoot集成ElasticSearch
+找文档
+
+在官网的文档中找到ElasticSearch CLients。
+
+
+点进去之后，选择第一个 Java REST Client
+
+
+我们选择高级的客户端。
+
+
+
+找到了原生的依赖
+12345&lt;dependency&gt;    &lt;groupId&gt;org.elasticsearch.client&lt;/groupId&g
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-23 11:48" pubdate>
+              2021-01-23
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/ElasticSearch/">ElasticSearch</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B008-%E6%96%87%E6%A1%A3%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" target="_self">
           <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="ElasticSearch笔记08-文档基本操作">
         </a>
@@ -208,7 +269,12 @@
           
             
           
-          
+          关于文档的操作
+基本操作
+
+
+添加数据，向yonghu索引表中添加类型为user的一条数据。
+1234567PUT /yonghu/user/1&#123;  &quot;name&quot;: &quot;乔威&quot;,  &quot;age&quot;: 20,  &quot;desc&quot;: &quot;simple code&quot;,  &quot;tags&quot;: [
         </a>
       </p>
 
@@ -683,53 +749,6 @@ Lucene使用Java写的，目标是为各种中小型应用软件加入全文检�
               <a href="/tags/Redis/">Redis</a>
             
           </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B016-%E5%93%A8%E5%85%B5%E6%A8%A1%E5%BC%8F/" target="_self">
-          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Redis笔记16-哨兵模式">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B016-%E5%93%A8%E5%85%B5%E6%A8%A1%E5%BC%8F/">Redis笔记16-哨兵模式</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B016-%E5%93%A8%E5%85%B5%E6%A8%A1%E5%BC%8F/">
-          
-          
-            
-          
-          更多信息参考博客：https://www.jianshu.com/p/06ab9daf921d
-主从切换技术的方法是：当主服务器宕机后，需要手动把一台从服务器切换为主服务器，这就需要人工干预，费事费力，还会造成一段时间内服务不可用。这不是一种推荐的方式，更多时候，我们优先考虑哨兵模式。
-单机单个哨兵
-
-哨兵的作用：
-
-通过发送命令，让Redis服务器返回监控其运行状态，包括主服务器和从服务器。
-当
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-21 11:40" pubdate>
-              2021-01-21
-            </time>
-          </div>
-        
-        
         
       </div>
     </article>

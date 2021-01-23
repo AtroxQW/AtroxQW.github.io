@@ -196,7 +196,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      0 字
+      428 字
     </span>
   
 
@@ -206,7 +206,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      5
        分钟
     </span>
   
@@ -239,7 +239,111 @@
             <h1 style="display: none">ElasticSearch笔记08-文档基本操作</h1>
             
             <div class="markdown-body">
-              
+              <h2 id="关于文档的操作"><a href="#关于文档的操作" class="headerlink" title="关于文档的操作"></a>关于文档的操作</h2><blockquote>
+<p>基本操作</p>
+</blockquote>
+<ol>
+<li><p><strong>添加数据</strong>，向yonghu索引表中添加类型为user的一条数据。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs json">PUT /yonghu/user/1<br>&#123;<br>  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;乔威&quot;</span>,<br>  <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">20</span>,<br>  <span class="hljs-attr">&quot;desc&quot;</span>: <span class="hljs-string">&quot;simple code&quot;</span>,<br>  <span class="hljs-attr">&quot;tags&quot;</span>: [<span class="hljs-string">&quot;技术宅&quot;</span>,<span class="hljs-string">&quot;自燃&quot;</span>,<span class="hljs-string">&quot;LOL&quot;</span>]<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B008-%E6%96%87%E6%A1%A3%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/1.png" srcset="/img/loading.gif" alt="添加数据" style="zoom: 80%;">
+
+<p>后面，再添加两条数据。</p>
+<p><img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B008-%E6%96%87%E6%A1%A3%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/data.png" srcset="/img/loading.gif" alt="数据"></p>
+</li>
+<li><p>获取数据</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs json">GET yonghu/user/1<br></code></pre></td></tr></table></figure>
+
+<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B008-%E6%96%87%E6%A1%A3%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/get.png" srcset="/img/loading.gif" alt="获取数据" style="zoom:67%;">
+</li>
+<li><p>更新数据 PUT</p>
+<p>将3号剑魔的name更新为atrox。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs json">PUT /yonghu/user/3<br>&#123;<br>  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;atrox&quot;</span>,<br>  <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">3000</span>,<br>  <span class="hljs-attr">&quot;desc&quot;</span>: <span class="hljs-string">&quot;灭绝的死寂&quot;</span>,<br>  <span class="hljs-attr">&quot;tags&quot;</span>: [<span class="hljs-string">&quot;暗裔&quot;</span>,<span class="hljs-string">&quot;剑气&quot;</span>,<span class="hljs-string">&quot;大灭&quot;</span>]<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B008-%E6%96%87%E6%A1%A3%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/update.png" srcset="/img/loading.gif" alt="更新数据" style="zoom:67%;">
+</li>
+<li><p>更新数据POST  _update</p>
+<p>将3号atrox的name改回剑魔</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs json">POST yonghu/user/3/_update<br>&#123;<br>  <span class="hljs-attr">&quot;doc&quot;</span>: &#123;<br>    <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;剑魔&quot;</span>,<br>    <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">3000</span>,<br>    <span class="hljs-attr">&quot;desc&quot;</span>: <span class="hljs-string">&quot;灭绝的死寂&quot;</span>,<br>    <span class="hljs-attr">&quot;tags&quot;</span>: [<span class="hljs-string">&quot;暗裔&quot;</span>,<span class="hljs-string">&quot;剑气&quot;</span>,<span class="hljs-string">&quot;大灭&quot;</span>]<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B008-%E6%96%87%E6%A1%A3%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/update2.png" srcset="/img/loading.gif" alt="更新" style="zoom:67%;">
+</li>
+<li><p>简单的条件搜索</p>
+<p><strong>搜索name是剑魔的user</strong></p>
+<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B008-%E6%96%87%E6%A1%A3%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/查.png" srcset="/img/loading.gif" alt="查询" style="zoom:67%;">
+
+</li>
+</ol>
+<blockquote>
+<p>复杂操作</p>
+</blockquote>
+<p><strong>简单的根据name查询</strong></p>
+<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B008-%E6%96%87%E6%A1%A3%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/复杂.png" srcset="/img/loading.gif" alt="复杂查询" style="zoom: 67%;">
+
+<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B008-%E6%96%87%E6%A1%A3%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/2.png" srcset="/img/loading.gif" alt="查询出两条" style="zoom:67%;">
+
+<p><strong>只查看想要的字段</strong></p>
+<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B008-%E6%96%87%E6%A1%A3%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/3.png" srcset="/img/loading.gif" alt="过滤字段" style="zoom:67%;">
+
+<p><strong>根据年龄排序查询</strong></p>
+<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B008-%E6%96%87%E6%A1%A3%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/sort.png" srcset="/img/loading.gif" alt="排序" style="zoom:67%;">
+
+<p><strong>分页查询</strong></p>
+<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B008-%E6%96%87%E6%A1%A3%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/4.png" srcset="/img/loading.gif" alt="分页" style="zoom:67%;">
+
+<p><strong>布尔值查询</strong>：多条件查询</p>
+<ul>
+<li>must（相当于and），所有的条件都要符合</li>
+</ul>
+<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B008-%E6%96%87%E6%A1%A3%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/5.png" srcset="/img/loading.gif" alt="布尔值查询" style="zoom:67%;">
+
+<ul>
+<li><p>should（相当于or），符合某几个条件即可</p>
+<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B008-%E6%96%87%E6%A1%A3%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/6.png" srcset="/img/loading.gif" alt="should" style="zoom:67%;">
+</li>
+<li><p>must_not（相当于not）</p>
+<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B008-%E6%96%87%E6%A1%A3%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/not.png" srcset="/img/loading.gif" alt="must_not" style="zoom:67%;">
+</li>
+<li><p>过滤器filter</p>
+<p>gt 大于<br>gte 大于等于<br>lt 小于<br>lte 小于等于</p>
+<p> <strong>查询年龄大于2000岁且name不是大司马的用户</strong></p>
+<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B008-%E6%96%87%E6%A1%A3%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/7.png" srcset="/img/loading.gif" alt="过滤" style="zoom:67%;">
+</li>
+<li><p>匹配多个条件</p>
+<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B008-%E6%96%87%E6%A1%A3%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/8.png" srcset="/img/loading.gif" alt="多条件" style="zoom:67%;">
+
+</li>
+</ul>
+<blockquote>
+<p>精确查询</p>
+</blockquote>
+<p>term查询时直接通过倒排索引指定的词条精确查找的。</p>
+<p><strong>关于分词</strong>：</p>
+<ul>
+<li>term，直接查询精确的</li>
+<li>match，会使用分词器解析！（先分析文档，然后在通过分析的文档进行查询）</li>
+</ul>
+<p><strong>两个类型：text keyword</strong></p>
+<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B008-%E6%96%87%E6%A1%A3%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/9.png" srcset="/img/loading.gif" alt="keyword" style="zoom:67%;">
+
+<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B008-%E6%96%87%E6%A1%A3%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/10.png" srcset="/img/loading.gif" alt="text" style="zoom:67%;">
+
+<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B008-%E6%96%87%E6%A1%A3%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/11.png" srcset="/img/loading.gif" alt="keyword字段不会被分词器解析" style="zoom:67%;">
+
+<blockquote>
+<p>多个值匹配精确查询</p>
+</blockquote>
+<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B008-%E6%96%87%E6%A1%A3%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/12.png" srcset="/img/loading.gif" alt="多值匹配" style="zoom:67%;">
+
+<blockquote>
+<p>高亮查询</p>
+</blockquote>
+<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B008-%E6%96%87%E6%A1%A3%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/13.png" srcset="/img/loading.gif" alt="高亮" style="zoom:67%;">
+
+<p>自定义高亮样式</p>
+<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B008-%E6%96%87%E6%A1%A3%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/14.png" srcset="/img/loading.gif" alt="自定义高亮样式" style="zoom:67%;">
+
+
             </div>
             <hr>
             <div>
@@ -261,6 +365,12 @@
                 <div class="post-prevnext">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/posts/2021/01/23/ElasticSearch%E7%AC%94%E8%AE%B009-SpringBoot%E9%9B%86%E6%88%90ElasticSearch/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">ElasticSearch笔记09-SpringBoot集成ElasticSearch</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
