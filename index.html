@@ -191,6 +191,381 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/24/Nginx%E7%AC%94%E8%AE%B007-Nginx%E9%85%8D%E7%BD%AE%E5%AE%9E%E4%BE%8B-%E5%8A%A8%E9%9D%99%E5%88%86%E7%A6%BB/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Nginx笔记07-Nginx配置实例-动静分离">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/24/Nginx%E7%AC%94%E8%AE%B007-Nginx%E9%85%8D%E7%BD%AE%E5%AE%9E%E4%BE%8B-%E5%8A%A8%E9%9D%99%E5%88%86%E7%A6%BB/">Nginx笔记07-Nginx配置实例-动静分离</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/24/Nginx%E7%AC%94%E8%AE%B007-Nginx%E9%85%8D%E7%BD%AE%E5%AE%9E%E4%BE%8B-%E5%8A%A8%E9%9D%99%E5%88%86%E7%A6%BB/">
+          
+          
+            
+          
+          Nginx 动静分离简单来说就是把动态跟静态请求分开，不能理解成只是单纯的把动态页面和静态页面物理分离。严格意义上说应该是动态请求跟静态请求分开，可以理解成使用Nginx 处理静态页面，Tomcat处理动态页面。动静分离从目前实现角度来讲大致分为两种， 一种是纯粹把静态文件独立成单独的域名，放在独立的服务器上，也是目前主流推崇的方案； 另外一种方法就是动态跟静态文件混合在一起发布，通过 nginx
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-24 14:59" pubdate>
+              2021-01-24
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Nginx/">Nginx</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/24/Nginx%E7%AC%94%E8%AE%B006-Nginx%E9%85%8D%E7%BD%AE%E5%AE%9E%E4%BE%8B-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Nginx笔记06-Nginx配置实例-负载均衡">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/24/Nginx%E7%AC%94%E8%AE%B006-Nginx%E9%85%8D%E7%BD%AE%E5%AE%9E%E4%BE%8B-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/">Nginx笔记06-Nginx配置实例-负载均衡</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/24/Nginx%E7%AC%94%E8%AE%B006-Nginx%E9%85%8D%E7%BD%AE%E5%AE%9E%E4%BE%8B-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/">
+          
+          
+            
+          
+          Nginx配置实例-负载均衡
+首先准备两个启动的Tomcat
+
+在nginx.conf中进行配置
+12345678910111213141516http &#123;	......	upstraem myserver &#123;		ip_hash;		server 8.131.49.204:8080 weight=1;    server 8.131.49.204:8081 weight=1;	
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-24 14:53" pubdate>
+              2021-01-24
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Nginx/">Nginx</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/24/Nginx%E7%AC%94%E8%AE%B005-Nginx%E9%85%8D%E7%BD%AE%E5%AE%9E%E4%BE%8B-%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Nginx笔记05-Nginx配置实例-反向代理">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/24/Nginx%E7%AC%94%E8%AE%B005-Nginx%E9%85%8D%E7%BD%AE%E5%AE%9E%E4%BE%8B-%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">Nginx笔记05-Nginx配置实例-反向代理</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/24/Nginx%E7%AC%94%E8%AE%B005-Nginx%E9%85%8D%E7%BD%AE%E5%AE%9E%E4%BE%8B-%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">
+          
+          
+            
+          
+          nginx配置实例-反向代理
+准备工作
+
+
+下载Tomcat到服务器：https://tomcat.apache.org/download-90.cgi
+
+解压Tomcat
+
+启动Tomcat，进入bin目录，执行以下命令。
+12345678[root@iZ2zeh7ydg2bbydds175q0Z bin]# ./startup.sh Using CATALINA_BASE:   /home/a
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-24 13:21" pubdate>
+              2021-01-24
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Nginx/">Nginx</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/24/Nginx%E7%AC%94%E8%AE%B004-Nginx%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Nginx笔记04-Nginx配置文件">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/24/Nginx%E7%AC%94%E8%AE%B004-Nginx%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/">Nginx笔记04-Nginx配置文件</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/24/Nginx%E7%AC%94%E8%AE%B004-Nginx%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/">
+          
+          
+            
+          
+          nginx配置文件
+nginx配置文件所在位置：/usr/local/nginx/conf/nginx.conf
+
+1234567[root@iZ2zeh7ydg2bbydds175q0Z sbin]# cd /usr/local/nginx/conf[root@iZ2zeh7ydg2bbydds175q0Z conf]# lsfastcgi.conf            koi-win    
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-24 12:27" pubdate>
+              2021-01-24
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Nginx/">Nginx</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/24/Nginx%E7%AC%94%E8%AE%B003-Nginx%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Nginx笔记03-Nginx常用命令">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/24/Nginx%E7%AC%94%E8%AE%B003-Nginx%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">Nginx笔记03-Nginx常用命令</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/24/Nginx%E7%AC%94%E8%AE%B003-Nginx%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+          
+          
+            
+          
+          nginx操作的常用命令
+使用nginx操作命令前提：进入nginx的目录
+1[root@iZ2zeh7ydg2bbydds175q0Z ~]# cd /usr/local/nginx/sbin
+
+查看nginx的版本号: ./nginx -v
+12[root@iZ2zeh7ydg2bbydds175q0Z sbin]# ./nginx -vnginx version: nginx/1.18.0
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-24 12:05" pubdate>
+              2021-01-24
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Nginx/">Nginx</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/23/Nginx%E7%AC%94%E8%AE%B002-Linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85nginx/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Nginx笔记02-Linux系统安装nginx">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/23/Nginx%E7%AC%94%E8%AE%B002-Linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85nginx/">Nginx笔记02-Linux系统安装nginx</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/23/Nginx%E7%AC%94%E8%AE%B002-Linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85nginx/">
+          
+          
+            
+          
+          Nginx的安装
+使用远程连接工具连接到服务器。
+
+
+去nginx官网：https://nginx.org/下载
+
+
+先别急着解压，先要下载关于nginx的素材。
+
+下载pcre库，下载：https://ftp.pcre.org/pub/pcre/
+
+将pcre压缩包发送到服务器，解压。
+
+
+1tar zxvf pcre2-10.36.tar.gz
+
+进入解压后文件目录，执行命令
+1./confi
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-23 19:34" pubdate>
+              2021-01-23
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Nginx/">Nginx</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/23/Nginx%E7%AC%94%E8%AE%B001-nginx%E7%AE%80%E4%BB%8B/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Nginx笔记01-nginx简介">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/23/Nginx%E7%AC%94%E8%AE%B001-nginx%E7%AE%80%E4%BB%8B/">Nginx笔记01-nginx简介</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/23/Nginx%E7%AC%94%E8%AE%B001-nginx%E7%AE%80%E4%BB%8B/">
+          
+          
+            
+          
+          Nginx简介
+Nginx概述
+
+Nginx (“engine x”)是一个高性能的 HTTP 和反向代理服务器 特点是占有内存少，并发能力强，事实上 nginx 的并发能力确实在同类型的网页服务器中表现较好，中国大陆使用 nginx网站用户有：百度、京东、新浪、网易、腾讯、淘宝等。
+
+Nginx作为web服务器
+
+Nginx可以作为静态页面的 web 服务器，同时还支持 CGI 协议的动态语言，
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-23 17:50" pubdate>
+              2021-01-23
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Nginx/">Nginx</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/posts/2021/01/23/ElasticSearch%E7%AC%94%E8%AE%B009-SpringBoot%E9%9B%86%E6%88%90ElasticSearch/" target="_self">
           <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="ElasticSearch笔记09-SpringBoot集成ElasticSearch">
         </a>
@@ -376,389 +751,11 @@ DELETE
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B006-IK%E5%88%86%E8%AF%8D%E5%99%A8%E6%8F%92%E4%BB%B6/" target="_self">
-          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="ElasticSearch笔记06-IK分词器插件">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B006-IK%E5%88%86%E8%AF%8D%E5%99%A8%E6%8F%92%E4%BB%B6/">ElasticSearch笔记06-IK分词器插件</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B006-IK%E5%88%86%E8%AF%8D%E5%99%A8%E6%8F%92%E4%BB%B6/">
-          
-          
-            
-          
-          IK分词器插件
-概念
-
-分词∶即把一段中文或者别的划分成一个个的关键字，我们在搜索时候会把自己的信息进行分词，会把数据库中或者索引库中的数据进行分词，然后进行一个匹配操作，默认的中文分词是将每个字看成一个词，比如“”我爱狂神”会被分为”我”∵”爱””狂””神”，这显然是不符合要求的，所以我们需要安装中文分词器ik来解决这个问题。
-IK提供了两个分词算法: ik smart和ik_max_word，
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-22 17:27" pubdate>
-              2021-01-22
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ElasticSearch/">ElasticSearch</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B005-ES%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/" target="_self">
-          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="ElasticSearch笔记04-ES核心概念">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B005-ES%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/">ElasticSearch笔记04-ES核心概念</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B005-ES%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/">
-          
-          
-            
-          
-          ElasticSearch核心概念
-概述
-
-在前面的学习中，我们掌握了es是什么，同时也把es的服务已经安装启动，那么es是如何去存储数据，数据结构是什么，又是如何实现搜索的呢？我们先来聊聊Elasticsearch的相关概念吧！
-集群,节点,索引,类型,文档,分片,映射是什么。
-elasticsearch是面向文档的，关系行数据库和elasticsearch客观的对比!一切都是json。
-
-
-
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-22 16:38" pubdate>
-              2021-01-22
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ElasticSearch/">ElasticSearch</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B004-ElasticSearch%E5%AE%89%E8%A3%85/" target="_self">
-          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="ElasticSearch笔记03-ElasticSearch安装">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B004-ElasticSearch%E5%AE%89%E8%A3%85/">ElasticSearch笔记03-ElasticSearch安装</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B004-ElasticSearch%E5%AE%89%E8%A3%85/">
-          
-          
-            
-          
-          ElasticSearch安装
-声明
-
-JDK最低要求版本：1.8，elasticsearch的版本和对应我们之后的Java的核心jar包。
-
-下载
-
-Elastic官网：https://www.elastic.co/cn/
-
-下载页面：https://www.elastic.co/cn/elasticsearch/
-
-下载选项：https://www.elastic.co/cn/download
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-22 10:19" pubdate>
-              2021-01-22
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ElasticSearch/">ElasticSearch</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B003-ElasticSearch%E4%B8%8ESolr%E7%9A%84%E5%8C%BA%E5%88%AB/" target="_self">
-          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="ElasticSearch笔记03-ElasticSearch与Solr的区别">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B003-ElasticSearch%E4%B8%8ESolr%E7%9A%84%E5%8C%BA%E5%88%AB/">ElasticSearch笔记03-ElasticSearch与Solr的区别</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B003-ElasticSearch%E4%B8%8ESolr%E7%9A%84%E5%8C%BA%E5%88%AB/">
-          
-          
-            
-          
-          ES和Solr的区别
-ElasticSearch简介
-
-Elasticsearch是一个实时分布式搜索和分析引擎，它让你以之前未有的速度处理大数据成为可能。
-它用于全文搜索、结构化搜索、分析以及将这三者混合使用。
-维基百科使用ElasticSearch提供全文搜索并高亮关键字，以及输入实时搜索（search-asyou-type）和搜索纠错（did-you-mean）等搜索建议功能。
-英国卫报使用
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-22 08:37" pubdate>
-              2021-01-22
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ElasticSearch/">ElasticSearch</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B002-%E6%A6%82%E8%BF%B0/" target="_self">
-          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="ElasticSearch笔记02-概述">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B002-%E6%A6%82%E8%BF%B0/">ElasticSearch笔记02-概述</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B002-%E6%A6%82%E8%BF%B0/">
-          
-          
-            
-          
-          概述
-定义
-
-Elasticsearch，简称为es，es是一个开源的扩展的分布式全文检索引擎，他可以近乎实时的存储,检索数据；本身扩展性很好，可以扩展到上百台服务器，处理PB级别(大数据时代)的数据。es也使用Java并发使用Lucene作为其核心来实现所有索引和搜索的功能，但是它的目的是通过简单的RESTful API 来隐藏Lucene的复杂性，从而让全文搜索变得简单.
-据国际权威的数据库产
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-22 08:37" pubdate>
-              2021-01-22
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ElasticSearch/">ElasticSearch</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/21/ElasticSearch%E7%AC%94%E8%AE%B001-%E8%81%8A%E8%81%8ADoug-Cutting/" target="_self">
-          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="ElasticSearch笔记01-聊聊Doug Cutting">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/21/ElasticSearch%E7%AC%94%E8%AE%B001-%E8%81%8A%E8%81%8ADoug-Cutting/">ElasticSearch笔记01-聊聊Doug Cutting</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/21/ElasticSearch%E7%AC%94%E8%AE%B001-%E8%81%8A%E8%81%8ADoug-Cutting/">
-          
-          
-            
-          
-          聊聊Doug Cutting
-本故事来自于公众号：新栆课堂
-
-1998年9月4日，Google公司在美国硅谷成立，正如大家所知，它是一家做搜索引擎起家的公司。
-
-无独有偶,一位名叫Doug Cutting的美国工程师,也迷上了搜索引擎。他做了一个用于文本搜索的函数库(姑且理解为软件的功能组件)，命名为Lucene。
-
-Lucene使用Java写的，目标是为各种中小型应用软件加入全文检索功能.因为好
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-21 19:25" pubdate>
-              2021-01-21
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ElasticSearch/">ElasticSearch</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B017-%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E4%B8%8E%E9%9B%AA%E5%B4%A9/" target="_self">
-          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Redis笔记17-缓存穿透与雪崩">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B017-%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E4%B8%8E%E9%9B%AA%E5%B4%A9/">Redis笔记17-缓存穿透与雪崩</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B017-%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E4%B8%8E%E9%9B%AA%E5%B4%A9/">
-          
-          
-            
-          
-          缓存穿透与雪崩缓存穿透（查不到）
-概念
-
-在默认情况下，用户请求数据时，会先在缓存(Redis)中查找，若没找到即缓存未命中，再在数据库中进行查找，数量少可能问题不大，可是一旦大量的请求数据（例如秒杀场景）缓存都没有命中的话，就会全部转移到数据库上，造成数据库极大的压力，就有可能导致数据库崩溃。网络安全中也有人恶意使用这种手段进行攻击被称为洪水攻击。
-
-解决方案
-
-布隆过滤器
-对所有可能查询的参数
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-21 12:11" pubdate>
-              2021-01-21
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Redis/">Redis</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/"><i class="iconfont icon-arrowright"></i></a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
   
