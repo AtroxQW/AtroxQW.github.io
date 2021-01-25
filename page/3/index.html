@@ -191,6 +191,62 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B014-%E5%8F%91%E5%B8%83%E4%B8%8E%E8%AE%A2%E9%98%85/" target="_self">
+          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Redis笔记14-发布与订阅">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B014-%E5%8F%91%E5%B8%83%E4%B8%8E%E8%AE%A2%E9%98%85/">Redis笔记14-发布与订阅</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B014-%E5%8F%91%E5%B8%83%E4%B8%8E%E8%AE%A2%E9%98%85/">
+          
+          
+            
+          
+          发布与订阅Redis 发布订阅(pub/sub)是一种消息通信模式：发送者(pub)发送消息，订阅者(sub)接收消息。
+下图展示了频道 channel1 ， 以及订阅这个频道的三个客户端 —— client2 、 client5 和 client1 之间的关系：
+
+当有新消息通过 PUBLISH 命令发送给频道 channel1 时， 这个消息就会被发送给订阅它的三个客户端：
+
+命令
+
+
+命令
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-21 09:48" pubdate>
+              2021-01-21
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Redis/">Redis</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/posts/2021/01/20/Redis%E7%AC%94%E8%AE%B013-Redis%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96-AOF/" target="_self">
           <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Redis笔记13-Redis的持久化-AOF">
         </a>
@@ -677,58 +733,6 @@ STRLEN key
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
             <time datetime="2021-01-19 10:07" pubdate>
-              2021-01-19
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Redis/">Redis</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B004-Redis%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/" target="_self">
-          <img src="/img/blog/Hexo-Fluid%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE.jpg" srcset="/img/loading.gif" alt="Redis笔记04-Redis的基本知识">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B004-Redis%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/">Redis笔记04-Redis的基本知识</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B004-Redis%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/">
-          
-          
-            
-          
-          Redis基础知识
-redis默认有16个数据库
-
-默认使用的是第0个
-16个数据库为：DB 0~DB 15。默认使用DB 0 ，可以使用select n切换到DB n，dbsize可以查看当前数据库的大小，与key数量相关。
-12345678910111213141516171819202122232425262728127.0.0.1:6379&gt; config get databases
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-19 09:25" pubdate>
               2021-01-19
             </time>
           </div>
