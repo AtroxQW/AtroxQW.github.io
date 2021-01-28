@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="codeAtrox">
   <meta name="keywords" content="">
-  <title>Redis笔记12-Redis的持久化-RDB - Atrox的博客</title>
+  <title>https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/Redis笔记12-Redis的持久化-RDB - Atrox的博客</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -174,7 +174,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Redis笔记12-Redis的持久化-RDB">
+            <span class="h2" id="subtitle" title="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/Redis笔记12-Redis的持久化-RDB">
               
             </span>
 
@@ -236,12 +236,12 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Redis笔记12-Redis的持久化-RDB</h1>
+            <h1 style="display: none">https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/Redis笔记12-Redis的持久化-RDB</h1>
             
             <div class="markdown-body">
               <h2 id="持久化-RDB"><a href="#持久化-RDB" class="headerlink" title="持久化-RDB"></a>持久化-RDB</h2><h3 id="什么是RDB"><a href="#什么是RDB" class="headerlink" title="什么是RDB"></a>什么是RDB</h3><hr>
 <p>RDB：Redis Databases，在指定时间间隔后，将内存中的数据集快照写入数据库 ；在恢复时候，直接读取快照文件，进行数据的恢复 ；</p>
-<p><img src="/posts/2021/01/20/Redis%E7%AC%94%E8%AE%B012-Redis%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96-RDB/rdb.png" srcset="/img/loading.gif" alt="rdb"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/Redis%E7%AC%94%E8%AE%B012-Redis%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96-RDB/rdb.png" srcset="/img/loading.gif" alt="rdb"></p>
 <p>默认情况下， Redis 将数据库快照保存在名字为 dump.rdb的二进制文件中。文件名可以在配置文件中进行自定义。</p>
 <h3 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h3><hr>
 <p>在进行 <strong><code>RDB</code></strong> 的时候，**<code>redis</code>** 的主线程是不会做 <strong><code>io</code></strong> 操作的，主线程会 <strong><code>fork</code></strong> 一个子线程来完成该操作；</p>
@@ -254,7 +254,7 @@
 </li>
 </ol>
 <p>这种工作方式使得 Redis 可以从写时复制（copy-on-write）机制中获益(因为是使用子进程进行写操作，而父进程依然可以接收来自客户端的请求。)</p>
-<p><img src="/posts/2021/01/20/Redis%E7%AC%94%E8%AE%B012-Redis%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96-RDB/rdb_reason.png" srcset="/img/loading.gif" alt="rdb原理"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/Redis%E7%AC%94%E8%AE%B012-Redis%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96-RDB/rdb_reason.png" srcset="/img/loading.gif" alt="rdb原理"></p>
 <h3 id="触发机制"><a href="#触发机制" class="headerlink" title="触发机制"></a>触发机制</h3><hr>
 <ol>
 <li>save的规则满足的情况下，会自动触发rdb原则</li>
@@ -265,16 +265,16 @@
 <blockquote>
 <p>由于 <code>save</code> 命令是同步命令，会占用Redis的主进程。若Redis数据非常多时，<code>save</code>命令执行速度会非常慢，阻塞所有客户端的请求。</p>
 </blockquote>
-<p><img src="/posts/2021/01/20/Redis%E7%AC%94%E8%AE%B012-Redis%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96-RDB/save.png" srcset="/img/loading.gif" alt="save"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/Redis%E7%AC%94%E8%AE%B012-Redis%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96-RDB/save.png" srcset="/img/loading.gif" alt="save"></p>
 <h4 id="flushall命令"><a href="#flushall命令" class="headerlink" title="flushall命令"></a>flushall命令</h4><p><code>flushall</code> 命令也会触发持久化 ；</p>
 <h4 id="触发持久化规则"><a href="#触发持久化规则" class="headerlink" title="触发持久化规则"></a>触发持久化规则</h4><p>满足配置条件中的触发条件 ；</p>
 <blockquote>
 <p>可以通过配置文件对 Redis 进行设置， 让它在“ N 秒内数据集至少有 M 个改动”这一条件被满足时， 自动进行数据集保存操作。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">save 900 1<br>save 300 10<br>save 60 10000<br></code></pre></td></tr></table></figure>
 </blockquote>
-<p><img src="/posts/2021/01/20/Redis%E7%AC%94%E8%AE%B012-Redis%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96-RDB/tiaojian.png" srcset="/img/loading.gif" alt="满足条件"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/Redis%E7%AC%94%E8%AE%B012-Redis%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96-RDB/tiaojian.png" srcset="/img/loading.gif" alt="满足条件"></p>
 <h4 id="bgsave"><a href="#bgsave" class="headerlink" title="bgsave"></a>bgsave</h4><p><code>bgsave</code> 是异步进行，进行持久化的时候，<code>redis</code> 还可以将继续响应客户端请求 ；</p>
-<p><img src="/posts/2021/01/20/Redis%E7%AC%94%E8%AE%B012-Redis%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96-RDB/bgsave.png" srcset="/img/loading.gif" alt="bgsave"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/Redis%E7%AC%94%E8%AE%B012-Redis%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96-RDB/bgsave.png" srcset="/img/loading.gif" alt="bgsave"></p>
 <p><strong>bgsave和save对比</strong></p>
 <table>
 <thead>

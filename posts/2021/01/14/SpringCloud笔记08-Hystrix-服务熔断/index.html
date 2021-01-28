@@ -244,12 +244,12 @@
 </blockquote>
 <p>复杂分布式体系结构中的应用程序有数十个依赖关系，每个依赖关系在某些时候将不可避免失败！</p>
 <h3 id="一、服务雪崩"><a href="#一、服务雪崩" class="headerlink" title="一、服务雪崩"></a>一、服务雪崩</h3><p>多个微服务之间调用的时候，假设微服务A调用微服务B和微服务C，微服务B和微服务C又调用其他的微服务，这就是所谓的“扇出”，如果扇出的链路上<strong>某个微服务的调用响应时间过长，或者不可用</strong>，对微服务A的调用就会占用越来越多的系统资源，进而引起系统崩溃，所谓的“雪崩效应”。</p>
-<p><img src="/posts/2021/01/14/SpringCloud%E7%AC%94%E8%AE%B008-Hystrix-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD/%E6%9C%8D%E5%8A%A1%E9%9B%AA%E5%B4%A9.png" srcset="/img/loading.gif" alt="服务雪崩"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/SpringCloud%E7%AC%94%E8%AE%B008-Hystrix-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD/%E6%9C%8D%E5%8A%A1%E9%9B%AA%E5%B4%A9.png" srcset="/img/loading.gif" alt="服务雪崩"></p>
 <p> 对于高流量的应用来说，单一的后端依赖可能会导致所有服务器上的所有资源都在几十秒内饱和。比失败更糟糕的是，这些应用程序还可能导致服务之间的延迟增加，备份队列，线程和其他系统资源紧张，导致整个系统发生更多的级联故障，<strong>这些都表示需要对故障和延迟进行隔离和管理，以达到单个依赖关系的失败而不影响整个应用程序或系统运行</strong>。</p>
 <p> 我们需要，<strong>弃车保帅</strong>！</p>
 <h3 id><a href="#" class="headerlink" title></a></h3><h3 id="二、什么是Hystrix"><a href="#二、什么是Hystrix" class="headerlink" title="二、什么是Hystrix"></a>二、什么是Hystrix</h3><p><strong>ystrix</strong>是一个应用于处理分布式系统的延迟和容错的开源库，在分布式系统里，许多依赖不可避免的会调用失败，比如超时，异常等，<strong>Hystrix</strong> 能够保证在一个依赖出问题的情况下，不会导致整个体系服务失败，避免级联故障，以提高分布式系统的弹性。</p>
 <p> “<strong>断路器</strong>”本身是一种开关装置，当某个服务单元发生故障之后，通过断路器的故障监控 (类似熔断保险丝) ，<strong>向调用方返回一个服务预期的，可处理的备选响应 (FallBack) ，而不是长时间的等待或者抛出调用方法无法处理的异常，这样就可以保证了服务调用方的线程不会被长时间，不必要的占用</strong>，从而避免了故障在分布式系统中的蔓延，乃至雪崩。</p>
-<p><img src="/posts/2021/01/14/SpringCloud%E7%AC%94%E8%AE%B008-Hystrix-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD/%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD.png" srcset="/img/loading.gif" alt="服务熔断"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/SpringCloud%E7%AC%94%E8%AE%B008-Hystrix-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD/%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD.png" srcset="/img/loading.gif" alt="服务熔断"></p>
 <h3 id="三、Hystrix能干什么"><a href="#三、Hystrix能干什么" class="headerlink" title="三、Hystrix能干什么"></a>三、Hystrix能干什么</h3><ul>
 <li>服务降级</li>
 <li>服务熔断</li>
@@ -258,14 +258,14 @@
 <li>…</li>
 </ul>
 <p>当一切正常时，请求流可以如下所示：</p>
-<p><img src="/posts/2021/01/14/SpringCloud%E7%AC%94%E8%AE%B008-Hystrix-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD/1.png" srcset="/img/loading.gif" alt="正常请求流"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/SpringCloud%E7%AC%94%E8%AE%B008-Hystrix-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD/1.png" srcset="/img/loading.gif" alt="正常请求流"></p>
 <p>当许多后端系统中有一个潜在阻塞服务时，它可以阻止整个用户请求：</p>
-<p><img src="/posts/2021/01/14/SpringCloud%E7%AC%94%E8%AE%B008-Hystrix-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD/2.png" srcset="/img/loading.gif" alt="阻塞请求流"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/SpringCloud%E7%AC%94%E8%AE%B008-Hystrix-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD/2.png" srcset="/img/loading.gif" alt="阻塞请求流"></p>
 <p>随着大容量通信量的增加，单个后端依赖项的潜在性会导致所有服务器上的所有资源在几秒钟内饱和。</p>
 <p>应用程序中通过网络或客户端库可能导致网络请求的每个点都是潜在故障的来源。比失败更糟糕的是，这些应用程序还可能导致服务之间的延迟增加，从而备份队列、线程和其他系统资源，从而导致更多跨系统的级联故障。</p>
-<p><img src="/posts/2021/01/14/SpringCloud%E7%AC%94%E8%AE%B008-Hystrix-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD/3.png" srcset="/img/loading.gif" alt="级联故障"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/SpringCloud%E7%AC%94%E8%AE%B008-Hystrix-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD/3.png" srcset="/img/loading.gif" alt="级联故障"></p>
 <p>当使用<strong>Hystrix</strong>包装每个基础依赖项时，上面的图表中所示的体系结构会发生类似于以下关系图的变化。<strong>每个依赖项是相互隔离的</strong>，限制在延迟发生时它可以填充的资源中，并包含在回退逻辑中，该逻辑决定在依赖项中发生任何类型的故障时要做出什么样的响应：</p>
-<p><img src="/posts/2021/01/14/SpringCloud%E7%AC%94%E8%AE%B008-Hystrix-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD/4.png" srcset="/img/loading.gif" alt="发生故障的响应"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/SpringCloud%E7%AC%94%E8%AE%B008-Hystrix-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD/4.png" srcset="/img/loading.gif" alt="发生故障的响应"></p>
 <h3 id="四、服务熔断"><a href="#四、服务熔断" class="headerlink" title="四、服务熔断"></a>四、服务熔断</h3><h5 id="什么是服务熔断"><a href="#什么是服务熔断" class="headerlink" title="什么是服务熔断?"></a>什么是服务熔断?</h5><p> <strong>熔断机制是赌赢雪崩效应的一种微服务链路保护机制</strong>。</p>
 <p> 当扇出链路的某个微服务不可用或者响应时间太长时，会进行服务的降级，<strong>进而熔断该节点微服务的调用，快速返回错误的响应信息</strong>。检测到该节点微服务调用响应正常后恢复调用链路。在SpringCloud框架里熔断机制通过Hystrix实现。Hystrix会监控微服务间调用的状况，当失败的调用到一定阀值缺省是<strong>5秒内20次调用失败，就会启动熔断机制</strong>。熔断机制的注解是：<code>@HystrixCommand</code>。</p>
 <p>服务熔断解决如下问题：</p>
@@ -288,14 +288,14 @@
 
 <p>测试：</p>
 <p>使用熔断后，当访问一个不存在的id时，前台页展示数据如下:</p>
-<p><img src="/posts/2021/01/14/SpringCloud%E7%AC%94%E8%AE%B008-Hystrix-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD/5.png" srcset="/img/loading.gif" alt="id不存在"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/SpringCloud%E7%AC%94%E8%AE%B008-Hystrix-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD/5.png" srcset="/img/loading.gif" alt="id不存在"></p>
 <p>而不适用熔断的springcloud-provider-dept–8001模块访问相同地址会出现Error Page;</p>
 <p>因此，<strong>为了避免因某个微服务后台出现异常或错误而导致整个应用或网页报错，使用熔断是必要的</strong></p>
 <h3 id="五、服务降级"><a href="#五、服务降级" class="headerlink" title="五、服务降级"></a>五、服务降级</h3><h5 id="什么是服务降级"><a href="#什么是服务降级" class="headerlink" title="什么是服务降级?"></a>什么是服务降级?</h5><p> 服务降级是指 当服务器压力剧增的情况下，根据实际业务情况及流量，对一些服务和页面有策略的不处理，或换种简单的方式处理，从而释放服务器资源以保证核心业务正常运作或高效运作。说白了，<strong>就是尽可能的把系统资源让给优先级高的服务</strong>。</p>
 <p>资源有限，而请求是无限的。如果在并发高峰期，不做服务降级处理，一方面肯定会影响整体服务的性能，严重的话可能会导致宕机某些重要的服务不可用。所以，一般在高峰期，为了保证核心功能服务的可用性，都要对某些服务降级处理。比如当双11活动时，把交易无关的服务统统降级，如查看蚂蚁深林，查看历史订单等等。</p>
 <p>服务降级主要用于什么场景呢？当整个微服务架构整体的负载超出了预设的上限阈值或即将到来的流量预计将会超过预设的阈值时，为了保证重要或基本的服务能正常运行，可以将一些 不重要 或 不紧急 的服务或任务进行服务的 延迟使用 或 暂停使用。</p>
 <p>降级的方式可以根据业务来，可以延迟服务，比如延迟给用户增加积分，只是放到一个缓存中，等服务平稳之后再执行 ；或者在粒度范围内关闭服务，比如关闭相关文章的推荐。</p>
-<p><img src="/posts/2021/01/14/SpringCloud%E7%AC%94%E8%AE%B008-Hystrix-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD/%E6%9C%8D%E5%8A%A1%E9%99%8D%E7%BA%A7.png" srcset="/img/loading.gif" alt="服务降级"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/SpringCloud%E7%AC%94%E8%AE%B008-Hystrix-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD/%E6%9C%8D%E5%8A%A1%E9%99%8D%E7%BA%A7.png" srcset="/img/loading.gif" alt="服务降级"></p>
 <p>由上图可得，<strong>当某一时间内服务A的访问量暴增，而B和C的访问量较少，为了缓解A服务的压力，这时候需要B和C暂时关闭一些服务功能，去承担A的部分服务，从而为A分担压力，叫做服务降级</strong>。</p>
 <h5 id="服务降级需要考虑的问题"><a href="#服务降级需要考虑的问题" class="headerlink" title="服务降级需要考虑的问题"></a>服务降级需要考虑的问题</h5><ul>
 <li>1）那些服务是核心服务，哪些服务是非核心服务</li>
@@ -340,12 +340,12 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@SpringBootApplication</span><br><span class="hljs-meta">@EnableEurekaClient</span> <span class="hljs-comment">//EnableEurekaClient 客户端的启动类，在服务启动后自动向注册中心注册服务</span><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DeptProvider_8001</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        SpringApplication.run(DeptProvider_8001.class,args);<br>    &#125;<br><br>    <span class="hljs-comment">//增加一个 Servlet</span><br>    <span class="hljs-meta">@Bean</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> ServletRegistrationBean <span class="hljs-title">hystrixMetricsStreamServlet</span><span class="hljs-params">()</span></span>&#123;<br>        ServletRegistrationBean registrationBean = <span class="hljs-keyword">new</span> ServletRegistrationBean(<span class="hljs-keyword">new</span> HystrixMetricsStreamServlet());<br>        <span class="hljs-comment">//访问该页面就是监控页面</span><br>        registrationBean.addUrlMappings(<span class="hljs-string">&quot;/actuator/hystrix.stream&quot;</span>);<br><br>        <span class="hljs-keyword">return</span> registrationBean;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>访问：<a target="_blank" rel="noopener" href="http://localhost:9001/hystrix">http://localhost:9001/hystrix</a></p>
-<p><img src="/posts/2021/01/14/SpringCloud%E7%AC%94%E8%AE%B008-Hystrix-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD/dashboard.png" srcset="/img/loading.gif" alt="Hystrix Dashboard"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/SpringCloud%E7%AC%94%E8%AE%B008-Hystrix-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD/dashboard.png" srcset="/img/loading.gif" alt="Hystrix Dashboard"></p>
 <p>进入监控页面：</p>
-<p><img src="/posts/2021/01/14/SpringCloud%E7%AC%94%E8%AE%B008-Hystrix-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD/dash1.png" srcset="/img/loading.gif" alt="Hystrix Dashboard"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/SpringCloud%E7%AC%94%E8%AE%B008-Hystrix-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD/dash1.png" srcset="/img/loading.gif" alt="Hystrix Dashboard"></p>
 <p>效果如下图：</p>
-<p><img src="/posts/2021/01/14/SpringCloud%E7%AC%94%E8%AE%B008-Hystrix-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD/dash2.png" srcset="/img/loading.gif" alt="Hystrix Dashboard监控"></p>
-<p><img src="/posts/2021/01/14/SpringCloud%E7%AC%94%E8%AE%B008-Hystrix-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD/dash3.png" srcset="/img/loading.gif" alt="Hystrix Dashboard监控讲解"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/SpringCloud%E7%AC%94%E8%AE%B008-Hystrix-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD/dash2.png" srcset="/img/loading.gif" alt="Hystrix Dashboard监控"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/SpringCloud%E7%AC%94%E8%AE%B008-Hystrix-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD/dash3.png" srcset="/img/loading.gif" alt="Hystrix Dashboard监控讲解"></p>
 
             </div>
             <hr>
@@ -371,7 +371,7 @@
                     
                       <a href="/posts/2021/01/14/SpringCloud%E7%AC%94%E8%AE%B009-Zuul%E8%B7%AF%E7%94%B1%E7%BD%91%E5%85%B3/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">SpringCloud笔记09-Zuul路由网关</span>
+                        <span class="hidden-mobile">https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/SpringCloud笔记09-Zuul路由网关</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     

@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="codeAtrox">
   <meta name="keywords" content="">
-  <title>SpringBoot笔记07-Thymeleaf模板引擎 - Atrox的博客</title>
+  <title>https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/SpringBoot笔记07-Thymeleaf模板引擎 - Atrox的博客</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -174,7 +174,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="SpringBoot笔记07-Thymeleaf模板引擎">
+            <span class="h2" id="subtitle" title="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/SpringBoot笔记07-Thymeleaf模板引擎">
               
             </span>
 
@@ -236,7 +236,7 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">SpringBoot笔记07-Thymeleaf模板引擎</h1>
+            <h1 style="display: none">https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/SpringBoot笔记07-Thymeleaf模板引擎</h1>
             
             <div class="markdown-body">
               <h2 id="Thymeleaf"><a href="#Thymeleaf" class="headerlink" title="Thymeleaf"></a>Thymeleaf</h2><h3 id="一、模板引擎"><a href="#一、模板引擎" class="headerlink" title="一、模板引擎"></a>一、模板引擎</h3><p>前端交给我们的页面，是html页面。如果是我们以前开发，我们需要把他们转成jsp页面，jsp好处就是当我们查出一些数据转发到JSP页面以后，我们可以用jsp轻松实现数据的显示，及交互等。</p>
@@ -244,7 +244,7 @@
 <p>那不支持jsp，如果我们直接用纯静态页面的方式，那给我们开发会带来非常大的麻烦，那怎么办呢？</p>
 <p><strong>SpringBoot推荐你可以来使用模板引擎：</strong></p>
 <p>模板引擎，我们其实大家听到很多，其实jsp就是一个模板引擎，还有用的比较多的freemarker，包括SpringBoot给我们推荐的Thymeleaf，模板引擎有非常多，但再多的模板引擎，他们的思想都是一样的，什么样一个思想呢我们来看一下这张图：</p>
-<p><img src="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B007-Thymeleaf%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/template_engine.png" srcset="/img/loading.gif" alt="模板引擎"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/SpringBoot%E7%AC%94%E8%AE%B007-Thymeleaf%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/template_engine.png" srcset="/img/loading.gif" alt="模板引擎"></p>
 <p>模板引擎的作用就是我们来写一个页面模板，比如有些值呢，是动态的，我们写一些表达式。而这些值，从哪来呢，就是我们在后台封装一些数据。然后把这个模板和这个数据交给我们模板引擎，模板引擎按照我们这个数据帮你把这表达式解析、填充到我们指定的位置，然后把这个数据最终生成一个我们想要的内容给我们写出去，这就是我们这个模板引擎，不管是jsp还是其他模板引擎，都是这个思想。只不过呢，就是说不同模板引擎之间，他们可能这个语法有点不一样。其他的我就不介绍了，我主要来介绍一下SpringBoot给我们推荐的Thymeleaf模板引擎，这模板引擎呢，是一个高级语言的模板引擎，他的这个语法更简单。而且呢，功能更强大。</p>
 <p>我们呢，就来看一下这个模板引擎，那既然要看这个模板引擎。首先，我们来看SpringBoot里边怎么用。</p>
 <h3 id="二、引入Thymeleaf"><a href="#二、引入Thymeleaf" class="headerlink" title="二、引入Thymeleaf"></a>二、引入Thymeleaf</h3><p>怎么引入呢，对于springboot来说，什么事情不都是一个start的事情嘛，我们去在项目中引入一下。这里三个网址：</p>
@@ -290,13 +290,13 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span> <span class="hljs-attr">xmlns:th</span>=<span class="hljs-string">&quot;http://www.thymeleaf.org&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>  <span class="hljs-comment">&lt;!--所有的html元素都可以被 thymeleaf替换接管： th：元素名--&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">th:text</span>=<span class="hljs-string">&quot;$&#123;msg&#125;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure>
 </li>
 <li><p>启动测试</p>
-<p><img src="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B007-Thymeleaf%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/test.png" srcset="/img/loading.gif" alt="测试结果"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/SpringBoot%E7%AC%94%E8%AE%B007-Thymeleaf%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/test.png" srcset="/img/loading.gif" alt="测试结果"></p>
 </li>
 </ol>
 <p><strong>入门搞定，我们来认真研习一下Thymeleaf的使用语法！</strong></p>
 <ol>
 <li><p><strong>我们可以使用任意的 th:attr 来替换Html中原生属性的值！</strong></p>
-<p><img src="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B007-Thymeleaf%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/%E8%AF%AD%E6%B3%95.png" srcset="/img/loading.gif" alt="语法"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/SpringBoot%E7%AC%94%E8%AE%B007-Thymeleaf%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/%E8%AF%AD%E6%B3%95.png" srcset="/img/loading.gif" alt="语法"></p>
 </li>
 </ol>
 <ol start="2">
@@ -342,7 +342,7 @@
                     
                       <a href="/posts/2021/01/09/SpringBoot%E7%AC%94%E8%AE%B008-MVC%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">SpringBoot笔记08-MVC自动配置原理</span>
+                        <span class="hidden-mobile">https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/SpringBoot笔记08-MVC自动配置原理</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -351,7 +351,7 @@
                     
                     
                       <a href="/posts/2021/01/08/SpringBoot%E7%AC%94%E8%AE%B006-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%98%A0%E5%B0%84%E8%A7%84%E5%88%99/">
-                        <span class="hidden-mobile">SpringBoot笔记06-静态资源映射规则</span>
+                        <span class="hidden-mobile">https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/SpringBoot笔记06-静态资源映射规则</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

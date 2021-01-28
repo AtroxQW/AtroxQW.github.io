@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="codeAtrox">
   <meta name="keywords" content="">
-  <title>ElasticSearch笔记07-索引基本操作 - Atrox的博客</title>
+  <title>https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/ElasticSearch笔记07-索引基本操作 - Atrox的博客</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -174,7 +174,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="ElasticSearch笔记07-索引基本操作">
+            <span class="h2" id="subtitle" title="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/ElasticSearch笔记07-索引基本操作">
               
             </span>
 
@@ -236,7 +236,7 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">ElasticSearch笔记07-索引基本操作</h1>
+            <h1 style="display: none">https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/ElasticSearch笔记07-索引基本操作</h1>
             
             <div class="markdown-body">
               <h2 id="REST风格说明"><a href="#REST风格说明" class="headerlink" title="REST风格说明"></a>REST风格说明</h2><blockquote>
@@ -283,10 +283,10 @@
 <li><p>创建一个索引</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">PUT /索引名/~类型名~/文档id<br>&#123;请求体&#125;<br></code></pre></td></tr></table></figure>
 
-<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B007-%E7%B4%A2%E5%BC%95%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/创建索引.png" srcset="/img/loading.gif" alt="创建索引" style="zoom: 67%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/ElasticSearch笔记07-索引基本操作/创建索引.png" srcset="/img/loading.gif" alt="创建索引" style="zoom: 67%;">
 
 <p>在elasticsearch-head中查看该索引的添加数据，这就是可以当做数据库学习的原因。</p>
-<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B007-%E7%B4%A2%E5%BC%95%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/查看索引.png" srcset="/img/loading.gif" alt="创建索引" style="zoom: 67%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/ElasticSearch笔记07-索引基本操作/查看索引.png" srcset="/img/loading.gif" alt="创建索引" style="zoom: 67%;">
 </li>
 <li><p>那么name这个字段用不用指定类型呢？毕竟我们关系型数据库是需要指定的。</p>
 <ul>
@@ -299,37 +299,37 @@
 </ul>
 </li>
 <li><p>创建索引时，指定字段的类型。</p>
-<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B007-%E7%B4%A2%E5%BC%95%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/指定类型.png" srcset="/img/loading.gif" alt="指定类型" style="zoom: 67%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/ElasticSearch笔记07-索引基本操作/指定类型.png" srcset="/img/loading.gif" alt="指定类型" style="zoom: 67%;">
 </li>
 <li><p>通过GET请求获取索引的信息。</p>
-<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B007-%E7%B4%A2%E5%BC%95%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/索引信息.png" srcset="/img/loading.gif" alt="索引信息" style="zoom:67%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/ElasticSearch笔记07-索引基本操作/索引信息.png" srcset="/img/loading.gif" alt="索引信息" style="zoom:67%;">
 </li>
 <li><p>添加数据后，查看默认的字段类型</p>
 <p><strong>添加数据</strong></p>
-<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B007-%E7%B4%A2%E5%BC%95%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/默认信息.png" srcset="/img/loading.gif" alt="创建索引添加数据" style="zoom:67%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/ElasticSearch笔记07-索引基本操作/默认信息.png" srcset="/img/loading.gif" alt="创建索引添加数据" style="zoom:67%;">
 
 <p><strong>如果自己的文档字段没有指定，那么ES就会给我们默认配置字段类型</strong></p>
 </li>
 </ol>
-<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B007-%E7%B4%A2%E5%BC%95%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/默认.png" srcset="/img/loading.gif" alt="默认类型" style="zoom:67%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/ElasticSearch笔记07-索引基本操作/默认.png" srcset="/img/loading.gif" alt="默认类型" style="zoom:67%;">
 
 <ol start="7">
 <li><p>扩展：获得elasticsearch的一些信息。</p>
 <p><strong>获得健康值</strong></p>
-<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B007-%E7%B4%A2%E5%BC%95%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/health.png" srcset="/img/loading.gif" alt="健康值" style="zoom:67%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/ElasticSearch笔记07-索引基本操作/health.png" srcset="/img/loading.gif" alt="健康值" style="zoom:67%;">
 
 <p><strong>查看索引的信息</strong></p>
-<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B007-%E7%B4%A2%E5%BC%95%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/info.png" srcset="/img/loading.gif" alt="索引信息" style="zoom:80%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/ElasticSearch笔记07-索引基本操作/info.png" srcset="/img/loading.gif" alt="索引信息" style="zoom:80%;">
 </li>
 <li><p>修改：提交还是使用PUT，然后覆盖</p>
 <p><strong>曾经的办法</strong>：还是向test3索引添加id为1的数据，字段值改变。</p>
-<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B007-%E7%B4%A2%E5%BC%95%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/update1.png" srcset="/img/loading.gif" alt="方法1" style="zoom:67%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/ElasticSearch笔记07-索引基本操作/update1.png" srcset="/img/loading.gif" alt="方法1" style="zoom:67%;">
 
 <p><strong>现在的方法</strong>：使用POST方法。</p>
-<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B007-%E7%B4%A2%E5%BC%95%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/update2.png" srcset="/img/loading.gif" alt="方法二" style="zoom:67%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/ElasticSearch笔记07-索引基本操作/update2.png" srcset="/img/loading.gif" alt="方法二" style="zoom:67%;">
 </li>
 <li><p>删除索引：根据请求判断是删除索引还是删除文档。</p>
-<img src="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B007-%E7%B4%A2%E5%BC%95%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/delete.png" srcset="/img/loading.gif" alt="删除索引" style="zoom:67%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/ElasticSearch笔记07-索引基本操作/delete.png" srcset="/img/loading.gif" alt="删除索引" style="zoom:67%;">
 
 </li>
 </ol>
@@ -358,7 +358,7 @@
                     
                       <a href="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B008-%E6%96%87%E6%A1%A3%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">ElasticSearch笔记08-文档基本操作</span>
+                        <span class="hidden-mobile">https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/ElasticSearch笔记08-文档基本操作</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -367,7 +367,7 @@
                     
                     
                       <a href="/posts/2021/01/22/ElasticSearch%E7%AC%94%E8%AE%B006-IK%E5%88%86%E8%AF%8D%E5%99%A8%E6%8F%92%E4%BB%B6/">
-                        <span class="hidden-mobile">ElasticSearch笔记06-IK分词器插件</span>
+                        <span class="hidden-mobile">https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/ElasticSearch笔记06-IK分词器插件</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

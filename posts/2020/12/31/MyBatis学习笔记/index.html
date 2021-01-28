@@ -239,12 +239,12 @@
             <h1 style="display: none">MyBatis学习笔记</h1>
             
             <div class="markdown-body">
-              <h2 id="1、Introduction"><a href="#1、Introduction" class="headerlink" title="1、Introduction"></a>1、Introduction</h2><h3 id="1-1-What-is-MyBatis？"><a href="#1-1-What-is-MyBatis？" class="headerlink" title="1.1 What is MyBatis？"></a>1.1 What is MyBatis？</h3><p><strong>MyBatis_Logo</strong>:<img src="/posts/2020/12/31/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/mybatis_logo.png" srcset="/img/loading.gif" alt="MyBatis_logo" style="zoom:67%;"></p>
+              <h2 id="1、Introduction"><a href="#1、Introduction" class="headerlink" title="1、Introduction"></a>1、Introduction</h2><h3 id="1-1-What-is-MyBatis？"><a href="#1-1-What-is-MyBatis？" class="headerlink" title="1.1 What is MyBatis？"></a>1.1 What is MyBatis？</h3><p><strong>MyBatis_Logo</strong>:<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/MyBatis学习笔记/mybatis_logo.png" srcset="/img/loading.gif" alt="MyBatis_logo" style="zoom:67%;"></p>
 <p><strong>concept</strong>：MyBatis是一款优秀的==持久层框架==，它支持定制化SQL、存储过程以及高级映射。MyBatis避免了几乎所有的<code>JDBC代码</code>和<code>手动设置参数</code>以及<code>获取结果集</code>。MyBatis可以使用简单的<code>XML</code>或<code>注解</code>来配置和映射原生类型、接口和Java的pojo（实体类）为数据库中的记录。</p>
 <p><strong>history</strong>：MyBatis 本是apache的一个开源项目<strong>iBatis</strong>，2010年这个<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%A1%B9%E7%9B%AE/477803">项目</a>由apache software foundation 迁移到了[google code](<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/google">https://baike.baidu.com/item/google</a> code/2346604)，并且改名为MyBatis 。2013年11月迁移到<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Github/10145341">Github</a>。</p>
 <h3 id="1-2-How-to-get-MyBatis"><a href="#1-2-How-to-get-MyBatis" class="headerlink" title="1.2 How to get MyBatis?"></a>1.2 How to get MyBatis?</h3><h4 id="1-2-1-download-from-github"><a href="#1-2-1-download-from-github" class="headerlink" title="1.2.1 download from github"></a><strong>1.2.1 download from github</strong></h4><ul>
 <li><p><strong>首先，打开github官网搜索MyBatis，从返回结果中找到==mybatis/mybatis-3==，如下图所示。</strong></p>
-<img src="/posts/2020/12/31/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/mybatis_github.png" srcset="/img/loading.gif" alt="mybatis从github下载" style="zoom: 67%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/MyBatis学习笔记/mybatis_github.png" srcset="/img/loading.gif" alt="mybatis从github下载" style="zoom: 67%;">
 
 
 
@@ -252,7 +252,7 @@
 </ul>
 <ul>
 <li><p><strong>点击上图红色矩形圈住的部分，单击点进去看到MyBatis的代码结构，如下图所示。</strong></p>
-<img src="/posts/2020/12/31/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/mybatis_github_code.png" srcset="/img/loading.gif" alt="github中MyBatis的具体情况" style="zoom: 67%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/MyBatis学习笔记/mybatis_github_code.png" srcset="/img/loading.gif" alt="github中MyBatis的具体情况" style="zoom: 67%;">
 
 
 
@@ -261,7 +261,7 @@
 <p>  <strong>从源码中的pom.xml文件，我们可以得到，这是一个Maven项目。</strong></p>
 <ul>
 <li><p><strong>那么，如何下载MyBatis项目呢，我们可以点击上图左侧的master，弹出下拉菜单选择下载的版本，或者点击右侧的绿色Code下载按钮，选择下载方式。</strong></p>
-<img src="/posts/2020/12/31/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/mybatis_github_download.png" srcset="/img/loading.gif" alt="github上MyBatis的下载方式" style="zoom:75%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/MyBatis学习笔记/mybatis_github_download.png" srcset="/img/loading.gif" alt="github上MyBatis的下载方式" style="zoom:75%;">
 
 </li>
 </ul>
@@ -269,7 +269,7 @@
 <li><p><strong>首先在网页地址栏输入Maven仓库url：<a target="_blank" rel="noopener" href="https://mvnrepository.com/">https://mvnrepository.com/</a></strong></p>
 </li>
 <li><p><strong>进入官网之后直接搜索MyBatis即可，得到结果如下图所示</strong>。</p>
-<img src="/posts/2020/12/31/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/mybatis_maven.png" srcset="/img/loading.gif" alt="maven仓库MyBatis搜索结果" style="zoom:75%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/MyBatis学习笔记/mybatis_maven.png" srcset="/img/loading.gif" alt="maven仓库MyBatis搜索结果" style="zoom:75%;">
 
 
 
@@ -277,7 +277,7 @@
 </ul>
 <ul>
 <li><p><strong>点击第一个结果，进入选择版本页面，笔者处于学习阶段，选择和狂神一样的3.5.2版本</strong></p>
-<img src="/posts/2020/12/31/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/mybatis_maven_versions.png" srcset="/img/loading.gif" alt="mybatis选择3.5.2版本" style="zoom:75%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/MyBatis学习笔记/mybatis_maven_versions.png" srcset="/img/loading.gif" alt="mybatis选择3.5.2版本" style="zoom:75%;">
 
 
 
@@ -335,7 +335,7 @@
 <p>笔者用的MySQL可视化工具是**==MySQL Workbench==**。</p>
 <ul>
 <li><p><strong>首先进入首页，输入账号密码连接MySQL数据库。</strong></p>
-<p><strong><img src="/posts/2020/12/31/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/mysql_workbench.png" srcset="/img/loading.gif" alt="MySQL连接" style="zoom:75%;"></strong></p>
+<p><strong><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/MyBatis学习笔记/mysql_workbench.png" srcset="/img/loading.gif" alt="MySQL连接" style="zoom:75%;"></strong></p>
 </li>
 </ul>
 <ul>
@@ -365,7 +365,7 @@
 </ul>
 <h3 id="2-3-create-module"><a href="#2-3-create-module" class="headerlink" title="2.3 create module"></a>2.3 create module</h3><h4 id="2-3-1-new-empty-modue"><a href="#2-3-1-new-empty-modue" class="headerlink" title="2.3.1 new empty modue"></a>2.3.1 new empty modue</h4><ul>
 <li><p><strong>右键单击主目录MyBatis-Study，new module，创建普通的子模块mybatis-01</strong></p>
-<img src="/posts/2020/12/31/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/mybatis-01-new.gif" srcset="/img/loading.gif" alt="创建一个模块" style="zoom:67%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/MyBatis学习笔记/mybatis-01-new.gif" srcset="/img/loading.gif" alt="创建一个模块" style="zoom:67%;">
 
 
 
@@ -391,7 +391,7 @@
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span><br><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">configuration</span></span><br><span class="hljs-meta">  <span class="hljs-meta-keyword">PUBLIC</span> <span class="hljs-meta-string">&quot;-//mybatis.org//DTD Config 3.0//EN&quot;</span></span><br><span class="hljs-meta">  <span class="hljs-meta-string">&quot;http://mybatis.org/dtd/mybatis-3-config.dtd&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">configuration</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">environments</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;development&quot;</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">environment</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;development&quot;</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">transactionManager</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;JDBC&quot;</span>/&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">dataSource</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;POOLED&quot;</span>&gt;</span><br>                <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;driver&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;$&#123;driver&#125;&quot;</span>/&gt;</span><br>                <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;url&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;$&#123;url&#125;&quot;</span>/&gt;</span><br>                <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;username&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;$&#123;username&#125;&quot;</span>/&gt;</span><br>                <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;$&#123;password&#125;&quot;</span>/&gt;</span><br>            <span class="hljs-tag">&lt;/<span class="hljs-name">dataSource</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">environment</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">environments</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">configuration</span>&gt;</span><br></code></pre></td></tr></table></figure>
 </li>
 <li><p><strong>在mybatis目录下的resources中建立一个XML文件，名为：mybatis-config.xml</strong>，<strong>将上面的配置文件内容复制到该xml文件中。</strong></p>
-<img src="/posts/2020/12/31/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/mybatis_config.png" srcset="/img/loading.gif" alt="mybatis配置文件" style="zoom: 67%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/MyBatis学习笔记/mybatis_config.png" srcset="/img/loading.gif" alt="mybatis配置文件" style="zoom: 67%;">
 
 
 
@@ -407,7 +407,7 @@
 </ul>
 <ul>
 <li><p><strong>连接数据库（选择数据库为搭建环境时创建的mybatis）</strong></p>
-<img src="/posts/2020/12/31/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/mybatis-connect-database.gif" srcset="/img/loading.gif" alt="idea数据库" style="zoom:67%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/MyBatis学习笔记/mybatis-connect-database.gif" srcset="/img/loading.gif" alt="idea数据库" style="zoom:67%;">
 
 
 
@@ -418,7 +418,7 @@
 </blockquote>
 <ul>
 <li><p><strong>在java目录下创建com.atrox.utils包，再在utils包下创建MyBatisUtils类</strong></p>
-<img src="/posts/2020/12/31/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/mybatis_utils.png" srcset="/img/loading.gif" alt="mybatis工具类" style="zoom: 67%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/MyBatis学习笔记/mybatis_utils.png" srcset="/img/loading.gif" alt="mybatis工具类" style="zoom: 67%;">
 
 
 
@@ -437,13 +437,13 @@
 </blockquote>
 <h4 id="2-4-1-Entity-class"><a href="#2-4-1-Entity-class" class="headerlink" title="2.4.1 Entity class"></a>2.4.1 Entity class</h4><p><strong><code>编写实体类</code></strong>————————————————————————————–</p>
 <ul>
-<li><p><strong>在com.atrox下建立pojo包</strong> <img src="/posts/2020/12/31/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/mybatis_pojo.png" srcset="/img/loading.gif" alt="mybatis实体类" style="zoom:67%;"></p>
+<li><p><strong>在com.atrox下建立pojo包</strong> <img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/MyBatis学习笔记/mybatis_pojo.png" srcset="/img/loading.gif" alt="mybatis实体类" style="zoom:67%;"></p>
 </li>
 <li><p><strong>在pojo包下建立对应数据库MyBatis的表User实体类</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// User实体类</span><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span> </span>&#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> id;<br>    <span class="hljs-keyword">private</span> String name;<br>    <span class="hljs-keyword">private</span> String pwd;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">User</span><span class="hljs-params">()</span> </span>&#123;<br><br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">User</span><span class="hljs-params">(<span class="hljs-keyword">int</span> id, String name, String pwd)</span> </span>&#123;<br>        <span class="hljs-keyword">this</span>.id = id;<br>        <span class="hljs-keyword">this</span>.name = name;<br>        <span class="hljs-keyword">this</span>.pwd = pwd;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getId</span><span class="hljs-params">()</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> id;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setId</span><span class="hljs-params">(<span class="hljs-keyword">int</span> id)</span> </span>&#123;<br>        <span class="hljs-keyword">this</span>.id = id;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> name;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setName</span><span class="hljs-params">(String name)</span> </span>&#123;<br>        <span class="hljs-keyword">this</span>.name = name;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getPwd</span><span class="hljs-params">()</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> pwd;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setPwd</span><span class="hljs-params">(String pwd)</span> </span>&#123;<br>        <span class="hljs-keyword">this</span>.pwd = pwd;<br>    &#125;<br><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;User&#123;&quot;</span> +<br>                <span class="hljs-string">&quot;id=&quot;</span> + id +<br>                <span class="hljs-string">&quot;, name=&#x27;&quot;</span> + name + <span class="hljs-string">&#x27;\&#x27;&#x27;</span> +<br>                <span class="hljs-string">&quot;, pwd=&#x27;&quot;</span> + pwd + <span class="hljs-string">&#x27;\&#x27;&#x27;</span> +<br>                <span class="hljs-string">&#x27;&#125;&#x27;</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 </li>
 <li><p><strong>最终效果</strong></p>
-<img src="/posts/2020/12/31/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/mybaits_final_pojo.png" srcset="/img/loading.gif" alt="mybatis编写实体类截图" style="zoom: 67%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/MyBatis学习笔记/mybaits_final_pojo.png" srcset="/img/loading.gif" alt="mybatis编写实体类截图" style="zoom: 67%;">
 
 
 
@@ -458,7 +458,7 @@
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span><br><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">mapper</span></span><br><span class="hljs-meta">        <span class="hljs-meta-keyword">PUBLIC</span> <span class="hljs-meta-string">&quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;</span></span><br><span class="hljs-meta">        <span class="hljs-meta-string">&quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;</span>&gt;</span><br><span class="hljs-comment">&lt;!--namespace绑定一个对应的Dao/Mapper接口--&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">mapper</span> <span class="hljs-attr">namespace</span>=<span class="hljs-string">&quot;com.atrox.dao.UserDao&quot;</span>&gt;</span><br>    <span class="hljs-comment">&lt;!--SQL查询语句--&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;getUserList&quot;</span> <span class="hljs-attr">resultType</span>=<span class="hljs-string">&quot;com.atrox.pojo.User&quot;</span>&gt;</span><br>        select * from mybatis.user<br>    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">mapper</span>&gt;</span><br></code></pre></td></tr></table></figure>
 </li>
 <li><p><strong>最终效果</strong></p>
-<img src="/posts/2020/12/31/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/mybatis_dao.png" srcset="/img/loading.gif" alt="最终效果" style="zoom:67%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/MyBatis学习笔记/mybatis_dao.png" srcset="/img/loading.gif" alt="最终效果" style="zoom:67%;">
 
 </li>
 </ul>
@@ -467,7 +467,7 @@
 </blockquote>
 <ul>
 <li><p><strong>在src下的java包下建立com.atrox.dao包，在包下建立UserDaoTest类，与上面一一对应</strong></p>
-<img src="/posts/2020/12/31/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/mybatis_test.png" srcset="/img/loading.gif" alt="完善目录结构" style="zoom:67%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/MyBatis学习笔记/mybatis_test.png" srcset="/img/loading.gif" alt="完善目录结构" style="zoom:67%;">
 
 
 
@@ -533,7 +533,7 @@
 
 
 <h2 id="3、CRUD"><a href="#3、CRUD" class="headerlink" title="3、CRUD"></a>3、CRUD</h2><p>首先，将上面的UserDao接口改名为UserMapper，在重命名的时候，IDEA弹出了一个选项。是否修改与之有关的文件。笔者点击了确定，发现连出现UserDao地方的文件名也改了，不推荐点击。</p>
-<img src="/posts/2020/12/31/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/mybatis_rename.png" srcset="/img/loading.gif" alt="重命名请求框" style="zoom:67%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/MyBatis学习笔记/mybatis_rename.png" srcset="/img/loading.gif" alt="重命名请求框" style="zoom:67%;">
 
 <p>当修改为UserMapper，<strong>应该在UserMapper.xml中作相应修改</strong>,<strong>namespace中的报名应和接口的包名一致。</strong></p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">mapper</span> <span class="hljs-attr">namespace</span>=<span class="hljs-string">&quot;com.atrox.dao.UserMapper&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;getUserList&quot;</span> <span class="hljs-attr">resultType</span>=<span class="hljs-string">&quot;com.atrox.pojo.User&quot;</span>&gt;</span><br>        select * from mybatis.user<br>    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">mapper</span>&gt;</span><br></code></pre></td></tr></table></figure>
@@ -797,23 +797,23 @@
 </ul>
 <h3 id="4-8-Lifecycle-and-scope"><a href="#4-8-Lifecycle-and-scope" class="headerlink" title="4.8 Lifecycle and scope"></a>4.8 Lifecycle and scope</h3><p>生命周期和作用域是至关重要的，因为错误的使用会导致非常严重的<strong>并发问题</strong>。</p>
 <p>下面，用图来看一下整个流程：</p>
-<img src="/posts/2020/12/31/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/mybatis_lifecycle.png" srcset="/img/loading.gif" alt="流程图" style="zoom:75%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/MyBatis学习笔记/mybatis_lifecycle.png" srcset="/img/loading.gif" alt="流程图" style="zoom:75%;">
 
 <h4 id="4-8-1-SqlSessionFactoryBuilder"><a href="#4-8-1-SqlSessionFactoryBuilder" class="headerlink" title="4.8.1 SqlSessionFactoryBuilder"></a>4.8.1 SqlSessionFactoryBuilder</h4><p>这个类可以被实例化、使用和丢弃。<strong>一旦创建了SqlSessionFactory，就不再需要它了</strong>。因此 SqlSessionFactoryBuilder 实例的最佳作用域是<strong>方法作用域</strong>（也就是<strong>局部方法变量</strong>）</p>
 <h4 id="4-8-2-SqlSessionFactory"><a href="#4-8-2-SqlSessionFactory" class="headerlink" title="4.8.2 SqlSessionFactory"></a>4.8.2 SqlSessionFactory</h4><p>这个东西，可以想象为数据库连接池。SqlSessionFactory 一旦被创建就<strong>应该在应用的运行期间一直存在</strong>，没有任何理由丢弃它或重新创建另一个实例。多次重建 SqlSessionFactory 被视为一种代码“坏习惯”</p>
 <p>因此 SqlSessionFactory 的最佳作用域是<strong>应用作用域</strong>，最简单的就是使用<strong>单例模式</strong>或者静态单例模式。</p>
 <h4 id="4-8-3-SqlSession"><a href="#4-8-3-SqlSession" class="headerlink" title="4.8.3 SqlSession"></a>4.8.3 SqlSession</h4><p>这个东西，可以想象为连接到连接池的一个请求。SqlSession 的实例<strong>不是线程安全</strong>的，因此是不能被共享的，所以它的最佳的作用域是请求或<strong>方法作用域。</strong>在方法内用完之后需要赶紧关闭，否则资源被占用。</p>
-<h4 id="4-8-4-relationship"><a href="#4-8-4-relationship" class="headerlink" title="4.8.4 relationship"></a>4.8.4 relationship</h4><img src="/posts/2020/12/31/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/mybaits_SqlSession.png" srcset="/img/loading.gif" alt="关系" style="zoom:85%;">
+<h4 id="4-8-4-relationship"><a href="#4-8-4-relationship" class="headerlink" title="4.8.4 relationship"></a>4.8.4 relationship</h4><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/MyBatis学习笔记/mybaits_SqlSession.png" srcset="/img/loading.gif" alt="关系" style="zoom:85%;">
 
 <p>这里面的每一个Mapper，就代表着每一个具体的业务。</p>
 <h2 id="5、ResultMap"><a href="#5、ResultMap" class="headerlink" title="5、ResultMap"></a>5、ResultMap</h2><h3 id="5-1-problem"><a href="#5-1-problem" class="headerlink" title="5.1 problem"></a>5.1 problem</h3><p>结果集映射，用来解决的是<strong>JavaBean中的属性名和数据库中的字段名不一致</strong>的问题。</p>
 <p>在之前的项目中，数据库中的字段和JavaBean的属性名字是相同的。</p>
-<img src="/posts/2020/12/31/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/column_properties.png" srcset="/img/loading.gif" alt="属性与字段相同" style="zoom:80%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/MyBatis学习笔记/column_properties.png" srcset="/img/loading.gif" alt="属性与字段相同" style="zoom:80%;">
 
 <p>现在我们新建一个项目，拷贝之前的，测试实体类属性和字段不一致的情况。</p>
 <ul>
 <li><p><strong>第一步，修改User的属性和方法，使其属性名与数据库字段不一致，如图所示</strong></p>
-<img src="/posts/2020/12/31/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/update_column_properties.png" srcset="/img/loading.gif" alt="不一致的属性名与字段名" style="zoom:80%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/MyBatis学习笔记/update_column_properties.png" srcset="/img/loading.gif" alt="不一致的属性名与字段名" style="zoom:80%;">
 
 <p>先不修改别的，直接测试一下，发现查出的结果集<strong>密码字段全为null</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java">User&#123;id=<span class="hljs-number">1</span>, name=<span class="hljs-string">&#x27;乔威&#x27;</span>, password=<span class="hljs-string">&#x27;null&#x27;</span>&#125;<br>User&#123;id=<span class="hljs-number">2</span>, name=<span class="hljs-string">&#x27;张三&#x27;</span>, password=<span class="hljs-string">&#x27;null&#x27;</span>&#125;<br>User&#123;id=<span class="hljs-number">3</span>, name=<span class="hljs-string">&#x27;李四&#x27;</span>, password=<span class="hljs-string">&#x27;null&#x27;</span>&#125;<br>User&#123;id=<span class="hljs-number">4</span>, name=<span class="hljs-string">&#x27;李五&#x27;</span>, password=<span class="hljs-string">&#x27;null&#x27;</span>&#125;<br></code></pre></td></tr></table></figure>
@@ -924,7 +924,7 @@
 <li><p>当运行后，在<strong>左侧目录创建了log目录下面有atrox.txt</strong>,原因是log4j配置文件里写的</p>
 <figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-meta">log4j.appender.file.File</span>=<span class="hljs-string">./log/atrox.txt</span><br></code></pre></td></tr></table></figure>
 
-<p><img src="/posts/2020/12/31/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cmybatis_log.png" srcset="/img/loading.gif" alt="日志输出目录"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/mybatis_log.png" srcset="/img/loading.gif" alt="日志输出目录"></p>
 </li>
 <li><p>atrox.txt的日志信息和控制台输出的相同</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">[com.atrox.dao.UserMapperTest]-info:进入了testLog4j<br>[com.atrox.dao.UserMapperTest]-debug:进入了testLog4j<br>[com.atrox.dao.UserMapperTest]-error:进入了testLog4j<br></code></pre></td></tr></table></figure>
@@ -962,7 +962,7 @@
 <p><strong>第三步，测试</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Test</span><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">getUserByRowBounds</span><span class="hljs-params">()</span> </span>&#123;<br>    SqlSession sqlSession = MyBatisUtils.getSqlSession();<br><br>    <span class="hljs-comment">// RowBounds实现</span><br>    RowBounds rowBounds = <span class="hljs-keyword">new</span> RowBounds(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>);<br><br>    <span class="hljs-comment">// 通过Java代码层面实现分页</span><br>    List&lt;Object&gt; users = sqlSession.selectList(<span class="hljs-string">&quot;com.atrox.dao.UserMapper.getuserByRowBounds&quot;</span>, <span class="hljs-keyword">null</span>, rowBounds);<br>    <span class="hljs-keyword">for</span> (Object user : users) &#123;<br>        System.out.println(user);<br>    &#125;<br>    sqlSession.close();<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h3 id="7-3-Pagnation-Plugins"><a href="#7-3-Pagnation-Plugins" class="headerlink" title="7.3 Pagnation Plugins"></a>7.3 Pagnation Plugins</h3><img src="/posts/2020/12/31/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/mybatis_pageHelper.png" srcset="/img/loading.gif" alt="分页插件" style="zoom:75%;">
+<h3 id="7-3-Pagnation-Plugins"><a href="#7-3-Pagnation-Plugins" class="headerlink" title="7.3 Pagnation Plugins"></a>7.3 Pagnation Plugins</h3><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/MyBatis学习笔记/mybatis_pageHelper.png" srcset="/img/loading.gif" alt="分页插件" style="zoom:75%;">
 
 
 
@@ -997,7 +997,7 @@
 </li>
 </ol>
 <h3 id="8-3-MyBatis-Source-code-analysis"><a href="#8-3-MyBatis-Source-code-analysis" class="headerlink" title="8.3 MyBatis Source code analysis"></a>8.3 MyBatis Source code analysis</h3><p><strong>MyBatis详细的执行流程！</strong></p>
-<p><img src="/posts/2020/12/31/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5CMyBatis_core_code.png" srcset="/img/loading.gif" alt="MyBatis源码分析"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MyBatis_core_code.png" srcset="/img/loading.gif" alt="MyBatis源码分析"></p>
 <h3 id="8-4-Use-annotation-CRUD"><a href="#8-4-Use-annotation-CRUD" class="headerlink" title="8.4 Use annotation CRUD"></a>8.4 Use annotation CRUD</h3><p>我们可以在工具类创建的时候实现<strong>自动提交事务</strong>，在MyBatisUtils中修改获取sqlSession的方法!</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> SqlSession <span class="hljs-title">getSqlSession</span><span class="hljs-params">()</span> </span>&#123; <span class="hljs-keyword">return</span> sqlSessionFactory.openSession(<span class="hljs-keyword">true</span>); &#125; <br></code></pre></td></tr></table></figure>
 
@@ -1042,7 +1042,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Getter</span> and <span class="hljs-meta">@Setter</span><br><span class="hljs-meta">@FieldNameConstants</span><br><span class="hljs-meta">@ToString</span><br><span class="hljs-meta">@EqualsAndHashCode</span><br><span class="hljs-meta">@AllArgsConstructor</span>, <span class="hljs-meta">@RequiredArgsConstructor</span> and <span class="hljs-meta">@NoArgsConstructor</span><br><span class="hljs-meta">@Log</span>, <span class="hljs-meta">@Log4j</span>, <span class="hljs-meta">@Log4j2</span>, <span class="hljs-meta">@Slf4j</span>, <span class="hljs-meta">@XSlf4j</span>, <span class="hljs-meta">@CommonsLog</span>, <span class="hljs-meta">@JBossLog</span>, <span class="hljs-meta">@Flogger</span>, <span class="hljs-meta">@CustomLog</span><br><span class="hljs-meta">@Data</span><br><span class="hljs-meta">@Builder</span><br><span class="hljs-meta">@SuperBuilder</span><br><span class="hljs-meta">@Singular</span><br><span class="hljs-meta">@Delegate</span><br><span class="hljs-meta">@Value</span><br><span class="hljs-meta">@Accessors</span><br><span class="hljs-meta">@Wither</span><br><span class="hljs-meta">@With</span><br><span class="hljs-meta">@SneakyThrows</span><br></code></pre></td></tr></table></figure>
 
 <p>当我们在一个类上面加上<code>@Data</code>，就会帮我们生成无参构造器，get/set方法，toString方法，equals方法和hasCode方法。</p>
-<img src="/posts/2020/12/31/MyBatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/@Data.png" srcset="/img/loading.gif" alt="加上@Data注解" style="zoom:75%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/MyBatis学习笔记/@Data.png" srcset="/img/loading.gif" alt="加上@Data注解" style="zoom:75%;">
 
 <p>由于加了上面@Data，是没有有参构造器的，我们可以再加两个注解</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// User实体类</span><br><span class="hljs-meta">@Data</span><br><span class="hljs-meta">@AllArgsConstructor</span><br><span class="hljs-meta">@NoArgsConstructor</span><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span> </span>&#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> id;<br>    <span class="hljs-keyword">private</span> String name;<br>    <span class="hljs-keyword">private</span> String password;<br>&#125;<br></code></pre></td></tr></table></figure>
@@ -1399,7 +1399,7 @@
                     
                       <a href="/posts/2020/12/31/JavaWeb%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">JavaWeb学习笔记</span>
+                        <span class="hidden-mobile">https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/JavaWeb学习笔记</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
