@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/img/blog/fav.jpg">
-  <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/img/blog/fav.jpg">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN/source/img/blog/fav.jpg">
+  <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN/source/img/blog/fav.jpg">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -243,40 +243,40 @@
 <p>本故事来自于公众号：新栆课堂</p>
 </blockquote>
 <p>1998年9月4日，Google公司在美国硅谷成立，正如大家所知，它是一家做搜索引擎起家的公司。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/ElasticSearch%E7%AC%94%E8%AE%B001-%E8%81%8A%E8%81%8ADoug-Cutting/google_brand.png" srcset="/img/loading.gif" alt="Google商标"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN/source/_posts/ElasticSearch%E7%AC%94%E8%AE%B001-%E8%81%8A%E8%81%8ADoug-Cutting/google_brand.png" srcset="/img/loading.gif" alt="Google商标"></p>
 <p>无独有偶,一位名叫<strong>Doug Cutting</strong>的美国工程师,也迷上了<strong>搜索引擎</strong>。他做了一个用于文本搜索的函数库(姑且理解为软件的功能组件)，命名为<strong>Lucene</strong>。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/ElasticSearch%E7%AC%94%E8%AE%B001-%E8%81%8A%E8%81%8ADoug-Cutting/doug_cutting.png" srcset="/img/loading.gif" alt="Doug Cutting"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN/source/_posts/ElasticSearch%E7%AC%94%E8%AE%B001-%E8%81%8A%E8%81%8ADoug-Cutting/doug_cutting.png" srcset="/img/loading.gif" alt="Doug Cutting"></p>
 <p><strong>Lucene</strong>使用<strong>Java</strong>写的，目标是为各种中小型应用软件加入全文检索功能.因为好用而且<strong>开源</strong>(代码公开),非常受程序员们稀罕。</p>
 <p>早期的时候，这个项目被发布在Doug Cutting的个人网站和SourceForge（一个开源软件网站）。后来，2001年底，Lucene成为<strong>Apache软件基金会</strong>jakarta项目的一个子项目。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/ElasticSearch%E7%AC%94%E8%AE%B001-%E8%81%8A%E8%81%8ADoug-Cutting/apache.png" srcset="/img/loading.gif" alt="apache基金会"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN/source/_posts/ElasticSearch%E7%AC%94%E8%AE%B001-%E8%81%8A%E8%81%8ADoug-Cutting/apache.png" srcset="/img/loading.gif" alt="apache基金会"></p>
 <p>2004年，Doug Cutting再接再励，在Lucene的基础上，和Apache开源伙伴Mike Cafarella合作，开发了一款可以代替当时的主流搜索的开源搜索引擎，命名为<strong>Nutch</strong>。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/ElasticSearch%E7%AC%94%E8%AE%B001-%E8%81%8A%E8%81%8ADoug-Cutting/nutch.png" srcset="/img/loading.gif" alt="nutch"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN/source/_posts/ElasticSearch%E7%AC%94%E8%AE%B001-%E8%81%8A%E8%81%8ADoug-Cutting/nutch.png" srcset="/img/loading.gif" alt="nutch"></p>
 <p>Nutch是一个建立在<strong>Lucene核心</strong>之上的网页搜索应用程序，可以下载下来直接使用。它在Lucene的基础上加了网络爬虫和一些网页相关的功能，目的就是从一个简单的站内检索推广到全球网络的搜索上，就像Google一样。</p>
 <p>Nutch在业界的影响力比Lucene更大。</p>
 <p>大批网站采用了Nutch平台，<strong>大大降低了技术门槛</strong>，使低成本的普通计算机取代高价的Web服务器成为可能。甚至有一段时间，在硅谷有了一股用Nutch低成本创业的潮流。</p>
 <p>随着时间的推移，无论是Google还是Nutch，都面临<strong>搜索对象“体积”不断增大</strong>的问题。尤其是Google，作为互联网搜索引擎，需要存储大量的网页，并<strong>不断优化自己的搜索算法，提升搜索效率</strong>。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/ElasticSearch%E7%AC%94%E8%AE%B001-%E8%81%8A%E8%81%8ADoug-Cutting/google.png" srcset="/img/loading.gif" alt="google优化搜索"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN/source/_posts/ElasticSearch%E7%AC%94%E8%AE%B001-%E8%81%8A%E8%81%8ADoug-Cutting/google.png" srcset="/img/loading.gif" alt="google优化搜索"></p>
 <p>在这个过程中，Google确实找到了不少好的办法,并且无私地分享了出来，开源是一种伟大的精神。</p>
 <p>2003年,Google发表了一篇技术学术论文，公开介绍了自己的谷歌文件系统<strong>GFS</strong>(google File System)。这是google公司为了<strong>存储海量搜素数据</strong>而设计的<strong>专用文件系统</strong>。</p>
 <p>第二年，2004年，Doug Cutting基于Google的GFS论文，实现了<strong>分布式文件存储系统</strong>，并将它命名为<strong>NDFS</strong>(<strong>Nutch</strong> Distributed File System)。</p>
-<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/ElasticSearch笔记01-聊聊Doug-Cutting/gfs_to_ndfs.jpg" srcset="/img/loading.gif" alt="基于GFS实现NDFS" style="zoom:80%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN/source/_posts/ElasticSearch笔记01-聊聊Doug-Cutting/gfs_to_ndfs.jpg" srcset="/img/loading.gif" alt="基于GFS实现NDFS" style="zoom:80%;">
 
 <p>还是2004年,Google又发表了一篇技术学术论文，介绍自己的<strong>MapReduce</strong>编程模型。这个编程模型,用于大规模数据集(大于1TB)的并行分析运算。</p>
 <p>2005年，Doug Cutting 又<strong>基于MapReduce</strong>，在<strong>Nutch搜索引擎</strong>实现了该功能。</p>
-<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/ElasticSearch笔记01-聊聊Doug-Cutting/mapreduce.png" srcset="/img/loading.gif" alt="MapReduce模型" style="zoom:80%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN/source/_posts/ElasticSearch笔记01-聊聊Doug-Cutting/mapreduce.png" srcset="/img/loading.gif" alt="MapReduce模型" style="zoom:80%;">
 
 <p>2006年，当时依然很厉害的<strong>Yahoo(雅虎)公司</strong>，招安了Doug Cutting。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/ElasticSearch%E7%AC%94%E8%AE%B001-%E8%81%8A%E8%81%8ADoug-Cutting/yahoo.png" srcset="/img/loading.gif" alt="雅虎公司商标"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN/source/_posts/ElasticSearch%E7%AC%94%E8%AE%B001-%E8%81%8A%E8%81%8ADoug-Cutting/yahoo.png" srcset="/img/loading.gif" alt="雅虎公司商标"></p>
 <p>加盟Yahoo之后，Doug Cutting将<strong>NDFS</strong>和<strong>MapReduce</strong>进行了升级改造，并重新命名为<strong>Hadoop</strong>（NDFS也改名为HDFS，Hadoop Distributed File System）。</p>
 <p>这个，就是后来大名鼎鼎的大数据框架系统——Hadoop的由来。而Doug Cutting，则被人们称为<strong>Hadoop之父</strong>。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/ElasticSearch%E7%AC%94%E8%AE%B001-%E8%81%8A%E8%81%8ADoug-Cutting/hadoop_father.png" srcset="/img/loading.gif" alt="Hadoop之父"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN/source/_posts/ElasticSearch%E7%AC%94%E8%AE%B001-%E8%81%8A%E8%81%8ADoug-Cutting/hadoop_father.png" srcset="/img/loading.gif" alt="Hadoop之父"></p>
 <p>我们继续叙述，还是2006年，Google又发表了一篇论文。这次，它们介绍了自己的<strong>BigTable</strong>。这是一种<strong>分布式数据存储系统</strong>，一种用来处理海量数据的<strong>非关系型数据库</strong>。</p>
 <p>Doug Cutting当然没有放过，在自己的<strong>Hadoop</strong>系统里面，引入了<strong>BigTable</strong>，并命名为<strong>HBase</strong>。</p>
-<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/ElasticSearch笔记01-聊聊Doug-Cutting/bigTable_to_hbase.png" srcset="/img/loading.gif" alt="HBase" style="zoom:80%;">
+<img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN/source/_posts/ElasticSearch笔记01-聊聊Doug-Cutting/bigTable_to_hbase.png" srcset="/img/loading.gif" alt="HBase" style="zoom:80%;">
 
 <p>好吧，Doug Cutting反正就是紧跟Google时代步伐，你出什么，我学什么。</p>
 <p>所以，Hadoop的核心部分，基本上都有Google的影子。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/_posts/ElasticSearch%E7%AC%94%E8%AE%B001-%E8%81%8A%E8%81%8ADoug-Cutting/google_hadoop.png" srcset="/img/loading.gif" alt="google与hadoop联系"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN/source/_posts/ElasticSearch%E7%AC%94%E8%AE%B001-%E8%81%8A%E8%81%8ADoug-Cutting/google_hadoop.png" srcset="/img/loading.gif" alt="google与hadoop联系"></p>
 <p>2008年1月，Hadoop成功上位，正式成为Apache基金会的顶级项目。同年2月，Yahoo宣布建成了一个拥有1万个内核的Hadoop集群，并将自己的搜索引擎产品部署在上面。7月，Hadoop打破世界纪录，成为最快排序1TB数据的系统，用时209秒。</p>
 <p>此后，<strong>Hadoop便进入了高速发展期，直至现在</strong>。</p>
 
