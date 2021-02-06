@@ -191,6 +191,135 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B008-%E4%BA%8B%E5%8A%A1%E7%9A%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" target="_self">
+          <img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/img/blog/Hexo-Fluid博客配置.jpg" srcset="/img/loading.gif" alt="Redis笔记08-事务的相关操作">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B008-%E4%BA%8B%E5%8A%A1%E7%9A%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/">Redis笔记08-事务的相关操作</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B008-%E4%BA%8B%E5%8A%A1%E7%9A%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/">
+          
+          
+            
+          
+          Redis的单条命令是保证原子性的，但是redis事务不能保证原子性。
+
+Redis事务本质：一组命令的集合。
+—————– 队列 set set set 执行 ——————-
+事务中每条命令都会被序列化，执行过程中按顺序执行，不允许其他命令进行干扰。
+
+一次性
+顺序性
+排他性
+
+
+
+Redis事务没有隔离级别的概念
+Redis单条命令是保证原子性的，但是事务不保证原子性！
+
+
+Redis事务操作
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-19 19:36" pubdate>
+              2021-01-19
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Redis%E5%AD%A6%E4%B9%A0/">Redis学习</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B007-%E4%B8%89%E7%A7%8D%E7%89%B9%E6%AE%8A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" target="_self">
+          <img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/img/blog/Hexo-Fluid博客配置.jpg" srcset="/img/loading.gif" alt="Redis笔记07-三种特殊数据类型">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B007-%E4%B8%89%E7%A7%8D%E7%89%B9%E6%AE%8A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">Redis笔记07-三种特殊数据类型</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B007-%E4%B8%89%E7%A7%8D%E7%89%B9%E6%AE%8A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+          
+          
+            
+          
+          三种特殊数据类型Geospatial地理位置
+使用经纬度定位地理坐标并用一个有序集合zset保存，所以zset命令也可以使用
+
+
+
+
+命令
+描述
+
+
+
+geoadd key longitud(经度) latitude(纬度) member [..]
+将具体经纬度的坐标存入一个有序集合
+
+
+geopos key member [member..]
+获取集合中的一个/多个成员坐标
+
+
+geodist 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-19 16:54" pubdate>
+              2021-01-19
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Redis/">Redis</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B006-%E4%BA%94%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" target="_self">
           <img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/img/blog/Hexo-Fluid博客配置.jpg" srcset="/img/loading.gif" alt="Redis笔记06-五大数据类型">
         </a>
@@ -621,115 +750,11 @@ Linux诞生了这么多年，以前还喊着如何能取代windows系统，现�
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/15/Redis%E7%AC%94%E8%AE%B002-Redis%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" target="_self">
-          <img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/img/blog/Hexo-Fluid博客配置.jpg" srcset="/img/loading.gif" alt="Redis笔记02-Redis环境搭建">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/15/Redis%E7%AC%94%E8%AE%B002-Redis%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">Redis笔记02-Redis环境搭建</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/15/Redis%E7%AC%94%E8%AE%B002-Redis%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
-          
-          
-            
-          
-          一、概述1. Redis是什么？Redis（Remote Dictionary Server )，即远程字典服务。
-是一个开源的使用ANSI C语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。
-与memcached一样，为了保证效率，数据都是缓存在内存中。区别的是redis会周期性的把更新的数据写入磁盘或者把修改操作写入追加的记录文件，并且在此基
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-15 19:07" pubdate>
-              2021-01-15
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Redis/">Redis</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/15/Redis%E7%AC%94%E8%AE%B001-NoSQL%E8%BF%BD%E6%A0%B9%E6%BA%AF%E6%BA%90/" target="_self">
-          <img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/img/blog/Hexo-Fluid博客配置.jpg" srcset="/img/loading.gif" alt="Redis笔记01-NoSQL追根溯源">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/15/Redis%E7%AC%94%E8%AE%B001-NoSQL%E8%BF%BD%E6%A0%B9%E6%BA%AF%E6%BA%90/">Redis笔记01-NoSQL追根溯源</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/15/Redis%E7%AC%94%E8%AE%B001-NoSQL%E8%BF%BD%E6%A0%B9%E6%BA%AF%E6%BA%90/">
-          
-          
-            
-          
-          一、为什么使用NoSQL？说到为什么使用NoSQL，要从互联网网站架构的发展历史讲起。
-1. 单机MySQL时代
-90年代,一个网站的访问量一般不会太大，单个数据库完全够用。随着用户增多，网站出现以下问题
-
-数据量增加到一定程度，单机数据库就放不下了
-数据的索引（B+ Tree）,一个机器内存也存放不下
-访问量变大后（读写混合），一台服务器承受不住。
-
-2. Memcached(缓存) + MyS
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-15 12:58" pubdate>
-              2021-01-15
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Redis/">Redis</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/3/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/3/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/5/"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
   
