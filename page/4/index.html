@@ -191,6 +191,58 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/20/Redis%E7%AC%94%E8%AE%B013-Redis%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96-AOF/" target="_self">
+          <img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/img/blog/Hexo-Fluid博客配置.jpg" srcset="/img/loading.gif" alt="Redis笔记13-Redis的持久化-AOF">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/20/Redis%E7%AC%94%E8%AE%B013-Redis%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96-AOF/">Redis笔记13-Redis的持久化-AOF</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/20/Redis%E7%AC%94%E8%AE%B013-Redis%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96-AOF/">
+          
+          
+            
+          
+          持久化AOFAppend Only File
+将我们所有的命令都记录下来，history，恢复的时候就把这个文件全部再执行一遍
+
+以日志的形式来记录每个写的操作，将Redis执行过的所有指令记录下来（读操作不记录），只许追加文件但不可以改写文件，redis启动之初会读取该文件重新构建数据，换言之，redis重启的话就根据日志文件的内容将写指令从前到后执行一次以完成数据的恢复工作。
+
+什么是AOF 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-20 20:06" pubdate>
+              2021-01-20
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Redis/">Redis</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/posts/2021/01/20/Redis%E7%AC%94%E8%AE%B012-Redis%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96-RDB/" target="_self">
           <img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/img/blog/Hexo-Fluid博客配置.jpg" srcset="/img/loading.gif" alt="Redis笔记12-Redis的持久化-RDB">
         </a>
@@ -678,60 +730,6 @@ redis默认有16个数据库
             <i class="iconfont icon-date"></i>
             <time datetime="2021-01-19 09:25" pubdate>
               2021-01-19
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Redis/">Redis</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/18/Redis%E7%AC%94%E8%AE%B003-redis-benchmark%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/" target="_self">
-          <img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@1.0/source/img/blog/Hexo-Fluid博客配置.jpg" srcset="/img/loading.gif" alt="Redis笔记03-redis-benchmark性能测试">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/18/Redis%E7%AC%94%E8%AE%B003-redis-benchmark%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/">Redis笔记03-redis-benchmark性能测试</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/18/Redis%E7%AC%94%E8%AE%B003-redis-benchmark%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/">
-          
-          
-            
-          
-          性能测试redis-benchmark是一个压力测试工具，而且是官方自带的。
-redis-benchmark的命令参数，如下图所示：
-
-下面我们来进行简单测试：
-1# 测试：100个并发连接，100000个请求
-
-
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-18 20:32" pubdate>
-              2021-01-18
             </time>
           </div>
         
