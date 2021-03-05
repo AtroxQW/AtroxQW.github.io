@@ -191,6 +191,115 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B017-%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E4%B8%8E%E9%9B%AA%E5%B4%A9/" target="_self">
+          <img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN/source/_posts/Redis笔记01-NoSQL追根溯源/index.jpg" srcset="/img/loading.gif" alt="Redis笔记17-缓存穿透与雪崩">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B017-%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E4%B8%8E%E9%9B%AA%E5%B4%A9/">Redis笔记17-缓存穿透与雪崩</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B017-%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E4%B8%8E%E9%9B%AA%E5%B4%A9/">
+          
+          
+            
+          
+          缓存穿透与雪崩缓存穿透（查不到）
+概念
+
+在默认情况下，用户请求数据时，会先在缓存(Redis)中查找，若没找到即缓存未命中，再在数据库中进行查找，数量少可能问题不大，可是一旦大量的请求数据（例如秒杀场景）缓存都没有命中的话，就会全部转移到数据库上，造成数据库极大的压力，就有可能导致数据库崩溃。网络安全中也有人恶意使用这种手段进行攻击被称为洪水攻击。
+
+解决方案
+
+布隆过滤器
+对所有可能查询的参数
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-21 12:11" pubdate>
+              2021-01-21
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Redis/">Redis</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B016-%E5%93%A8%E5%85%B5%E6%A8%A1%E5%BC%8F/" target="_self">
+          <img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN/source/_posts/Redis笔记01-NoSQL追根溯源/index.jpg" srcset="/img/loading.gif" alt="Redis笔记16-哨兵模式">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B016-%E5%93%A8%E5%85%B5%E6%A8%A1%E5%BC%8F/">Redis笔记16-哨兵模式</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B016-%E5%93%A8%E5%85%B5%E6%A8%A1%E5%BC%8F/">
+          
+          
+            
+          
+          更多信息参考博客：https://www.jianshu.com/p/06ab9daf921d
+主从切换技术的方法是：当主服务器宕机后，需要手动把一台从服务器切换为主服务器，这就需要人工干预，费事费力，还会造成一段时间内服务不可用。这不是一种推荐的方式，更多时候，我们优先考虑哨兵模式。
+单机单个哨兵
+
+哨兵的作用：
+
+通过发送命令，让Redis服务器返回监控其运行状态，包括主服务器和从服务器。
+当
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-21 11:40" pubdate>
+              2021-01-21
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Redis/">Redis</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/posts/2021/01/21/Redis%E7%AC%94%E8%AE%B015-%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/" target="_self">
           <img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN/source/_posts/Redis笔记01-NoSQL追根溯源/index.jpg" srcset="/img/loading.gif" alt="Redis笔记15-主从复制">
         </a>
@@ -613,149 +722,11 @@ Redis事务操作
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B007-%E4%B8%89%E7%A7%8D%E7%89%B9%E6%AE%8A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" target="_self">
-          <img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN/source/_posts/Redis笔记01-NoSQL追根溯源/index.jpg" srcset="/img/loading.gif" alt="Redis笔记07-三种特殊数据类型">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B007-%E4%B8%89%E7%A7%8D%E7%89%B9%E6%AE%8A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">Redis笔记07-三种特殊数据类型</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B007-%E4%B8%89%E7%A7%8D%E7%89%B9%E6%AE%8A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
-          
-          
-            
-          
-          三种特殊数据类型Geospatial地理位置
-使用经纬度定位地理坐标并用一个有序集合zset保存，所以zset命令也可以使用
-
-
-
-
-命令
-描述
-
-
-
-geoadd key longitud(经度) latitude(纬度) member [..]
-将具体经纬度的坐标存入一个有序集合
-
-
-geopos key member [member..]
-获取集合中的一个/多个成员坐标
-
-
-geodist 
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-19 16:54" pubdate>
-              2021-01-19
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Redis/">Redis</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B006-%E4%BA%94%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" target="_self">
-          <img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN/source/_posts/Redis笔记01-NoSQL追根溯源/index.jpg" srcset="/img/loading.gif" alt="Redis笔记06-五大数据类型">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B006-%E4%BA%94%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">Redis笔记06-五大数据类型</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B006-%E4%BA%94%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
-          
-          
-            
-          
-          五大数据类型String（字符串）
-
-
-命令
-描述
-
-
-
-APPEND key value
-向指定的key的value后追加字符串
-
-
-DECR/INCR key
-将指定key的value数值进行+1/-1(仅对于数字)
-
-
-INCRBY/DECRBY key n
-按指定的步长对数值进行加减
-
-
-INCRBYFLOAT key n
-为数值加上浮点型数值
-
-
-STRLEN key
-获取key保存值的
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-19 10:20" pubdate>
-              2021-01-19
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Redis/">Redis</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/3/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/5/"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/3/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/5/"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
   
