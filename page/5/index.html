@@ -191,6 +191,69 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B008-%E4%BA%8B%E5%8A%A1%E7%9A%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" target="_self">
+          <img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN/source/_posts/Redis笔记01-NoSQL追根溯源/index.jpg" srcset="/img/loading.gif" alt="Redis笔记08-事务的相关操作">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B008-%E4%BA%8B%E5%8A%A1%E7%9A%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/">Redis笔记08-事务的相关操作</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B008-%E4%BA%8B%E5%8A%A1%E7%9A%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/">
+          
+          
+            
+          
+          Redis的单条命令是保证原子性的，但是redis事务不能保证原子性。
+
+Redis事务本质：一组命令的集合。
+—————– 队列 set set set 执行 ——————-
+事务中每条命令都会被序列化，执行过程中按顺序执行，不允许其他命令进行干扰。
+
+一次性
+顺序性
+排他性
+
+
+
+Redis事务没有隔离级别的概念
+Redis单条命令是保证原子性的，但是事务不保证原子性！
+
+
+Redis事务操作
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-19 19:36" pubdate>
+              2021-01-19
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Redis%E5%AD%A6%E4%B9%A0/">Redis学习</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/posts/2021/01/19/Redis%E7%AC%94%E8%AE%B007-%E4%B8%89%E7%A7%8D%E7%89%B9%E6%AE%8A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" target="_self">
           <img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN/source/_posts/Redis笔记01-NoSQL追根溯源/index.jpg" srcset="/img/loading.gif" alt="Redis笔记07-三种特殊数据类型">
         </a>
@@ -680,55 +743,6 @@ Linux诞生了这么多年，以前还喊着如何能取代windows系统，现�
             <i class="iconfont icon-tags"></i>
             
               <a href="/tags/Linux/">Linux</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/posts/2021/01/15/Redis%E7%AC%94%E8%AE%B002-Redis%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" target="_self">
-          <img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN/source/_posts/Redis笔记01-NoSQL追根溯源/index.jpg" srcset="/img/loading.gif" alt="Redis笔记02-Redis环境搭建">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2021/01/15/Redis%E7%AC%94%E8%AE%B002-Redis%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">Redis笔记02-Redis环境搭建</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2021/01/15/Redis%E7%AC%94%E8%AE%B002-Redis%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
-          
-          
-            
-          
-          一、概述1. Redis是什么？Redis（Remote Dictionary Server )，即远程字典服务。
-是一个开源的使用ANSI C语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。
-与memcached一样，为了保证效率，数据都是缓存在内存中。区别的是redis会周期性的把更新的数据写入磁盘或者把修改操作写入追加的记录文件，并且在此基
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-15 19:07" pubdate>
-              2021-01-15
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Redis/">Redis</a>
             
           </div>
         
