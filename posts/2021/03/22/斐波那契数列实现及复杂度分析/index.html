@@ -239,33 +239,27 @@
             <h1 style="display: none">斐波那契数列实现及复杂度分析</h1>
             
             <div class="markdown-body">
-              <h3 id="递归方式实现"><a class="header-anchor" href="#递归方式实现">¶</a>递归方式实现</h3>
-<h4 id="代码"><a class="header-anchor" href="#代码">¶</a>代码</h4>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 采用递归实现斐波那契数列生成函数</span><br><span class="hljs-comment"> */</span><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">fibonacciGenerate1</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>&#123;<br>    <span class="hljs-keyword">if</span> (n == <span class="hljs-number">0</span>) &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>    &#125;<br>    <span class="hljs-keyword">if</span> (n == <span class="hljs-number">1</span>) &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> fibonacciGenerate1(n - <span class="hljs-number">1</span>) + fibonacciGenerate1(n - <span class="hljs-number">2</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
-<h4 id="复杂度分析"><a class="header-anchor" href="#复杂度分析">¶</a>复杂度分析</h4>
-<p>以 <code>n = 6</code>为例：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN/source/_posts/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E5%AE%9E%E7%8E%B0%E5%8F%8A%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90/1.png" srcset="/img/loading.gif" alt="斐波那契数列"></p>
+              <h3 id="递归方式实现"><a href="#递归方式实现" class="headerlink" title="递归方式实现"></a>递归方式实现</h3><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 采用递归实现斐波那契数列生成函数</span><br><span class="hljs-comment"> */</span><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">fibonacciGenerate1</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>&#123;<br>    <span class="hljs-keyword">if</span> (n == <span class="hljs-number">0</span>) &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>    &#125;<br>    <span class="hljs-keyword">if</span> (n == <span class="hljs-number">1</span>) &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> fibonacciGenerate1(n - <span class="hljs-number">1</span>) + fibonacciGenerate1(n - <span class="hljs-number">2</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h4 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h4><p>以 <code>n = 6</code>为例：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/AtroxQW/jsDeliverCDN@master/source/_posts/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E5%AE%9E%E7%8E%B0%E5%8F%8A%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90/1.png" srcset="/img/loading.gif" alt="斐波那契数列"></p>
 <ul>
-<li>
-<p><strong>时间复杂度</strong>：为二叉树所有节点的个数</p>
+<li><p><strong>时间复杂度</strong>：为二叉树所有节点的个数</p>
 <ul>
-<li>二叉树高度 h = 5</li>
+<li>二叉树高度 h = 5  </li>
 <li>图中有 1 + 2+ 4 + 8  = 15，可以理解为 2^(6 - 2) - 1</li>
 <li>对于 F(n) 来说，所有节点个数为：2^(n - 2) - 1</li>
 <li>时间复杂度 T(n) = O(2^n)</li>
 </ul>
 </li>
-<li>
-<p><strong>空间复杂度</strong>：为树的高度 h ，即 O(N)</p>
+<li><p><strong>空间复杂度</strong>：为树的高度 h ，即 O(N)</p>
 </li>
 </ul>
-<h3 id="循环方式实现"><a class="header-anchor" href="#循环方式实现">¶</a>循环方式实现</h3>
-<h4 id="代码-v2"><a class="header-anchor" href="#代码-v2">¶</a>代码</h4>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 采用非递归（循环）实现斐波那契数列生成函数</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span>[] fibonacciGenerate2(<span class="hljs-keyword">int</span> n) &#123;<br>    <span class="hljs-keyword">int</span>[] array = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];<br>    array[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>;<br>    array[<span class="hljs-number">1</span>] = <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">2</span>; i &lt;= n; i++) &#123;<br>        array[i] = array[i - <span class="hljs-number">1</span>] + array[i - <span class="hljs-number">2</span>];<br>    &#125;<br>    <span class="hljs-keyword">return</span> array;<br>&#125;<br></code></pre></td></tr></table></figure>
-<h4 id="复杂度分析-v2"><a class="header-anchor" href="#复杂度分析-v2">¶</a>复杂度分析</h4>
-<ul>
+<h3 id="循环方式实现"><a href="#循环方式实现" class="headerlink" title="循环方式实现"></a>循环方式实现</h3><h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 采用非递归（循环）实现斐波那契数列生成函数</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span>[] fibonacciGenerate2(<span class="hljs-keyword">int</span> n) &#123;<br>    <span class="hljs-keyword">int</span>[] array = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];<br>    array[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>;<br>    array[<span class="hljs-number">1</span>] = <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">2</span>; i &lt;= n; i++) &#123;<br>        array[i] = array[i - <span class="hljs-number">1</span>] + array[i - <span class="hljs-number">2</span>];<br>    &#125;<br>    <span class="hljs-keyword">return</span> array;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h4 id="复杂度分析-1"><a href="#复杂度分析-1" class="headerlink" title="复杂度分析"></a>复杂度分析</h4><ul>
 <li><strong>时间复杂度</strong>：创建一个数组。每次将前两个数相加后直接赋给后一个数。只需要从头到尾赋值一遍就可以了，所以 T(n) = O(n)</li>
-<li><strong>空间复杂度</strong>：有 n 个数需要创建包含 n 个 数的一维数组。空间复杂度为 O(n)</li>
+<li><strong>空间复杂度</strong>：有 n 个数需要创建包含 n 个 数的一维数组。空间复杂度为 O(n) </li>
 </ul>
 
             </div>
