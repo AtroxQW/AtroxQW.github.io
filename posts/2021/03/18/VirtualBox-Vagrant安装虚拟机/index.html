@@ -196,7 +196,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      248 字
+      249 字
     </span>
   
 
@@ -239,39 +239,51 @@
             <h1 style="display: none">VirtualBox+Vagrant安装虚拟机</h1>
             
             <div class="markdown-body">
-              <h3 id="虚拟机环境搭建"><a href="#虚拟机环境搭建" class="headerlink" title="虚拟机环境搭建"></a>虚拟机环境搭建</h3><h4 id="一、安装-Linux-虚拟机"><a href="#一、安装-Linux-虚拟机" class="headerlink" title="一、安装 Linux 虚拟机"></a>一、安装 Linux 虚拟机</h4><ul>
-<li><p>下载安装 VirtualBox：<a target="_blank" rel="noopener" href="https://www.virtualbox.org/%EF%BC%8C%E9%9C%80%E8%A6%81%E5%BC%80%E5%90%AF">https://www.virtualbox.org/，需要开启</a> CPU 虚拟化。</p>
+              <h3 id="虚拟机环境搭建"><a class="header-anchor" href="#虚拟机环境搭建">¶</a>虚拟机环境搭建</h3>
+<h4 id="一、安装-Linux-虚拟机"><a class="header-anchor" href="#一、安装-Linux-虚拟机">¶</a>一、安装 Linux 虚拟机</h4>
+<ul>
+<li>
+<p>下载安装 VirtualBox：<a target="_blank" rel="noopener" href="https://www.virtualbox.org/%EF%BC%8C%E9%9C%80%E8%A6%81%E5%BC%80%E5%90%AF">https://www.virtualbox.org/，需要开启</a> CPU 虚拟化。</p>
 <p><img src="/posts/2021/03/18/VirtualBox-Vagrant%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/1.png" srcset="/img/loading.gif" alt="virtualBox官网"></p>
 </li>
-<li><p>下载 Vagrant 操作系统官方镜像仓库：<a target="_blank" rel="noopener" href="https://app.vagrantup.com/boxes/search">https://app.vagrantup.com/boxes/search</a></p>
+<li>
+<p>下载 Vagrant 操作系统官方镜像仓库：<a target="_blank" rel="noopener" href="https://app.vagrantup.com/boxes/search">https://app.vagrantup.com/boxes/search</a></p>
 <img src="/posts/2021/03/18/VirtualBox-Vagrant%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/2.png" srcset="/img/loading.gif" alt="镜像仓库" style="zoom:80%;">
 </li>
-<li><p>下载 Vagrant：<a target="_blank" rel="noopener" href="https://www.vagrantup.com/downloads.html">https://www.vagrantup.com/downloads.html</a></p>
+<li>
+<p>下载 Vagrant：<a target="_blank" rel="noopener" href="https://www.vagrantup.com/downloads.html">https://www.vagrantup.com/downloads.html</a></p>
 <p><img src="/posts/2021/03/18/VirtualBox-Vagrant%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/3.png" srcset="/img/loading.gif" alt="Vagrant下载"></p>
 </li>
 </ul>
-<h4 id="二、测试-Vagrant-和-VirtualBox"><a href="#二、测试-Vagrant-和-VirtualBox" class="headerlink" title="二、测试 Vagrant 和 VirtualBox"></a>二、测试 Vagrant 和 VirtualBox</h4><p>打开CMD命令行，输入<code>vagrant</code>，查看是否出现命令提示。</p>
+<h4 id="二、测试-Vagrant-和-VirtualBox"><a class="header-anchor" href="#二、测试-Vagrant-和-VirtualBox">¶</a>二、测试 Vagrant 和 VirtualBox</h4>
+<p>打开CMD命令行，输入<code>vagrant</code>，查看是否出现命令提示。</p>
 <p><img src="/posts/2021/03/18/VirtualBox-Vagrant%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/4.png" srcset="/img/loading.gif" alt="测试vagrant命令"></p>
 <p>打开VirtualBox，更改虚拟机文件存储位置，默认为C盘。</p>
 <img src="/posts/2021/03/18/VirtualBox-Vagrant%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/5.png" srcset="/img/loading.gif" alt="VirtualBox全局设定" style="zoom: 67%;">
-
-<h4 id="三、快速安装虚拟机"><a href="#三、快速安装虚拟机" class="headerlink" title="三、快速安装虚拟机"></a>三、快速安装虚拟机</h4><ol>
-<li><p>打开 windows CMD窗口，运行命令<code>vagrant init centos/7</code>，即可初始化一个CentOS7虚拟机环境。</p>
+<h4 id="三、快速安装虚拟机"><a class="header-anchor" href="#三、快速安装虚拟机">¶</a>三、快速安装虚拟机</h4>
+<ol>
+<li>
+<p>打开 windows CMD窗口，运行命令<code>vagrant init centos/7</code>，即可初始化一个CentOS7虚拟机环境。</p>
 <p><img src="/posts/2021/03/18/VirtualBox-Vagrant%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/6.png" srcset="/img/loading.gif" alt="初始化"></p>
 </li>
-<li><p>打开该目录下查看生成的 VagrantFile 文件。</p>
+<li>
+<p>打开该目录下查看生成的 VagrantFile 文件。</p>
 <p><img src="/posts/2021/03/18/VirtualBox-Vagrant%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/7.png" srcset="/img/loading.gif" alt="vagrantFile文件"></p>
 </li>
-<li><p>输入<code>vagrant up</code>命令来向 VirtualBox 创建虚拟机，失败。</p>
+<li>
+<p>输入<code>vagrant up</code>命令来向 VirtualBox 创建虚拟机，失败。</p>
 <p><img src="/posts/2021/03/18/VirtualBox-Vagrant%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/8.png" srcset="/img/loading.gif" alt="创建虚拟机"></p>
 </li>
-<li><p>先将镜像文件下载到本地：<a target="_blank" rel="noopener" href="https://vagrantcloud.com/centos/boxes/7/versions/2004.01/providers/virtualbox.box%EF%BC%8C%E6%94%BE%E5%88%B0%E7%9B%AE%E5%BD%95%E4%B8%8B%E3%80%82">https://vagrantcloud.com/centos/boxes/7/versions/2004.01/providers/virtualbox.box，放到目录下。</a></p>
+<li>
+<p>先将镜像文件下载到本地：<a target="_blank" rel="noopener" href="https://vagrantcloud.com/centos/boxes/7/versions/2004.01/providers/virtualbox.box%EF%BC%8C%E6%94%BE%E5%88%B0%E7%9B%AE%E5%BD%95%E4%B8%8B%E3%80%82">https://vagrantcloud.com/centos/boxes/7/versions/2004.01/providers/virtualbox.box，放到目录下。</a></p>
 <p><img src="/posts/2021/03/18/VirtualBox-Vagrant%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/9.png" srcset="/img/loading.gif" alt="本地box文件"></p>
 </li>
-<li><p>执行命令 box 镜像文件下载到本地，然后重复上面的过程。</p>
+<li>
+<p>执行命令 box 镜像文件下载到本地，然后重复上面的过程。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">vagrant box add centos/7 F:\backups\Centos7\centos-7.0-x86_64.box<br>vagrant init centos/7<br>vagrant up<br></code></pre></td></tr></table></figure>
 </li>
-<li><p>连接上虚拟机 <code>vagrant ssh</code>， 测试 Linux 命令。</p>
+<li>
+<p>连接上虚拟机 <code>vagrant ssh</code>， 测试 Linux 命令。</p>
 <p><img src="/posts/2021/03/18/VirtualBox-Vagrant%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/10.png" srcset="/img/loading.gif" alt="测试连接"></p>
 </li>
 </ol>
